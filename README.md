@@ -6,4 +6,5 @@ GG Thipe    - 12101232 <br />
 AR Soroush  - 13238958 <br />
 TB Pole     - 13122160 <br />
 C Nkhwashu  - 14296684 <br />
+P Madigoe   - 13049128 <br />
 (Still in progress)
