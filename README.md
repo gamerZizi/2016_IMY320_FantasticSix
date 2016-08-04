@@ -37,30 +37,30 @@ Communities without proper sanitation suffer from major diseases and pollution b
   •	A login system for members<br />
   
  <strong> Types of users</strong><br />
-    &nbsp;•	Volunteers<br />
-     &nbsp;•	General public<br />
-    &nbsp; •	Benefactors<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;•	Volunteers<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;•	General public<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;•	Benefactors<br />
 <strong>User need</strong>s<br />
   •	Volunteers<br />
-    o	Information about events. Upcoming and past projects.<br />
-    o	Schedule for site visits by the organisation.<br />
-    o	Equipment needed for projects.<br />
-    o	Volunteering information.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Information about events. Upcoming and past projects.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Schedule for site visits by the organisation.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Equipment needed for projects.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Volunteering information.<br />
   •	General public<br />
-    o	Information about the organisation<br />
-    o	Information about events. Upcoming and past projects.<br />
-    o	Schedule for site visits by the organisation.<br />
-    o	Equipment needed for projects.<br />
-    o	Volunteering information.<br />
-    o	Related organisations<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Information about the organisation<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Information about events. Upcoming and past projects.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Schedule for site visits by the organisation.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Equipment needed for projects.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Volunteering information.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Related organisations<br />
   •	Benefactors<br />
-    o	Information about the organisation<br />
-    o	Organisation needs <br />
-    o	Projects, upcoming and running<br />
-    o	Organisation location<br />
-    o	A way to contact the organisation<br />
-    o	Information about people involved in the organisation<br />
-    o	
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Information about the organisation<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Organisation needs <br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Projects, upcoming and running<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Organisation location<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	A way to contact the organisation<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; o	Information about people involved in the organisation<br />
+    
 
   
 Solutions<br />
