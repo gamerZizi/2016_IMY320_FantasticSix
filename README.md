@@ -10,27 +10,27 @@ P Madigoe   - 13049128 <br />
 (Still in progress)
 
 IMY 320 Website Project Proposal
-NPO Name: 
+NPO Name: Amanzimtoti
 
 Introduction
 
 Based on our previous meeting we had with you about your water and sanitation company, we have come up with an easy efficient way of representing your information on the site. We plan to create a site that will be integrated with a mobile application that will give members of the NPO and general public better access to information on your projects. <br />
 
 Background
-Sanitation is a basic human need that most rural communities do not have access to. Since established in 2010, NPO Name has been involved in projects that enrich human lives by providing awareness about water conservation and the maintenance of hygienic conditions. <br />
+Sanitation is a basic human need that most rural communities do not have access to. Since established in 2010,Amanzimtoti has been involved in projects that enrich human lives by providing awareness about water conservation and the maintenance of hygienic conditions. <br />
 
 Communities without proper sanitation suffer from major diseases and pollution but thanks to your organisation, people’s lives have improved immensely from a number of your projects.<br />
 
 Needs<br />
 
-NPO Name needs a website with the following functionality:<br />
+Amanzimtoti needs a website with the following functionality:<br />
   •	A front page to place new stories, news and our events<br />
   •	An about us page and contact us page<br />
   •	A calendar illustrating events<br />
   •	Login system allowing admin to modify content<br />
   •	Storage for official documents<br />
   
-NPO Name mobile application should be able to:<br />
+Amanzimtoti mobile application should be able to:<br />
   •	Reflect organisation information<br />
   •	Members will be able to read and view the calendar<br />
   •	A way to announce information to all members<br />
@@ -52,16 +52,17 @@ Functional<br />
       o	Notification handling<br />
 Non functional<br />
     •	Integration<br />
-     o	RESTful web api<br />
-     o	
-   •	Technology<br />
-      o	Languages: HTML, CSS, PHP, javaScript, SQL<br />
-      o	IDEs: Netbeans<br />
-      o	version control: git<br />
-      o	WordPress<br />
+     
+
+  •	Technologies for the mobile application:<br />
       o	PhoneGap<br />
-  •	Responsive web design<br />
+      o	jQuery Mobile<br />
+      o	RESTful web api<br />
+      
+  •Technologies for the website:<br />
       o	bootstrap<br />
+      o	Languages: HTML, CSS, PHP, javaScript, SQL<br />
+       o	WordPress<br />
   •	Architectural patterns<br />
       o	MVC - Separation of concerns<br />
    
