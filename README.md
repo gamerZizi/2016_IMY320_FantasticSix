@@ -23,25 +23,52 @@ Communities without proper sanitation suffer from major diseases and pollution b
 
 Needs<br />
 
-Amanzimtoti needs a website with the following functionality:<br />
+<strong>Amanzimtoti needs a website with the following functionality:</strong><br />
   •	A front page to place new stories, news and our events<br />
   •	An about us page and contact us page<br />
   •	A calendar illustrating events<br />
   •	Login system allowing admin to modify content<br />
   •	Storage for official documents<br />
   
-Amanzimtoti mobile application should be able to:<br />
+<strong>Amanzimtoti mobile application should be able to:</strong><br />
   •	Reflect organisation information<br />
   •	Members will be able to read and view the calendar<br />
   •	A way to announce information to all members<br />
   •	A login system for members<br />
   
+ <strong> Types of users</strong><br />
+    •	Volunteers<br />
+    •	General public<br />
+    •	Benefactors<br />
+<strong>User need</strong>s<br />
+  •	Volunteers<br />
+    o	Information about events. Upcoming and past projects.<br />
+    o	Schedule for site visits by the organisation.<br />
+    o	Equipment needed for projects.<br />
+    o	Volunteering information.<br />
+  •	General public<br />
+    o	Information about the organisation<br />
+    o	Information about events. Upcoming and past projects.<br />
+    o	Schedule for site visits by the organisation.<br />
+    o	Equipment needed for projects.<br />
+    o	Volunteering information.<br />
+    o	Related organisations<br />
+  •	Benefactors<br />
+    o	Information about the organisation<br />
+    o	Organisation needs <br />
+    o	Projects, upcoming and running<br />
+    o	Organisation location<br />
+    o	A way to contact the organisation<br />
+    o	Information about people involved in the organisation<br />
+    o	
+
+  
 Solutions<br />
 Based on your stated needs we have come up with user friendly web and mobile application technologies to meet the requirements.<br />
 
-Requirements:<br />
+<strong>Requirements:</strong><br />
 
-Functional:<br />
+<strong>Functional:</strong><br />
   •	User sub systems<br />
       o	User registration<br />
       o	User login<br />
@@ -54,7 +81,7 @@ Functional:<br />
       o	Notification handling<br />
       
       
-Non functional<br />
+<strong>Non functional</strong><br />
     •	Integration<br />
      
 
