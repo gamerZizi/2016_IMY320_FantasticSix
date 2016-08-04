@@ -65,9 +65,8 @@ Non functional<br />
     o	PhoneGap<br />
   •	Architectural patterns<br />
     o	MVC - Separation of concerns<br />
-    o	Layered design<br />
-  •	Architectural tactics<br />
-    o	Master-Slave<br />
+   
+
 
 
 
