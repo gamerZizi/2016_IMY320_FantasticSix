@@ -60,9 +60,8 @@ Non functional<br />
       o	version control: git<br />
       o	WordPress<br />
       o	PhoneGap<br />
-  •	Scalability<br />
+  •	Responsive web design<br />
       o	bootstrap<br />
-      o	PhoneGap<br />
   •	Architectural patterns<br />
       o	MVC - Separation of concerns<br />
    
