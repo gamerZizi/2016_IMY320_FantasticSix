@@ -42,29 +42,29 @@ Based on your stated needs we have come up with user friendly web and mobile app
 Requirements<br />
 Functional<br />
   •	User sub systems<br />
-    o	User registration<br />
-    o	User login<br />
-    o	Home page navigation<br />
+      o	User registration<br />
+      o	User login<br />
+      o	Home page navigation<br />
   •	Information sub system<br />
-    o	Organisation of events<br />
-   	Current projects<br />
-   	Previous projects<br />
-    o	Notification handling<br />
+      o	Organisation of events<br />
+   	  Current projects<br />
+   	  Previous projects<br />
+      o	Notification handling<br />
 Non functional<br />
-  •	Integration<br />
-    o	RESTful web api<br />
-    o	
-  •	Technology<br />
-    o	Languages: HTML, CSS, PHP, javaScript, SQL<br />
-    o	IDEs: Netbeans<br />
-    o	version control: git<br />
-    o	WordPress<br />
-    o	PhoneGap<br />
+    •	Integration<br />
+     o	RESTful web api<br />
+     o	
+   •	Technology<br />
+      o	Languages: HTML, CSS, PHP, javaScript, SQL<br />
+      o	IDEs: Netbeans<br />
+      o	version control: git<br />
+      o	WordPress<br />
+      o	PhoneGap<br />
   •	Scalability<br />
-    o	bootstrap<br />
-    o	PhoneGap<br />
+      o	bootstrap<br />
+      o	PhoneGap<br />
   •	Architectural patterns<br />
-    o	MVC - Separation of concerns<br />
+      o	MVC - Separation of concerns<br />
    
 
 
