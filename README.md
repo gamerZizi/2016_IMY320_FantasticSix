@@ -39,17 +39,21 @@ Amanzimtoti mobile application should be able to:<br />
 Solutions<br />
 Based on your stated needs we have come up with user friendly web and mobile application technologies to meet the requirements.<br />
 
-Requirements<br />
-Functional<br />
+Requirements:<br />
+
+Functional:<br />
   •	User sub systems<br />
       o	User registration<br />
       o	User login<br />
       o	Home page navigation<br />
+      
   •	Information sub system<br />
       o	Organisation of events<br />
    	  Current projects<br />
    	  Previous projects<br />
       o	Notification handling<br />
+      
+      
 Non functional<br />
     •	Integration<br />
      
@@ -62,7 +66,9 @@ Non functional<br />
   •Technologies for the website:<br />
       o	bootstrap<br />
       o	Languages: HTML, CSS, PHP, javaScript, SQL<br />
-       o	WordPress<br />
+      o	WordPress<br />
+       
+       
   •	Architectural patterns<br />
       o	MVC - Separation of concerns<br />
    
