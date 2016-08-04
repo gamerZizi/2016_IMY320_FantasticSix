@@ -12,16 +12,16 @@ P Madigoe   - 13049128 <br />
 IMY 320 Website Project Proposal <br />
 NPO Name: Amanzimtoti
 
-Introduction
+<strong>Introduction</strong>
 
 Based on our previous meeting we had with you about your water and sanitation company, we have come up with an easy efficient way of representing your information on the site. We plan to create a site that will be integrated with a mobile application that will give members of the NPO and general public better access to information on your projects. <br />
 
-Background
+<strong>Background</strong>
 Sanitation is a basic human need that most rural communities do not have access to. Since established in 2010,Amanzimtoti has been involved in projects that enrich human lives by providing awareness about water conservation and the maintenance of hygienic conditions. <br />
 
 Communities without proper sanitation suffer from major diseases and pollution but thanks to your organisation, people’s lives have improved immensely from a number of your projects.<br />
 
-Needs<br />
+<strong>Needs</strong><br />
 
 <strong>Amanzimtoti needs a website with the following functionality:</strong><br />
   •	A front page to place new stories, news and our events<br />
@@ -37,9 +37,9 @@ Needs<br />
   •	A login system for members<br />
   
  <strong> Types of users</strong><br />
-    •	Volunteers<br />
-    •	General public<br />
-    •	Benefactors<br />
+    &nbsp;•	Volunteers<br />
+     &nbsp;•	General public<br />
+    &nbsp; •	Benefactors<br />
 <strong>User need</strong>s<br />
   •	Volunteers<br />
     o	Information about events. Upcoming and past projects.<br />
