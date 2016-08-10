@@ -1,4 +1,4 @@
-# 2016_IMY320_FantasticSeven
+# 2016_IMY320_FantasticSix
 
 ZI Mahlangu - 11206218 <br />
 SC Simelane - 27122591 <br />
