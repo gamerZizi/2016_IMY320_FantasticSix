@@ -156,6 +156,9 @@ fabric.properties
 # ignore all files that start with ~
 ~*
 
+wp-admin/error_log
+
+
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
