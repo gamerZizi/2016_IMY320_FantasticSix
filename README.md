@@ -114,7 +114,7 @@ Based on your stated needs we have come up with user friendly web and mobile app
     <ul>
         <li>PhoneGap.</li>
         <li>jQuery Mobile (For UI).</li>
-        <li>RESTful web API.</li>
+        <li>RESTful Webservice API.</li>
     </ul>
     <br />
     <li><b>Architectural patterns:</b></li>
