@@ -1,6 +1,7 @@
 # ======================
 # Ignore Netbeans Files
 # ======================
+nbproject/
 nbproject/private/
 build/
 nbbuild/
