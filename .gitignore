@@ -1,12 +1,12 @@
 # ======================
 # Ignore Netbeans Files
 # ======================
-nbproject/
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
+web/nbproject/
+web/nbproject/private/
+web/build/
+web/nbbuild/
+web/dist/
+web/nbdist/
 nbactions.xml
 .nb-gradle/
 
