@@ -1,0 +1,41 @@
+/* 
+    Created on : Sep 1, 2016, 1:04:42 AM
+    Author     : Collen Simelane
+*/
+
+.amanzi-parent select, .amanzi-parent .input-div {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 2px;
+    color: #686868;
+    padding: 0.625em 0.4375em;
+    width: 100%;
+}
+
+.amanzi-parent .opt-title {
+    font-weight: bold;
+}
+
+.amanzi-parent #phone {
+    width: 91.7% !important;
+}
+
+.amanzi-parent label {
+    color: #686868;
+}
+
+.amanzi-parent .amanzi-row {
+    margin-bottom: 10px;
+}
+
+.amanzi-parent .gender-span {
+    margin-right: 20px;
+}
+
+.amanzi-parent fieldset legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #32373c;
+}
+
+
