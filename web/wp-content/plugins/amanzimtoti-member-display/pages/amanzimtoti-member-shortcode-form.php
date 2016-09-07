@@ -31,8 +31,13 @@ if (!$results): // display form ?>
 	</div>
 <?php
 else:
-	// display information
-	echo amanzi_display_user_information($results[0]);
+	echo '<div class="amanzi-parent content">';
+	echo	'<form action="" method="post">';
+	echo		'<input type="hidden" name="listaction" value="update">';					
+	echo			amanzi_display_user_information($results[0]);			// display information
+	echo		'<input type="submit" value="Update Details" class="submit" id="submit" name="submit" />';
+	echo	'</form>';
+	echo '</div>';
 endif;
 
 

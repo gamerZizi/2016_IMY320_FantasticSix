@@ -7,6 +7,27 @@ AR Soroush  - 13238958 <br />
 TB Pole     - 13122160 <br />
 C Nkhwashu  - 14296684 <br />
 
+<h2>Index:</h2>
+<ol>
+    <li>
+        <h3>IMY 320 Website Project Proposal</h3>
+        <ul>
+            <li><b>Introduction</b></li>
+            <li><b>Background</b></li>
+            <li><b>Needs</b></li>
+            <li><b>Solutions</b></li>
+            <li><b>Requirements</b></li>
+        </ul>
+    </li>
+    <li>
+        <h3>Phase 1 - Website (Alpha Version)</h3>
+        <ul>
+            <li><i>Site URL here in this section.</i></li>
+        </ul>
+    </li>
+</ol>
+<hr />
+<br />
 
 <h2>IMY 320 Website Project Proposal</h2>
 <b>NPO Name: </b><a href="http://amanzimtoti.byethost33.com">Amanzimtoti</a>

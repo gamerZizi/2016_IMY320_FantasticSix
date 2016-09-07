@@ -3,21 +3,33 @@
     Author     : Collen Simelane
 */
 
-.amanzi-parent select, .amanzi-parent .input-div {
+.amanzi-parent select, .amanzi-parent .input-div, .amanzi-parent table td span#phoneCode  {
     background: #f7f7f7 none repeat scroll 0 0;
     border: 1px solid #d1d1d1;
     border-radius: 2px;
     color: #686868;
     padding: 0.625em 0.4375em;
-    width: 100%;
+    width: 98%;
+}
+
+.amanzi-parent .input-div {
+    width: 96.4%;
+}
+
+.amanzi-parent input.text-input {
+    width: 98% !important;
 }
 
 .amanzi-parent .opt-title {
     font-weight: bold;
 }
 
+.amanzi-parent #phoneDiv input {
+    float: left;
+}
+
 .amanzi-parent #phone {
-    width: 91.7% !important;
+    width: 92% !important;
 }
 
 .amanzi-parent label {
@@ -32,10 +44,53 @@
     margin-right: 20px;
 }
 
+.amanzi-parent fieldset {
+    border: 1px solid #d1d1d1 !important;
+}
+
 .amanzi-parent fieldset legend {
     font-weight: bold;
     font-size: 1.2em;
     color: #32373c;
 }
 
+.amanzi-parent th {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.amanzi-parent td {
+    padding-left: 20px;
+}
+
+.amanzi-parent table td textarea, .amanzi-parent table td input[type='text'] {
+    width: 95%;
+}
+
+.amanzi-parent table td input#phone, .amanzi-parent table td span#phoneCode {
+    float: left;
+}
+
+.amanzi-parent table td span#phoneCode  {
+    padding: 4px 7px;
+    width: 10%;
+}
+
+.amanzi-parent table td input#phone {   
+    width: 81% !important;
+}
+
+.amanzi-parent-backend h2 {
+    font-size: 1.3em;
+    margin: 1em 0;
+    color: #23282d;
+}
+
+.amanzi-parent-backend #phoneCode {
+    
+}
+
+.amanzi-parent-backend #phone {
+    width: 20em;
+}
 

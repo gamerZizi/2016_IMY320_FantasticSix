@@ -62,7 +62,7 @@ function create_common_inputs() {
 				<legend class=''>Personal Details</legend>
 				<div class='amanzi-row'>
 				  <label for='fullname'>Full Name: </label>
-				  <input type='text' disabled='disabled' value='{$full_name}' />
+				  <input class='text-input' type='text' disabled='disabled' value='{$full_name}' />
 				</div>
 				<div class='amanzi-row'>
 				  <label for='gender'>Gender: </label><span style='color: red;'>*</span><br />
@@ -73,40 +73,58 @@ function create_common_inputs() {
 				</div>
 				<div class='amanzi-row'>
 				  <label for='dateOfBirth'>Date of Birth: </label><span style='color: red;'>*</span>
-				  <input class='text-input default_field_username' onchange='validateDOB();' type='text' id='dateOfBirth' name='dateOfBirth' value='' required='required' />
+				  <input placeholder='1880-12-31' class='text-input default_field_username text-input' onchange='validateDOB();' type='text' id='dateOfBirth' name='dateOfBirth' value='' required='required' />
 				  <span style='margin-left: 5px; font-size: 11px; font-style: italic;' class=''>(YYYY-MM-DD)</span>
 				</div>
-				<div class='amanzi-row'>
+				<div id='phoneDiv' class='amanzi-row'>
 				  <label for='phone'>Mobile Number: </label><span style='color: red;'>*</span><br />
 				  <input type='text' disabled='disabled' value='+27' size='5' style='width: 60px;' />
-				  <input class='text-input default_field_username' type='text' id='phone' name='phone' value='' maxlength='9' required='required' />
+				  <input placeholder='780000000' class='text-input default_field_username' type='text' id='phone' name='phone' value='' maxlength='9' required='required' />
 				</div>
-				<fieldset>
+				<fieldset id='addressFieldset'>
 				  <legend>Address:</legend>
 				  <div class='amanzi-row'>
 					<label class='' for='streenAddress'>Street Address: </label><span style='color: red;'>*</span>
-					<input type='text' id='streenAddress' name='streenAddress' value='' required='required' />
+					<input placeholder='111 Lundi Street' type='text' class='text-input' id='streenAddress' name='streenAddress' value='' required='required' />
 				  </div>
 				  <div class='amanzi-row'>
 					". create_continent_list() ."
 				  </div>
-				  <div class='amanzi-row' id='countryDiv'></div>
-				  <div class='amanzi-row' id='provinceDiv'></div>
-				  <div class='amanzi-row' id='cityDiv'></div>
-				  <div class='amanzi-row' id='postCodeDiv'></div>				  
+				  <div class='amanzi-row' id='countryDiv'>
+					<label for=''>Country:</label>
+					<select>
+						<option class='opt-title'>-- Please Select Country --</option>
+					</select>
+				  </div>
+				  <div class='amanzi-row' id='provinceDiv'>
+				    <label for=''>Province:</label>
+					<select>
+						<option class='opt-title'>-- Please Select Province --</option>
+					</select>
+				  </div>
+				  <div class='amanzi-row' id='cityDiv'>
+					<label for=''>City:</label>
+					<select>
+						<option class='opt-title'>-- Please Select City --</option>
+					</select>
+			      </div>
+				  <div class='amanzi-row' id='postCodeDiv'>
+					<label for=''>Post Code:</label><span style='color: red;'>*</span>
+					<input type='text' placeholder='55555' class='text-input' />
+				  </div>				  
 				</fieldset>
 				<div class='amanzi-row'>
 					<label for='occupation'>Occupation: </label><span style='color: red;'>*</span>
-					<input type='text' id='occupation' name='occupation' value='' required='required' />
+					<input placeholder='Web Developer' type='text' id='occupation' class='text-input' name='occupation' value='' required='required' />
 				  </div>
 				<div class='amanzi-row'>
 				  <label style='vertical-align: top;' for='prevProjects'>Previous Projects: </label>
-				  <textarea name='prevProjects' id='prevProjects' rows='6'></textarea>
+				  <textarea placeholder='Worked on a WordPress theme' name='prevProjects' id='prevProjects' rows='6'></textarea>
 				  <span style='margin-left: 5px; font-size: 11px; font-style: italic;' class=''>(Optional)</span>
 				</div>
 				<div class='amanzi-row'>
 					<label style='vertical-align: top;' for='refs'>References: </label>
-					<textarea name='refs' id='refs' rows='6'></textarea>
+					<textarea placeholder='MS Mohlala, +27787770000, Web Developer' name='refs' id='refs' rows='6'></textarea>
 					<span style='margin-left: 5px; font-size: 11px; font-style: italic;' class=''>(Optional) - <b>Format:</b> Name, Contact Number, Position</span>          
 				</div>
 			</fieldset>";
@@ -118,11 +136,11 @@ function create_company_inputs() {
 				<legend>Company Details</legend>
 				<div class='amanzi-row'>
 				  <label for='companyName'>Company Name: </label><span style='color: red;'>*</span>
-				  <input type='text' required='required' name='companyName' id='companyName' value='' />
+				  <input placeholder='Amanzimtoti Co.' type='text' required='required' class='text-input' name='companyName' id='companyName' value='' />
 				</div>
 				<div class='amanzi-row'>
 				  <label style='vertical-align: top;' for='companyAddress'>Company Address: </label><span style='color: red;'>*</span>
-				  <textarea name='companyAddress' id='companyAddress' required='required' rows='6'></textarea>
+				  <textarea placeholder='115 Menlyn Street, Rnadburg, 002' name='companyAddress' id='companyAddress' required='required' rows='6'></textarea>
 				</div>
 			</fieldset>";
 	return $html;
@@ -157,7 +175,7 @@ function create_city_list($province_id) {
 }
 
 function create_postcode_input() {
-	return create_input("Post Code", "postCode", "postCode");
+	return create_input("Post Code", "postCode", "postCode", true, "55555");
 }
 
 function get_country_name($country_id) {
@@ -232,9 +250,67 @@ function amanzi_insert_additional_details() {
 	);
 }
 
+function amanzi_update_additional_details($user_id = 0) {
+	global $wpdb;
+	$user = ($user_id === 0) ? wp_get_current_user() : get_userdata( $user_id );
+	$table = $wpdb->prefix . "amanzi_members";
+	//echo "<pre>"; print_r($_POST);exit;
+	$post = amanzi_clean_array($_POST);
+	extract($post);
+	if (!isset($role) || empty($role)) return;
+	if (!amanzi_format_dob($dateOfBirth)) return;
+	
+	$details = array();
+	$format = array();
+	$where = array("user_id" => $user->ID);
+	$where_format = array('%d');
+	
+	if ($role === "benefactor") {
+		$details["company_name"] = $companyName;					$format[] = '%s';
+		$details["company_address"] = $companyAddress;				$format[] = '%s';
+	}
+	
+	$details["date_of_birth"] = $dateOfBirth;						$format[] = '%s';
+	$details["occupation"] = $occupation;							$format[] = '%s';
+	$details["phone"] = amanzi_format_phone($phone);				$format[] = '%s';
+	//$details["address"] = amanzi_format_address($post);				$format[] = '%s';
+	
+	if (is_admin()) {
+		$details["gender"] = $gender;								$format[] = '%s';
+	}
+	
+	if (!empty($prevProjects)) {
+		$details["prev_projects"] = $prevProjects;					$format[] = '%s';
+	}
+	if (!empty($refs)) {
+		$details["references"] = $refs;								$format[] = '%s';
+	}
+	
+	$wpdb->update(
+		$table,
+		$details,
+		$where,
+		$format,
+		$where_format
+	);
+}
+
+
+/*if (!current_user_can("manage_options")) {
+	wp_die("You do not have sufficient permissions!");
+}
+*/
+
 function amanzi_clean_array($params) {
 	foreach ( $params as $key => $value ) {
-		$params[$key] = htmlspecialchars(trim($value));
+		if (is_array( $value )) {
+			foreach ( $value as $k => $val ) {
+				$params[$k] = htmlspecialchars(trim($val));
+			}
+		}
+		else {
+			$params[$key] = htmlspecialchars(trim($value));
+		}		
 	}
 	return $params;
 }
@@ -294,14 +370,14 @@ function create_select_list($label, $id, $name, $results, $value, $display, $jsc
 	return $select;
 }
 
-function create_input($label, $id, $name, $required = true, $value = "") {
+function create_input($label, $id, $name, $required = true, $placeholder="", $value = "") {
 	$input = "<label for='{$id}'>" . $label . ": </label>";
 	$requiredAttr = "";
 	if ($required) {
 		$input .= "<span style='color: red;'>*</span>";
 		$requiredAttr = "required='required'";
 	}
-	$input .= "<input {$requiredAttr} type='text' id='{$id}' name='{$name}' value='{$value}' />";
+	$input .= "<input placeholder='{$placeholder}' {$requiredAttr} class='text-input' type='text' id='{$id}' name='{$name}' value='{$value}' />";
 	return $input;
 }
 
@@ -311,27 +387,92 @@ function amanzi_display_user_information( $stdClass_object) {
 	$user_meta = get_user_meta($user->ID);
 	$extra_user_data = get_userdata($user->ID);
 	$full_name = $user_meta["first_name"][0] . " " . $user_meta["last_name"][0];
+	$hidden_inputs = "<input type='hidden' name='role' value='{$user_obj->roles[0]}' />";
 	$table =  "<table>";
 	$table .=		"<tr><th style='vertical-align: top;'>Full Name:</th><td>" . $full_name . "</td></tr>";
 	$table .=		"<tr><th style='vertical-align: top;'>Member Type:</th><td>" . ucfirst($user_obj->roles[0]) . "</td></tr>";
 	$table .=		"<tr><th style='vertical-align: top;'>Email Address:</th><td><a href='mailto:" . $user_obj->data->user_email. "'>" . $user_obj->data->user_email . "</a></td></tr>";
 	$table .=		"<tr><th style='vertical-align: top;'>Gender:</th><td>" . (($stdClass_object->gender === 'M') ? "Male" : "Female") . "</td></tr>";
-	$table .=		"<tr><th style='vertical-align: top;'>Date of Birth:</th><td>" . $stdClass_object->date_of_birth . "</td></tr>";
-	$table .=		"<tr><th style='vertical-align: top;'>Contact Number:</th><td>" . $stdClass_object->phone . "</td></tr>";
+	$table .=		"<tr><th style='vertical-align: top;'>Date of Birth:</th><td><input type='text' name='dateOfBirth' id='dateOfBirth' value='" . $stdClass_object->date_of_birth . "' onchange='validateDOB();' /></td></tr>";
+	$table .=		"<tr><th style='vertical-align: top;'>Contact Number:</th><td><span id='phoneCode'>+27</span><input type='text' id='phone' name='phone' value='" . substr($stdClass_object->phone, 3) . "' /></td></tr>";
 	$table .=		"<tr><th style='vertical-align: top;'>Address:</th><td>" . amanzi_format_address_html($stdClass_object->address) . "</td></tr>";
-	$table .=		"<tr><th style='vertical-align: top;'>Occupation:</th><td>" . $stdClass_object->occupation . "</td></tr>";
-	if (!empty($stdClass_object->prev_projects)) {
-		$table .=	"<tr><th style='vertical-align: top;'>Occupation:</th><td>" . amanzi_format_textarea_html($stdClass_object->prev_projects) . "</td></tr>";
-	}	
-	if (!empty($stdClass_object->references)) {
-		$table .=	"<tr><th style='vertical-align: top;'>Reference:</th><td>" . amanzi_format_textarea_html($stdClass_object->references, array(";", ",")) . "</td></tr>";
+	$table .=		"<tr><th style='vertical-align: top;'>Occupation:</th><td><input type='text' name='occupation' value='" . $stdClass_object->occupation . "' /></td></tr>";
+	
+	$placeholder = empty($stdClass_object->prev_projects) ? "placeholder='Worked on a WordPress theme'" : "";
+	//if (!empty($stdClass_object->prev_projects)) {
+		$table .=	"<tr><th style='vertical-align: top;'>Previous Projects:</th><td><textarea {$placeholder} name='prevProjects' rows='5'>" . amanzi_format_textarea_html($stdClass_object->prev_projects) . "</textarea></td></tr>";
+	//}	
+	$placeholder = empty($stdClass_object->references) ? "placeholder='MS Mohlala, +27787770000, Web Developer'" : "";
+	//if (!empty($stdClass_object->references)) {
+		$table .=	"<tr><th style='vertical-align: top;'>Reference:</th><td><textarea {$placeholder} name='refs' rows='5'>" . amanzi_format_textarea_html($stdClass_object->references, array(";", ",")) . "</textarea></td></tr>";
+	//}
+	
+	if ($user_obj->roles[0] === "benefactor") {
+		$placeholder = empty($stdClass_object->company_name) ? "Your Campany Name" : "";
+		//if (!empty($stdClass_object->company_name)) {
+			$table .=	"<tr><th style='vertical-align: top;'>Company Name:</th><td><input {$placeholder} type='text' name='companyName' value='" . $stdClass_object->company_name . "' /></td></tr>";
+		//}
+		$placeholder = empty($stdClass_object->company_address) ? "placeholder='115 Menlyn Street, Rnadburg, 002'" : "";
+		//if (!empty($stdClass_object->company_address)) {
+			$table .=	"<tr><th style='vertical-align: top;'>Company Address:</th><td><textarea {$placeholder} name='companyAddress' rows='5'>" . amanzi_format_textarea_html($stdClass_object->company_address) . "</textarea></td></tr>";
+		//}
 	}
-	if (!empty($stdClass_object->company_name)) {
-		$table .=	"<tr><th style='vertical-align: top;'>Company Name:</th><td>" . $stdClass_object->company_name . "</td></tr>";
-	}
-	if (!empty($stdClass_object->company_address)) {
-		$table .=	"<tr><th style='vertical-align: top;'>Company Address:</th><td>" . amanzi_format_textarea_html($stdClass_object->company_address) . "</td></tr>";
-	}	
+		
 	$table .= "</table>";
+	$table .= $hidden_inputs;
 	return $table;
+}
+
+function amanzi_display_user_information_under_user_profile() {
+	if (!isset($_GET["user_id"])) return;
+	$user_id = (!empty($_GET["user_id"])) ? (int)(trim($_GET["user_id"])) : 0;
+	
+	global $wpdb;
+	$query = "SELECT * FROM " . $wpdb->prefix . "amanzi_members WHERE user_id=" . $user_id . " LIMIT 1;";
+	$results = $wpdb->get_results($query);
+	if (!$results) return;
+		
+	$stdClass_object = $results[0];
+	$user_obj = new WP_User($user_id);
+	$user_meta = get_user_meta($user_id);
+	
+	$selectedM = ($stdClass_object->gender === 'M') ? "selected='selected'" : "";
+	$selectedF = ($stdClass_object->gender === 'F') ? "selected='selected'" : "";
+	$genderSelect  = "<select name='gender'>";
+	$genderSelect .=	"<option {$selectedM} value='M'>Male</option>";
+	$genderSelect .=	"<option {$selectedF} value='F'>Female</option>";
+	$genderSelect .= "</select>";
+	
+	$div  = "<div class='amanzi-parent-backend'>";
+	$div .=		"<h2>Amanzimtoti Member Details</h2>";
+	$table =  "<table class='form-table'>";
+	$table .=		"<tr><th style='vertical-align: top;'>Gender:</th><td>" . $genderSelect . "</td></tr>";
+	$table .=		"<tr><th style='vertical-align: top;'>Date of Birth:</th><td><input class='regular-text' type='text' name='dateOfBirth' id='dateOfBirth' value='" . $stdClass_object->date_of_birth . "' onchange='validateDOB();' /></td></tr>";
+	$table .=		"<tr><th style='vertical-align: top;'>Contact Number:</th><td><span style='border: 1px solid #ddd; padding: 3px 5px; background-color: #fff; color: grey;' id='phoneCode'>+27</span><input style='width: 22.4em;' class='regular-text' type='text' id='phone' name='phone' value='" . substr($stdClass_object->phone, 3) . "' /></td></tr>";
+	$table .=		"<tr><th style='vertical-align: top;'>Address:</th><td>" . amanzi_format_address_html($stdClass_object->address) . "</td></tr>";
+	$table .=		"<tr><th style='vertical-align: top;'>Occupation:</th><td><input class='regular-text' type='text' name='occupation' value='" . $stdClass_object->occupation . "' /></td></tr>";
+	
+	$placeholder = empty($stdClass_object->prev_projects) ? "placeholder='Worked on a WordPress theme'" : "";
+	//if (!empty($stdClass_object->prev_projects)) {
+		$table .=	"<tr><th style='vertical-align: top;'>Previous Projects:</th><td><textarea {$placeholder} name='prevProjects' rows='5' cols='30'>" . amanzi_format_textarea_html($stdClass_object->prev_projects) . "</textarea></td></tr>";
+	//}	
+	$placeholder = empty($stdClass_object->references) ? "placeholder='MS Mohlala, +27787770000, Web Developer'" : "";
+	//if (!empty($stdClass_object->references)) {
+		$table .=	"<tr><th style='vertical-align: top;'>Reference:</th><td><textarea {$placeholder} name='refs' rows='5' cols='30'>" . amanzi_format_textarea_html($stdClass_object->references, array(";", ",")) . "</textarea></td></tr>";
+	//}
+	
+	if ($user_obj->roles[0] === "benefactor") {
+		$placeholder = empty($stdClass_object->company_name) ? "Your Campany Name" : "";
+		//if (!empty($stdClass_object->company_name)) {
+			$table .=	"<tr><th style='vertical-align: top;'>Company Name:</th><td><input {$placeholder} class='regular-text' type='text' name='companyName' value='" . $stdClass_object->company_name . "' /></td></tr>";
+		//}
+		$placeholder = empty($stdClass_object->company_address) ? "placeholder='115 Menlyn Street, Rnadburg, 002'" : "";
+		//if (!empty($stdClass_object->company_address)) {
+			$table .=	"<tr><th style='vertical-align: top;'>Company Address:</th><td><textarea {$placeholder} name='companyAddress' rows='5' cols='30'>" . amanzi_format_textarea_html($stdClass_object->company_address) . "</textarea></td></tr>";
+		//}
+	}
+		
+	$table .= "</table>";
+	$div .= $table . "</div>";
+	echo $div;
 }
