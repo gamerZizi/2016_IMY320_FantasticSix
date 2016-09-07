@@ -9,7 +9,7 @@ C Nkhwashu  - 14296684 <br />
 
 
 <h2>IMY 320 Website Project Proposal</h2>
-<b>NPO Name: </b>Amanzimtoti
+<b>NPO Name: </b><a href="http://amanzimtoti.byethost33.com">Amanzimtoti</a>
 
 <h2>Introduction</h2>
 
@@ -129,6 +129,6 @@ Based on your stated needs we have come up with user friendly web and mobile app
     <b>Deadline: </b>29 August 2016<br />
     <ul>
         <li><b>Branch (<span style="color: green;">dev_phase1</span>) - </b><i> Web directory for the website, we'll later add mobile directory for the App (in <span style="color: green;">dev_phase2</span>).</i></li>
-        <li><b>Amanzimtoti Webpage: </b><a href="http://amanzimtoti.netau.net/" target="_blank">http://amanzimtoti.netau.net/</a></li>
+        <li><b>Amanzimtoti Webpage: </b><a href="http://http://amanzimtoti.byethost33.com" target="_blank">http://http://amanzimtoti.byethost33.com</a></li>
     </ul>
 </div>
