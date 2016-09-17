@@ -31,6 +31,7 @@ function amanzi_handle_ajax_requests() {
 	if ($_POST["type"] === "benefactor") {
 		echo create_company_inputs();
 	}
+	echo create_events_filter_section();
 	//print_r(  get_user_meta( wp_get_current_user()->ID));
 	exit();
 }
@@ -92,19 +93,19 @@ function create_common_inputs() {
 				  </div>
 				  <div class='amanzi-row' id='countryDiv'>
 					<label for=''>Country:</label>
-					<select>
+					<select required>
 						<option class='opt-title'>-- Please Select Country --</option>
 					</select>
 				  </div>
 				  <div class='amanzi-row' id='provinceDiv'>
 				    <label for=''>Province:</label>
-					<select>
+					<select required>
 						<option class='opt-title'>-- Please Select Province --</option>
 					</select>
 				  </div>
 				  <div class='amanzi-row' id='cityDiv'>
 					<label for=''>City:</label>
-					<select>
+					<select required>
 						<option class='opt-title'>-- Please Select City --</option>
 					</select>
 			      </div>
@@ -127,7 +128,7 @@ function create_common_inputs() {
 					<textarea placeholder='MS Mohlala, +27787770000, Web Developer' name='refs' id='refs' rows='6'></textarea>
 					<span style='margin-left: 5px; font-size: 11px; font-style: italic;' class=''>(Optional) - <b>Format:</b> Name, Contact Number, Position</span>          
 				</div>
-			</fieldset>";
+			</fieldset>";	
 	return $html;
 }
 
@@ -141,6 +142,23 @@ function create_company_inputs() {
 				<div class='amanzi-row'>
 				  <label style='vertical-align: top;' for='companyAddress'>Company Address: </label><span style='color: red;'>*</span>
 				  <textarea placeholder='115 Menlyn Street, Rnadburg, 002' name='companyAddress' id='companyAddress' required='required' rows='6'></textarea>
+				</div>
+			</fieldset>";
+	return $html;
+}
+
+function create_events_filter_section($event_categories=array(), $event_organizers=array()) {
+	$html = "<fieldset>
+				<legend>Events Filter (Mobile)</legend>
+				<div>
+					<p><i><b>(Optional)</b></i> Select a Filter to be used when displaying events on the mobile app. If you select nothing then all Events will be displayed.</p>
+				</div>
+				<hr />
+				<div class='amanzi-row'>
+					" . create_events_category_checkboxes($event_categories) . "
+				</div>
+				<div class='amanzi-row'>
+					" . create_events_organizer_checkboxes($event_organizers) . "
 				</div>
 			</fieldset>";
 	return $html;
@@ -174,6 +192,14 @@ function create_city_list($province_id) {
 	return create_select_list("City", "cityID", "city", $results, "city", "city", "showPostCodeInput();");
 }
 
+function create_events_category_checkboxes($checked_values=array()) {
+	return create_checkboxes("Filter By Event Category", "category", get_events_cateogries(), "term_id", "name", $checked_values);
+}
+
+function create_events_organizer_checkboxes($checked_values=array()) {
+	return create_checkboxes("Filter By Event Organizer", "organizer", get_events_organizers(), "meta_id", "meta_value", $checked_values);
+}
+
 function create_postcode_input() {
 	return create_input("Post Code", "postCode", "postCode", true, "55555");
 }
@@ -190,6 +216,22 @@ function get_province_name($province_id) {
 	$query = "SELECT `province` FROM " . $wpdb->prefix . "amanzi_provinces WHERE `id`='%d' LIMIT 1;";
 	$results = $wpdb->get_results($wpdb->prepare($query, (int)$province_id));
 	return $results[0]->province;
+}
+
+function get_events_cateogries() {
+	global $wpdb;
+	$query = "SELECT terms.term_id, terms.name FROM {$wpdb->prefix}terms AS terms "
+			."INNER JOIN {$wpdb->prefix }term_taxonomy AS term_taxonomy "
+			."ON term_taxonomy.term_id = terms.term_id "
+			."WHERE term_taxonomy.taxonomy = '%s';";
+	return $wpdb->get_results($wpdb->prepare($query, "tribe_events_cat"));
+}
+
+function get_events_organizers() {
+	global $wpdb;
+	$query = "SELECT meta_id, meta_value FROM {$wpdb->prefix}postmeta "
+			."WHERE meta_key='_OrganizerOrganizer' AND meta_value!='';";
+	return $wpdb->get_results($query);
 }
 
 function amanzi_user_exist( $user_id ) {
@@ -236,6 +278,12 @@ function amanzi_insert_additional_details() {
 	if (!empty($refs)) {
 		$details["references"] = $refs;								$format[] = '%s';
 	}
+	if (isset($category) && is_array($category)) {
+		$details["event_categories"] = json_encode($category);		$format[] = '%s';
+	}
+	if (isset($organizer) && is_array($organizer)) {
+		$details["event_organizers"] = json_encode($organizer);		$format[] = '%s';
+	}
 	
 	$wp_userdetails = array( "ID" => $user->ID, "role" => $role, "show_admin_bar_front" => "false" );
 	$user_id = wp_update_user($wp_userdetails);
@@ -254,7 +302,7 @@ function amanzi_update_additional_details($user_id = 0) {
 	global $wpdb;
 	$user = ($user_id === 0) ? wp_get_current_user() : get_userdata( $user_id );
 	$table = $wpdb->prefix . "amanzi_members";
-	//echo "<pre>"; print_r($_POST);exit;
+	
 	$post = amanzi_clean_array($_POST);
 	extract($post);
 	if (!isset($role) || empty($role)) return;
@@ -285,6 +333,16 @@ function amanzi_update_additional_details($user_id = 0) {
 	if (!empty($refs)) {
 		$details["references"] = $refs;								$format[] = '%s';
 	}
+	if (isset($category) && is_array($category)) {
+		$details["event_categories"] = json_encode($category);		$format[] = '%s';
+	} else {
+		$details["event_categories"] = json_encode(array());		$format[] = '%s';
+	}
+	if (isset($organizer) && is_array($organizer)) {
+		$details["event_organizers"] = json_encode($organizer);		$format[] = '%s';
+	} else {
+		$details["event_organizers"] = json_encode(array());		$format[] = '%s';
+	}
 	
 	$wpdb->update(
 		$table,
@@ -294,12 +352,6 @@ function amanzi_update_additional_details($user_id = 0) {
 		$where_format
 	);
 }
-
-
-/*if (!current_user_can("manage_options")) {
-	wp_die("You do not have sufficient permissions!");
-}
-*/
 
 function amanzi_clean_array($params) {
 	foreach ( $params as $key => $value ) {
@@ -381,6 +433,21 @@ function create_input($label, $id, $name, $required = true, $placeholder="", $va
 	return $input;
 }
 
+function create_checkboxes($label, $name, $results, $value, $display, $checked_array=array()) {
+	$input = "<label>" . $label . ": </label>";
+	$input .= "<div class='input-div'>";
+	if (!$results) {
+		return "";
+	}	
+	foreach ( $results as $result) {
+		if (empty($result->$display)) continue;
+		$checked = (!empty($checked_array) && in_array($result->$value, $checked_array)) ? "checked='checked'" : "";
+		$input .= "<input type='checkbox' name='{$name}[]' value='{$result->$value}' {$checked} />";
+		$input .= "<span class='checkbox-title'>{$result->$display}</span>";
+	}	
+	return $input . "</div>";
+}
+
 function amanzi_display_user_information( $stdClass_object) {
 	$user = wp_get_current_user();
 	$user_obj = new WP_User($user->ID);
@@ -419,6 +486,11 @@ function amanzi_display_user_information( $stdClass_object) {
 	}
 		
 	$table .= "</table>";
+	
+	$event_categories = (!empty($stdClass_object->event_categories)) ? json_decode($stdClass_object->event_categories) : array();
+	$event_organizers = (!empty($stdClass_object->event_organizers)) ? json_decode($stdClass_object->event_organizers) : array();
+	
+	$table .= create_events_filter_section($event_categories, $event_organizers);
 	$table .= $hidden_inputs;
 	return $table;
 }

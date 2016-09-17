@@ -1,0 +1,188 @@
+body {
+  background: #fff;
+  color: #202020;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  position: inherit;
+}
+
+.handy {
+  font-family: 'Caveat';
+}
+
+h1, h2 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 1rem 0;
+  padding: 0.4em 0 0.3rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+@media screen and (min-width: 64.0625rem) {
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+@media screen and (min-width: 64.0625rem) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+h3, h4 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1rem 0 .5rem;
+  padding: 0.3em 0 0.2em;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 64.0625rem) {
+  h3 {
+    font-size: 2.1rem;
+  }
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 64.0625rem) {
+  h4 {
+    font-size: 1.8rem;
+  }
+}
+
+h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1rem 0 .5rem;
+  padding: 0.2em 0 0.2em;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 64.0625rem) {
+  h5 {
+    font-size: 1.7rem;
+  }
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 64.0625rem) {
+  h6 {
+    font-size: 1.6rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+ol {
+  margin: 1.250rem 1.250rem 1.250rem 2.500rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: 0.625rem;
+}
+
+a {
+  color: #eb9f9f;
+  text-decoration: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.screen-reader-text, .no-display {
+  clip: rect(1px, 0.063rem, 0.063rem, 0.063rem);
+  height: 0.063rem;
+  overflow: hidden;
+  position: absolute !important;
+  width: 0.063rem;
+}
+
+.site .skip-link {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 0.063rem 0.063rem rgba(0, 0, 0, 0.2);
+  color: #21759b;
+  display: block;
+  font: bold 0.875rem/normal "Noto Sans", sans-serif;
+  left: -9999em;
+  outline: none;
+  padding: 0.938rem 1.438rem 0.875rem;
+  text-decoration: none;
+  text-transform: none;
+  top: -9999em;
+}
+
+dl {
+  margin-bottom: 1.6em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.6em;
+}
+
+table,
+th,
+td {
+  border: 1px solid #eaeaea;
+  border: 1px solid #333333;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-width: 1px 0 0 1px;
+  margin: 0 0 1.6em;
+  table-layout: fixed;
+  /* Prevents HTML tables from becoming too wide */
+  width: 100%;
+}
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+th {
+  border-width: 0 1px 1px 0;
+  color: #d38e8e;
+  font-weight: 700;
+}
+
+td {
+  border-width: 0 1px 1px 1px;
+}
+
+th, td {
+  padding: 0.4em;
+}

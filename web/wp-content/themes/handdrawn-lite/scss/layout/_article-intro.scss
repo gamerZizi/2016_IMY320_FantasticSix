@@ -1,0 +1,133 @@
+.sticky,
+.article-intro {
+  position: relative;
+  .article-title {
+    position: relative;
+    z-index: 4;
+    @media #{$print}{
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      top: 0;
+    }
+  }
+  img {
+    padding: 0.625rem 0 0 0;
+    width: 100%;
+    @media #{$print}{
+      display: none;
+    }
+  }
+  h1, h2 {
+    display: inline-block;
+    line-height: 1.5;
+    z-index: 3;
+    @media #{$brk-netbook}{     
+      margin-bottom: 0;
+    }
+  }
+}
+
+.post-informations {
+  color: $color-prim;
+  font-size: 1.3rem;
+  [class^="icon-"], [class*=" icon-"] {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+  }
+  .icon-calendar {
+    margin-left: 0;
+  }
+  .icon-speech-bubble-single {
+    font-size: 180%;
+  }
+  .handy {
+    margin-right: 1rem;
+  }
+  a {
+    border-bottom: 2px solid $color-prim;
+    margin: 0.1rem;
+    padding: 0.063rem 0.25rem;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+  }
+  a:hover {
+
+  }
+}
+
+.post-informations.under-thumbnail {
+  text-align: center;
+}
+
+.post-thumb {
+  margin-top: 2rem;
+  img {
+    width: 100%;
+  }
+}
+  
+.round-title {
+  position: relative;
+}
+
+
+img.attachment-post-thumbnail {
+  width: 100%;
+}
+
+.single-post {
+  .post-informations {
+    span {
+        display: inline;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-in-out;
+        opacity: 0;
+        transition-delay: 300ms;
+        -webkit-transition-delay: 300ms;
+        a {
+          display: inline;
+        }
+      }
+      span:nth-child(1) {
+        transition-delay: 400ms;
+        -webkit-transition-delay: 400ms;
+      }
+      span:nth-child(2) {
+        transition-delay: 500ms;
+        -webkit-transition-delay: 500ms;
+      }
+      span:nth-child(3) {
+        transition-delay: 600ms;
+        -webkit-transition-delay: 600ms;
+      }
+       span:nth-child(4) {
+        transition-delay: 700ms;
+        -webkit-transition-delay: 700ms;
+      }
+       span:nth-child(5) {
+        transition-delay: 800ms;
+        -webkit-transition-delay: 800ms;
+      }
+       span:nth-child(6) {
+        transition-delay: 900ms;
+        -webkit-transition-delay: 900ms;
+      }
+       span:nth-child(7) {
+        transition-delay: 1000ms;
+        -webkit-transition-delay: 1000ms;
+      }
+       span:nth-child(8) {
+        transition-delay: 1100ms;
+        -webkit-transition-delay: 1100ms;
+      }
+      span:nth-child(9) {
+        transition-delay: 1200ms;
+        -webkit-transition-delay: 1200ms;
+      }
+      span.comein {
+        opacity: 1;
+      }
+  }
+}

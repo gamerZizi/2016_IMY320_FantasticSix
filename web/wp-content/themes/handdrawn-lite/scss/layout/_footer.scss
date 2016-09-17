@@ -1,0 +1,14 @@
+.site-footer {
+  background: $color-ter;
+  color: $color-sec;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  @media #{$print}{
+    display: none;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+

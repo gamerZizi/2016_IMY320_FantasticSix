@@ -1,0 +1,52 @@
+﻿“Handdrawn-lite” Documentation by “SVG Themes” v2.1
+
+“Handdrwn-lite - Responsive WordPress Theme”
+
+Created: 22 February 2016
+By: Alessandro Costa - svgThemes.com
+Email: info@svgthemes.com
+
+Table of Contents
+
+1) Installation
+2) Posts
+3) Menu
+4) Localization
+
+Thank you for downloading Handdrawn-lite! This document covers the installation and use of this theme. I encourage you to read this document if you are experiencing any difficulties.
+
+1)Installation
+
+To install this theme you must have a working version of WordPress already installed. For information about the WordPress installation, please see the WordPressCodex.
+Upload via ftp:
+First, upload the zip archive named handdrawn-lite.zip that you downloaded on your computer to your server via ftp to the /themes/ directory on your Wordpress installation. (wp-content > themes).
+Upload via Wordpress admin:
+Go to your Wordpress admin, and in Appearance > Themes, choose Add New Themes.
+Click Add new and upload the handdrawn-lite.zip file, once you have uploaded the theme, click on "activate".
+Then, in the admin panel you will be required to install the handdrawnl-lite features plugin and the Advanced Custom Fields plugin, which are required for correct use of this theme.
+
+2)Posts
+
+Handdrawn-lite comes with two post formats: standard and aside. The difference between them is that all the text of the aside post has a hand written style, while only the title and the meta-informations of the standard post have a hand written style.
+This theme allow users to add a clip mask to the featured image, with the shape of a circle or with the shape of a cloud. When you edit a post, under the "Handdrawn svg options" area you can find a select option which contains the shape of the clip masks. When you select "circle" or "cloud" a new checkbox will appear: by checking it the title of the post will be displayed along a circle textpath.
+
+3) Menu
+
+This theme has two registered menu, the primary menu and the social menu. In the dashboard of WordPress, go to Appearance > Menu and click on "create a new menu". Call it "primary" and click on "Create Menu". Now, in the bottom part of the page, in "Menu Settings" > "Theme Locations" click on the "primary" checkbox. Remember to add the pages, links or categories that you want to display in the primary menu, selecting them on the left part of the screen and clicking on "add to menu".The social menu, which appears at the top right of the screen, contains links to the social network entered by the user (only for the following social networks: Facebook, Twitter, Google+ ). To do this, go to Appearance> Menus to create your menu and in "theme location" in the bottom of the page, select "Social media". At this point, in the Links tab, enter the url of your account of social networks (eg www.facebook.com/username), and the name of the link in "text link", then click "add to menu". The link will appear in the section "Menu structure", where you can drag the menu items in the order yor prefer.
+For more info on how to setup your menu in WordPress see http://codex.wordpress.org/Appearance_Menus_SubPanel
+
+4) Localization
+
+This theme is ready for localization via .po/.mo files. For more informations about translating Wordpress themes, see more at: http://codex.wordpress.org/Translating_WordPress.
+
+Quick start guide for changing the language of Handdrawn-lite
+
+Check your wp-config.php file, the language of this file must match to your translation;
+Into the folder languages of the theme, find the file handdrawn.pot, duplicate and rename it (example: fr_FR.po for Franch, en_EN.po for English).
+Download POEdit and open your file with this software.
+Translate your file. In File click on Preferences and select Automatically generate mo, then save your file.
+Finally, send your new .mo and .po via FTP to your server, in the folder "languages" of the theme
+
+Once again, thank you for downloading this theme.
+
+Alessandro Costa

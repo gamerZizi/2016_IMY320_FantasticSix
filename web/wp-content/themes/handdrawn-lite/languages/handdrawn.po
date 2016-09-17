@@ -1,0 +1,176 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Handdrawn-lite\n"
+"POT-Creation-Date: 2016-05-23 18:35+0100\n"
+"PO-Revision-Date: 2016-05-23 18:43+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:11
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:12
+msgid "It looks like nothing was found at this location"
+msgstr ""
+
+#: comments.php:20
+msgid "Comments"
+msgstr ""
+
+#: comments.php:25
+msgid "Previous"
+msgstr ""
+
+#: comments.php:25 index.php:14 search.php:22
+msgid "Next"
+msgstr ""
+
+#: comments.php:31
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:36
+msgid "name"
+msgstr ""
+
+#: comments.php:37
+msgid "email"
+msgstr ""
+
+#: comments.php:40
+msgid "Your email address will not be published. Name and email are required"
+msgstr ""
+
+#: comments.php:43
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: comments.php:44
+msgid "Comment"
+msgstr ""
+
+#: content-aside.php:17 content-page.php:38 content.php:47
+msgid "Pages:"
+msgstr ""
+
+#: content-none.php:10
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:17
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:21
+msgid "Sorry, but nothing matched your search terms."
+msgstr ""
+
+#: content-none.php:26
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. "
+msgstr ""
+
+#: content.php:40
+msgid "Edit"
+msgstr ""
+
+#: functions.php:31
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:32
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:87
+msgid "Right Sidebar Widget Area"
+msgstr ""
+
+#: functions.php:96
+msgid "Footer Widget Area"
+msgstr ""
+
+#: functions.php:152
+msgid "Read More"
+msgstr ""
+
+#: functions.php:189
+msgid "Search for:"
+msgstr ""
+
+#: functions.php:201
+msgid "Search"
+msgstr ""
+
+#: functions.php:248
+msgid ""
+"You need to install this plugin to use all the features included in the "
+"theme."
+msgstr ""
+
+#: header.php:66
+msgid "Social channels"
+msgstr ""
+
+#: inc/template-tags.php:21 inc/template-tags.php:79 inc/template-tags.php:103
+#: inc/template-tags.php:146 inc/template-tags.php:212
+msgid " by "
+msgstr ""
+
+#: inc/template-tags.php:238
+msgid " on "
+msgstr ""
+
+#: inc/template-tags.php:243
+msgid " edit comment"
+msgstr ""
+
+#: inc/template-tags.php:245
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:249
+msgid "reply"
+msgstr ""
+
+#: index.php:13 search.php:21
+msgid "Prev"
+msgstr ""
+
+#: page.php:19 single-post.php:19
+msgid "Next Post: "
+msgstr ""
+
+#: page.php:20 single-post.php:20
+msgid "Next post:"
+msgstr ""
+
+#: page.php:22 single-post.php:22
+msgid " Previous Post: "
+msgstr ""
+
+#: page.php:23 single-post.php:23
+msgid "Previous post:"
+msgstr ""
+
+#: search.php:12
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""

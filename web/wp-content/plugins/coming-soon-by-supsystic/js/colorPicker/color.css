@@ -1,0 +1,211 @@
+#rgbR {
+	background-color: #0ff;
+}
+#rgbG {
+	background-color: #f0f;
+}
+#rgbB {
+	background-color: #ff0;
+}
+#rgbR div {
+	background-color: #c00;
+}
+#rgbG div {
+	background-color: #0a0;
+}
+#rgbB div {
+	background-color: #00f;
+}
+#cmyC div {
+	background-color: #0ff;
+}
+#cmyM div {
+	background-color: #f0f;
+}
+#cmyY div {
+	background-color: #ff0;
+}
+
+
+#rgbR:before, #rgbG:before, #rgbB:before,
+#hslH:before, #hslS:before, #hslL:before,
+#cmyC:before, #cmyM:before, #cmyY:before{
+	display: block;
+	float: left;
+	margin-left: -18px;
+	margin-top: -3px;
+	color: #808080;
+	
+	font-family: Courier,mono;
+	font-size: 15px;
+	line-height: 15px;
+	cursor: default;
+}
+#rgbR:after, #rgbG:after, #rgbB:after {
+	display: block;
+	float: right;
+	margin-top: -12px;
+	margin-right: -1em;
+	color: #808080;
+	
+	font-family: Courier,mono;
+	font-size: 15px;
+	line-height: 15px;
+	cursor: default;
+}
+#rgbR:before {
+	content: 'R';	
+}
+#rgbG:before {
+	content: 'G';	
+}
+#rgbB:before {
+	content: 'B';	
+}
+#rgbR:after {
+	content: 'C';
+}
+#rgbG:after {
+	content: 'M';
+}
+#rgbB:after {
+	content: 'Y';
+}
+#hslH:before {
+	content: 'H';	
+}
+#hslS:before {
+	content: 'S';	
+}
+#hslL:before {
+	content: 'L';	
+}
+#cmyC:before {
+	content: 'C';	
+}
+#cmyM:before {
+	content: 'M';	
+}
+#cmyY:before {
+	content: 'Y';	
+}
+
+
+
+#hsv_map {
+	position: absolute;
+	right: 350px;
+	top: 20px;
+}
+#hsv_map .cover {
+	opacity: 0;
+	background-color: #000;
+	position: absolute;
+	top: -1px;
+	right: 39px;
+	bottom: -1px;
+	left: -1px;
+	border-radius: 50%;
+	cursor: crosshair;
+}
+#hsv_map .bar-bg, #hsv_map .bar-white {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 25px;
+	height: 200px;
+
+}
+#hsv_map .bar-bg {
+
+}
+#hsv_map .bar-white {
+	background-color: #fff;
+}
+.hsv-cursor {
+	position: absolute;
+	border: 1px solid #eee;
+	border-radius: 50%;
+	width: 9px;
+	height: 9px;
+	cursor: default;
+	margin: -5px;
+	cursor: crosshair;
+}
+.dark .hsv-cursor {
+	border-color: #333;
+}
+.no-cursor .hsv-cursor, #hsv_map.no-cursor .cover {
+	cursor: none; /* also works in IE8 */
+	/*url(_blank.gif), url(_blank.png), url(_blank.cur), auto;*/
+}
+#luminanceBar {
+	position: absolute;
+	right: 0;
+	top: 0;
+	/* background-color: red; */
+}
+.hsv-barcursors {
+	position: absolute;
+	right: 0;
+	width: 25px;
+	top: 0;
+	height: 200px;
+	overflow: hidden;
+}
+.hsv-barcursor-l, .hsv-barcursor-r {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 4px solid transparent;
+	margin-top: -4px;
+}
+.hsv-barcursor-l {
+	left: 0;
+	border-left: 4px solid #eee;
+}
+.hsv-barcursor-r {
+	right: 0;
+	border-right: 4px solid #eee;
+}
+.dark .hsv-barcursor-l {
+	border-left-color: #333;
+}
+.dark .hsv-barcursor-r {
+	border-right-color: #333;
+}
+.cp-app {
+    z-index: 999999;
+}
+.cp-exit {
+	display: none;
+}
+[bottom-panel="cp"] {
+	height: auto !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+.cp-hideArrow:after {
+	display: none;
+}
+.modalColorPicker {
+	position: absolute;
+    z-index: 99;
+    top: 80%;
+    right: 0;
+}
+.cp-slds > div {
+	cursor: crosshair !important;
+}
+.hidden {
+	display: none;
+}
+[data-sub-panel="color"] {
+	display: none !important;
+}
+.mce-colorpanel .wpColorPicker {
+	position: absolute;
+}
+.scsColorpickerInput {
+    border: 1px solid #fff !important;
+}

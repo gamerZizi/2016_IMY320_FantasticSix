@@ -1,0 +1,78 @@
+.off-canvas-wrapper {
+    @media #{$brk-netbook}{
+        overflow-y: hidden;
+    }
+    @media #{$only-tablets}{
+        background-color: $color-prim;
+    }
+}
+
+.off-canvas-content {
+    background: #fff;
+    box-shadow: none;
+    margin: 0 auto;
+    max-width: 68.75rem;
+}
+
+.boxed {
+    max-width: 1100px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 6px 0px #ccc;
+}
+
+#content {
+    padding-bottom: 4rem;
+}
+
+.pagination {
+    margin: 3rem 0;
+    position: relative;
+    width: 100%;
+    a {
+        display: inline-block;
+        height: 4.500rem;
+        margin-bottom: 2rem;
+    }
+    a:last-child {
+        float: right;
+    }
+    a:first-child {
+        float: left;
+    }
+    span {
+        display: inline-block;
+        text-align: center;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+        -webkit-transition-duration: 0.4s;
+        -webkit-transition-timing-function: ease-out;
+    }
+    span.previous {
+        font-size: 1.6rem;
+        padding-left: 1rem;
+    }
+    span.next {
+        font-size: 1.6rem;
+         padding-right: 1rem;
+    }
+    .icon-backward2,
+    .icon-forward3 {
+        top: 0.6rem;
+        position: relative;
+        transform: rotateX(90deg);
+    }
+    .icon-backward2 {
+        left: -4rem;
+    }
+    .icon-forward3 {
+        right: -4rem;
+    }
+    a:hover .icon-forward3,
+    a:hover .icon-backward2 {
+        transform: rotateX(0deg);
+    }
+}
+
+.js-off-canvas-exit {
+    z-index: 100;
+}

@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Image Carousel\n"
+"POT-Creation-Date: 2016-03-14 06:37+0700\n"
+"PO-Revision-Date: 2016-03-14 06:39+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: image-carousel.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: image-carousel.php:143
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: inc/class/BFI_Thumb.php:145
+msgid ""
+"The server does not have ImageMagick or GD installed and/or enabled! Any of "
+"these libraries are required for WordPress to be able to resize images. "
+"Please contact your server administrator to enable this before continuing."
+msgstr ""
+"Il server non ha installate e/o abilitate le librerie ImageMagick o GD! "
+"Almeno una di queste librerie sono indispensabili per permettere a Wordpress "
+"di ridimensionare le immagini. Si prega di contattare lamministratore di "
+"sistema per abilitarle prima di continuare."
+
+#: inc/class/BFI_Thumb.php:273
+msgid "Image rotate failed."
+msgstr "Ruota immagine non riuscita."
+
+#: inc/class/BFI_Thumb.php:296
+msgid "Image opacity change failed."
+msgstr "La modifica dell opacità dell immagine non è riuscita."
+
+#: inc/class/BFI_Thumb.php:383
+msgid "Image color change failed."
+msgstr "Cambiamento di colore immagine non riuscita."
+
+#: inc/class/BFI_Thumb.php:400
+msgid "Image grayscale failed."
+msgstr "Immagine in scala di grigi non riuscita."
+
+#: inc/class/BFI_Thumb.php:417
+msgid "Image negate failed."
+msgstr "Immagine Negate  non riuscita."
+
+#: inc/functions/ajax/icp-admin-ajax.php:147
+#, php-format
+msgid "By %s"
+msgstr "Da %s"
+
+#: inc/functions/ajax/icp-admin-ajax.php:159
+#, php-format
+msgid "Install %s now"
+msgstr "Installare %s ora"
+
+#: inc/functions/ajax/icp-admin-ajax.php:159
+msgid "Install Now"
+msgstr "Installa ora"
+
+#: inc/functions/ajax/icp-admin-ajax.php:166
+#, php-format
+msgid "Update %s now"
+msgstr "Aggiornare %s ora"
+
+#: inc/functions/ajax/icp-admin-ajax.php:166
+msgid "Update Now"
+msgstr "Aggiorna ora"
+
+#: inc/functions/ajax/icp-admin-ajax.php:172
+msgid "This plugin is already installed and is up to date"
+msgstr "Questo plugin è già installato ed è fino ad oggi"
+
+#: inc/functions/ajax/icp-admin-ajax.php:172
+msgctxt "plugin"
+msgid "Installed"
+msgstr "Installato"
+
+#: inc/functions/ajax/icp-admin-ajax.php:181
+#, php-format
+msgid "More information about %s"
+msgstr "Maggiori informazioni su %s"
+
+#: inc/functions/ajax/icp-admin-ajax.php:181
+msgid "More Details"
+msgstr "Più dettagli"
+
+#: inc/functions/ajax/icp-admin-ajax.php:249
+msgid "Last Updated:"
+msgstr "Ultimo aggiornamento:"
+
+#: inc/functions/ajax/icp-admin-ajax.php:250
+#, php-format
+msgid "%s ago"
+msgstr "%s fà"
+
+#: inc/functions/ajax/icp-admin-ajax.php:254
+#, php-format
+msgid "%s download"
+msgid_plural "%s downloads"
+msgstr[0] "%s download"
+msgstr[1] "%s downloads"
+
+#: inc/functions/ajax/icp-admin-ajax.php:259
+msgid "Untested with your version of WordPress"
+msgstr "Non testato con la tua versione di WordPress"
+
+#: inc/functions/ajax/icp-admin-ajax.php:261
+msgid "<strong>Incompatible</strong> with your version of WordPress"
+msgstr "<strong>Incompatibile</strong> con la versione di WordPress"
+
+#: inc/functions/ajax/icp-admin-ajax.php:263
+msgid "<strong>Compatible</strong> with your version of WordPress"
+msgstr "<strong>Compatibile</strong> con la versione di Wordpress"
+
+#: inc/functions/icp-functions.php:350
+msgid "Missing Attachment"
+msgstr "Allegato mancante"
+
+#: inc/functions/icp-functions.php:493
+msgid "No cache found"
+msgstr "Nessun cache trovato"
+
+#: inc/functions/icp-functions.php:499
+msgid "The cache files are not generated"
+msgstr "I file di cache non vengono generati"
+
+#: inc/functions/icp-functions.php:505
+msgid "You need to use php5 or greater to get cache size information."
+msgstr ""
+"È necessario utilizzare php5 o superiore per ottenere informazioni "
+"dimensione della cache."
+
+#: inc/functions/icp-functions.php:518
+msgid "Image Carousel Custom Link"
+msgstr "Immagine Carousel Link personalizzato"
+
+#: inc/functions/icp-functions.php:524
+msgid "Link URL"
+msgstr "URL link"
+
+#: inc/functions/icp-functions.php:531
+msgid "Target Link"
+msgstr "Target Link"
+
+#: inc/functions/icp-functions.php:535
+msgid "Open link in a new tab"
+msgstr "Apri collegamento in una nuova scheda"
+
+#: inc/functions/icp-functions.php:536
+msgid "Open link in same tab"
+msgstr "Apri il link nella stessa scheda"
+
+#: inc/icp-metabox.php:45
+msgid "Activate Carousel?"
+msgstr "Attivare il carosello?"
+
+#: inc/settings/icp-carousel-settings.php:33
+msgid "General"
+msgstr "Generale"
+
+#: inc/settings/icp-carousel-settings.php:40
+msgid "Carousel Auto Play"
+msgstr "Riproduzione automatica carosello"
+
+#: inc/settings/icp-carousel-settings.php:45
+msgid "Should the Carousel autoplay on start or not"
+msgstr "Dovrebbe il carosello autoplay su start o non"
+
+#: inc/settings/icp-carousel-settings.php:50
+msgid "Show Caption"
+msgstr "Mostra didascalia"
+
+#: inc/settings/icp-carousel-settings.php:55
+msgid "Use this option to show / hide Carousel captions"
+msgstr ""
+"Utilizzare questa opzione per mostrare / nascondere le didascalie carosello"
+
+#: inc/settings/icp-carousel-settings.php:60
+msgid "Fancy Caption"
+msgstr "Didascalia di fantasia"
+
+#: inc/settings/icp-carousel-settings.php:65
+msgid ""
+"If Enabled the plugin will automatically convert uppercase the first "
+"character of each word and replace - with spaces in a title. For example : "
+"ferrari-f12-berlinetta will change to Ferrari F12 Berlinetta"
+msgstr ""
+"Se abilitare il plugin converte automaticamente maiuscolo il primo carattere "
+"di ogni parola e sostituire - con gli spazi in un titolo. Per esempio: "
+"ferrari-f12-berlinetta-interior cambierà in Ferrari F12 Berlinetta interni"
+
+#: inc/settings/icp-carousel-settings.php:70
+msgid "Show Bullets Navigation"
+msgstr "Visualizza navigazione proiettili"
+
+#: inc/settings/icp-carousel-settings.php:75
+msgid "Use this option to show / hide Carousel bullets navigation"
+msgstr ""
+"Utilizzare questa opzione per Mostra / Nascondi navigazione proiettili "
+"carosello"
+
+#: inc/settings/icp-carousel-settings.php:80
+msgid "Slideshow Effect"
+msgstr "Effetto slideshow"
+
+#: inc/settings/icp-carousel-settings.php:89
+#: inc/settings/icp-carousel-settings.php:110
+#: inc/settings/icp-carousel-settings.php:155
+msgid " selected=\"selected\""
+msgstr " selected=\"selected\""
+
+#: inc/settings/icp-carousel-settings.php:92
+msgid "Choose an entrance animation for the Carousel. Default: easeOutBounce"
+msgstr ""
+"Scegliere un animazione ingresso per il Carosello. Predefinito: easeOutBounce"
+
+#: inc/settings/icp-carousel-settings.php:97
+msgid "Slideshow Interval"
+msgstr "Intervallo di presentazione"
+
+#: inc/settings/icp-carousel-settings.php:113
+msgid "The time in seconds when autoplaying. Default 3 seconds"
+msgstr ""
+"Il tempo in secondi quando AutoPlay. Impostazione predefinita: 3 secondi"
+
+#: inc/settings/icp-carousel-settings.php:118
+msgid "Carousel Items Width"
+msgstr "Larghezza elementi carosello"
+
+#: inc/settings/icp-carousel-settings.php:123
+msgid "Set the Carousel width to fit your needs. Default: 250 px"
+msgstr ""
+"Impostare la larghezza di carosello a vostro piacimento. Valore predefinito: "
+"250 px"
+
+#: inc/settings/icp-carousel-settings.php:130
+msgid "Carousel Auto Height"
+msgstr "Altezza automatica carosello"
+
+#: inc/settings/icp-carousel-settings.php:135
+msgid ""
+"If enabled, this plugin will dynamically adjust slider height based on each "
+"slides height. If disabled, carousel items height will be equal with the "
+"width"
+msgstr ""
+"Se abilitato, questo plugin sarà in grado di regolare dinamicamente altezza "
+"del dispositivo di scorrimento basato su ogni altezza di diapositive. Se "
+"disabilitato, carosello elementi altezza sarà uguale alla larghezza"
+
+#: inc/settings/icp-carousel-settings.php:142
+msgid "Carousel Items Margin"
+msgstr "Margine di elementi del carosello"
+
+#: inc/settings/icp-carousel-settings.php:158
+msgid "Set margin between each carousel items. Default 10 px"
+msgstr ""
+"Impostare il margine tra ogni elementi di carosello. Valore predefinito 10 px"
+
+#: inc/settings/icp-carousel-settings.php:163
+msgid "Open in Lightbox when Carousel Clicked"
+msgstr "Aperto in Lightbox quando clicco carosello"
+
+#: inc/settings/icp-carousel-settings.php:187
+msgid "Use this option to enable / disable Lighbox mode"
+msgstr ""
+"Utilizzare questa opzione per abilitare / disabilitare la modalità Lightbox"
+
+#: inc/settings/icp-carousel-settings.php:211
+msgid "Disable All Carousel"
+msgstr "Disattivare tutte le Carousel"
+
+#: inc/settings/icp-carousel-settings.php:216
+msgid "Use this option to mass Disable Carousel in all Post & Page"
+msgstr ""
+"Utilizzare questa opzione per massa disabilitare carosello in tutti i Post & "
+"pagina"
+
+#: inc/settings/icp-carousel-settings.php:221
+msgid "Image Cache Control"
+msgstr "Immagine Cache Control"
+
+#: inc/settings/icp-carousel-settings.php:226
+msgid "All Cache Cleared"
+msgstr "Cache cancellata"
+
+#: inc/settings/icp-carousel-settings.php:243
+#: inc/settings/icp-carousel-settings.php:256
+msgid "Save Changes"
+msgstr "Salva le modifiche"
+
+#: inc/settings/pages/icp-docs.php:12
+msgid "Documentation"
+msgstr "Documentazione"
+
+#: inc/settings/pages/icp-docs.php:14
+msgid ""
+"There are no complicated instructions for using Image Carousel plugin "
+"because this plugin designed to make all easy. Please watch the following "
+"video and we believe that you will easily to understand it just in minutes :"
+msgstr ""
+"Non esistono istruzioni complicati per l'utilizzo di plugin carosello di "
+"immagine perché questo plugin è progettato per rendere tutto facile. Si "
+"prega di guardare il seguente video e crediamo che si sarà facilmente per "
+"comprenderlo in minuti:"
+
+#: inc/settings/pages/icp-free-plugins.php:12
+msgid "Free Install Plugins"
+msgstr "Installare I Plugin"
+
+#: inc/settings/pages/icp-free-plugins.php:15
+msgid "Retrieving data from server, please wait..."
+msgstr "Recupero dei dati dal server, si prega di attendere..."
+
+#. Plugin Name of the plugin/theme
+msgid "Image Carousel"
+msgstr "Image Carousel"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://www.ghozylab.com/plugins/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Touch enabled Wordpress plugin that lets you create a beautiful responsive "
+"image carousel"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "GhozyLab, Inc."
+msgstr ""

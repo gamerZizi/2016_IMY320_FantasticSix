@@ -1,0 +1,17 @@
+// Descriptive color variables
+
+$white : #fff;
+$black : #000;
+$color-prim : #99b897;
+$color-sec : #d38e8e;
+$color-ter: #f8ecc9;
+$pink : #eb9f9f;
+$color-text: #202020;
+
+// Media query breakpoints
+$only-mobile : 'screen and (min-width: 0.063rem) and (max-width: 47.99rem)';
+$only-tablets : 'screen and (min-width: 0.063rem) and (max-width: 63.99rem)';
+$tablet-no-phone : 'screen and (min-width: 48.00rem) and (max-width: 63.99rem)';
+$brk-tablet : 'screen and (min-width: 48.000rem)';
+$brk-netbook : 'screen and (min-width: 64rem)';
+$print : 'print';

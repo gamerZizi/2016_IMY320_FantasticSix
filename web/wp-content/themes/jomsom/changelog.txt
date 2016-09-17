@@ -1,0 +1,59 @@
+== Changelog ==
+
+= 0.9 =
+* Bug Fixed: iPhone menu issue (Reported by Marius)
+* Removed: Depreciated theme tags: black, gray, green, white, dark, light, fluid-layout and responsive-layout
+
+= 0.8 =
+* Removed: White spaces in files
+* Updated: Theme descriptions
+
+= 0.7 =
+* Added: Upgrade To Pro button on customizer
+* Added: html5 shiv via wp_enqueue_scripts
+* Bug Fixed: Removed all closing ?> tags where not necessary (White space issue)
+* Ref https://themes.trac.wordpress.org/ticket/29666#comment:16
+ * Escaping Issues Solved:
+  * Used wp_kses on printf function
+  * Escaped admin_ull in sidebar.php
+ * Removed: error page emulation on top of included files (Emulating an error page isn't what theme should do or handle)
+ * Removed: catchthemes.com links from slider demo
+
+= 0.6 =
+* Updated: Meta viewport for better responsive support
+* Bug Fixed: Customizer not loading when Custom Site Logo not selected
+
+= 0.5 =
+* Bug Fixed: Parent menu highlight
+* Bug Fixed: Match mobile menu color
+* Bug Fixed: Mobile Menu issue in Ipad orientation change
+* Bug Fixed: Removed background from inc css causing issue in ads
+* Bug Fixed: White spaces issue after title in single post/page
+* Bug Fixed: Featured content image size
+* Bug Fixed: mobile-main-menu div from header.php
+* Bug Fixed: Sidebar width to 300px for better ads display
+* Bug Fixed: Layout options
+* Bug Fixed: Added author link in post meta
+* Bug Fixed: Video format issue with spacing
+
+= 0.4 =
+* Bug Fixed: Classes missing in Blog Post tag categories
+* Bug Fixed: Allow long words to be able to break and wrap onto the next line
+* Bug Fixed: Header Wrap Appearing When Site Title, Tagline and Logo disabled
+* Removed Mean Menu and Added Sidr Menu for mobile menu
+
+= 0.3 =
+* Removed three-columns from tags in style.css
+* Updated Theme Description
+* Updated Header Image Position
+
+= 0.2 =
+* Added Theme Options
+* Fixed responsive design
+* Initial Release in catchthemes.com
+* Added RTL support
+* Updated Screenshot
+* Updated Scripts and Styles attribution in readme file
+
+= 0.1 =
+* Initial Release

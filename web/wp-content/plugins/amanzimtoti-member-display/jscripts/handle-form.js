@@ -1,4 +1,4 @@
-var URL = document.location.protocol+"//"+document.location.host+"/wp-admin/admin-ajax.php";
+var URL = document.location.protocol+"//"+document.location.host+"/2016_IMY320_FantasticSix/web/wp-admin/admin-ajax.php";
 jQuery(document).ready(function($){
    
     $("#role").change(function (evt) {       

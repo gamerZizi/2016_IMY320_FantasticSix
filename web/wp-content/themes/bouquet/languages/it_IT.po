@@ -1,0 +1,305 @@
+# Translation of Bouquet in Italian
+# This file is distributed under the same license as the Bouquet package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-06-01 14:33:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
+"Project-Id-Version: Bouquet\n"
+
+#. Author URI of the plugin/theme
+#: wp-content/themes/pub/bouquet/style.css
+msgid "https://wordpress.com/themes/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/bouquet/full-width-page.php
+msgid "Full-width, no sidebar"
+msgstr "Larghezza intera, nessuna barra laterale"
+
+#. Description of the plugin/theme
+#: wp-content/themes/pub/bouquet/style.css
+msgid "Bouquet is an elegant, simple theme inspired by the beauty found in flowers. Notable features include two floral schemes, a responsive layout structure that adapts to smaller devices, a right sidebar, a full-width template, support for post formats, custom background, and custom header."
+msgstr ""
+
+#: search.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Spiacente, nulla corrisponde i termini della tua ricerca. Riprova con parole chiave diverse."
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Risultati della ricerca per: %s"
+
+#: inc/theme-options.php:106
+msgid "Save Options"
+msgstr "Salva le opzioni"
+
+#: inc/theme-options.php:61
+msgid "Options saved"
+msgstr "Opzioni salvate"
+
+#: inc/theme-options.php:71 inc/theme-options.php:73
+msgid "Color Scheme"
+msgstr "Schema colore"
+
+#: inc/theme-options.php:38
+msgid "Forget-Me-Not"
+msgstr "Nontiscordardimé"
+
+#: inc/theme-options.php:42
+msgid "Tiger Lily"
+msgstr "Giglio tigre"
+
+#: inc/theme-options.php:58
+msgid " Theme Options"
+msgstr "Opzioni del Tema"
+
+#: inc/theme-options.php:34
+msgid "Pink Dogwood (Default)"
+msgstr "Corniolo rosa (predefinito)"
+
+#: inc/theme-options.php:26
+msgid "Theme Options"
+msgstr "Opzioni tema"
+
+#: image.php:96
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Commenti e trackback sono attualmente chiusi."
+
+#: image.php:94
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "I trackback sono chiusi, ma puoi <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">postare un commento</a>."
+
+#: image.php:92
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "I commenti sono chiusi, ma puoi lasciare un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">URL del trackback</a>. "
+
+#: image.php:90
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Posta un commento\">Posta un commento</a> o usa questo <a class=\"trackback-link\" href=\"%s\" title=\"URL per il trackback a questo post\" rel=\"trackback\">indirizzo per il trackback</a>."
+
+#: image.php:37
+msgid "Next &rarr;"
+msgstr "Successivo &rarr;"
+
+#: image.php:24
+msgid "Published at <a href=\"%1$s\" title=\"Link to full-size image\">%2$s &times; %3$s</a> in <a href=\"%4$s\" title=\"Return to %5$s\" rel=\"gallery\">%5$s</a>"
+msgstr "Pubblicato su <a href=\"%1$s\" title=\"Link a immagine a dimensione originale\">%2$s &times; %3$s</a> in <a href=\"%4$s\" title=\"Ritorna a %5$s\" rel=\"gallery\">%5$s</a>"
+
+#: image.php:36
+msgid "&larr; Previous"
+msgstr "&larr; Precedente"
+
+#: header.php:46
+msgid "Skip to content"
+msgstr "Vai al contenuto"
+
+#: header.php:45
+msgid "Menu"
+msgstr "Menu"
+
+#: functions.php:394
+msgid "This entry was posted on %3$s, in %1$s."
+msgstr "Questa voce è stata pubblicata il %3$s, in %1$s."
+
+#: functions.php:519
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: functions.php:361
+msgid "This entry was posted on %5$s, in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Questa voce è stata pubblicata il %5$s, in %1$s. Aggiungi il <a href=\"%3$s\" title=\"Permalink a %4$s\" rel=\"bookmark\">permalink</a> ai segnalibri."
+
+#. translators: used between list items, there is a space after the comma
+#: functions.php:384
+msgid "This entry was posted on %3$s and tagged %2$s."
+msgstr "Questa voce è stata pubblicata il %3$s con tag %2$s."
+
+#: functions.php:386
+msgid "This entry was posted on %3$s."
+msgstr "Questa voce è stata pubblicata il %3$s."
+
+#: functions.php:392
+msgid "This entry was posted on %3$s, in %1$s and tagged %2$s."
+msgstr "Questa voce è stata pubblicata il %3$s, in %1$s con tag %2$s."
+
+#. translators: used between list items, there is a space after the comma
+#: functions.php:351
+msgid "This entry was posted on %5$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Questa voce è stata pubblicata il %5$s con tag %2$s. Aggiungi il <a href=\"%3$s\" title=\"Permalink a %4$s\" rel=\"bookmark\">permalink</a> ai segnalibri."
+
+#: functions.php:353
+msgid "This entry was posted on %5$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Questa voce è stata pubblicata il %5$s. Aggiungi il <a href=\"%3$s\" title=\"Permalink a %4$s\" rel=\"bookmark\">permalink</a> ai segnalibri."
+
+#: functions.php:359
+msgid "This entry was posted on %5$s, in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Questa voce è stata pubblicata il %5$s, in %1$s con tag %2$s. Aggiungi il <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a> ai segnalibri."
+
+#. translators: used between list items, there is a space after the comma
+#: functions.php:343 functions.php:376
+msgid ", "
+msgstr ", "
+
+#. translators: 1: date, 2: time
+#: functions.php:307
+msgid "%1$s at %2$s"
+msgstr "%1$s alle %2$s"
+
+#: functions.php:299
+msgid "Your comment is awaiting moderation."
+msgstr "Il tuo commento deve ancora venire moderato."
+
+#: functions.php:296
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">ha detto:</span>"
+
+#: functions.php:286
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:265
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Articoli più recenti <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:261
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articoli più vecchi"
+
+#: functions.php:256
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: functions.php:255
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: functions.php:232
+msgid "Sidebar 1"
+msgstr "Barra laterale 1"
+
+#: functions.php:234
+msgid "Drag widgets here to activate the sidebar."
+msgstr "Trascina qui i widget per attivare la barra laterale."
+
+#: functions.php:251
+msgid "Post navigation"
+msgstr "Navigazione articolo"
+
+#: functions.php:36
+msgid "Primary Menu"
+msgstr "Menu principale"
+
+#: footer.php:20
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s di %2$s."
+
+#: footer.php:18
+msgid "Proudly powered by %s"
+msgstr "Funziona grazie a %s"
+
+#: footer.php:18
+msgid "Semantic Personal Publishing Platform"
+msgstr "Piattaforma semantica di editoria personale "
+
+#: footer.php:18
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: content-gallery.php:73 content-page.php:20 content-single.php:25
+#: content.php:26 functions.php:286 functions.php:309 image.php:32 image.php:98
+msgid "Edit"
+msgstr "Modifica"
+
+#: content-gallery.php:71 content-page.php:18 content-single.php:23
+#: content.php:24
+msgid "1 Comment"
+msgstr ""
+
+#: content-gallery.php:71 content-page.php:18 content-single.php:23
+#: content.php:24
+msgid "% Comments"
+msgstr "% commenti"
+
+#: content-gallery.php:71 content-page.php:18 content-single.php:23
+#: content.php:24
+msgid "Leave a comment"
+msgstr "Lascia un commento"
+
+#: content-gallery.php:64 content-page.php:16 content-single.php:17
+#: content.php:18 image.php:84
+msgid "Pages:"
+msgstr "Pagine: "
+
+#: content-gallery.php:58
+msgid "Permalink to %s"
+msgstr "Permalink a %s"
+
+#: content-gallery.php:57
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "Questa galleria contiene <a %1$s>%2$s immagine</a>."
+msgstr[1] "Questa galleria contiene <a %1$s>%2$s immagini</a>."
+
+#: content-gallery.php:24 content.php:17
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continua a leggere <span class=\"meta-nav\">&rarr;</span>"
+
+#: comments.php:61
+msgid "Comments are closed."
+msgstr "I commenti sono chiusi."
+
+#: comments.php:31 comments.php:51
+msgid "Newer Comments &rarr;"
+msgstr "Commenti più recenti &rarr;"
+
+#: comments.php:30 comments.php:50
+msgid "&larr; Older Comments"
+msgstr "&larr; Commenti meno recenti"
+
+#: comments.php:22
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:29 comments.php:49
+msgid "Comment navigation"
+msgstr "Navigazione commenti"
+
+#: archive.php:61 index.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Non riusciamo a trovare quello che cerchi. Forse eseguire una ricerca potrebbe essere di aiuto."
+
+#: archive.php:57 index.php:40 search.php:34
+msgid "Nothing Found"
+msgstr "Nessun risultato"
+
+#: archive.php:31
+msgid "Archives"
+msgstr "Archivi"
+
+#: archive.php:21 archive.php:23 archive.php:25
+msgid "Archive | %s"
+msgstr "Archivio | %s"
+
+#: archive.php:27
+msgid "Archive by Author | %s"
+msgstr "Archivio per autore | %s"
+
+#: archive.php:29
+msgid "Tag Archive | %s"
+msgstr "Archivio tag | %s"
+
+#: 404.php:15
+msgid "Well this is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Be', è imbarazzante, no?"
+
+#: 404.php:19
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Sembra che non riusciamo a trovare quanto cercato. Forse la ricerca, o uno dei link qui sotto, può aiutare."

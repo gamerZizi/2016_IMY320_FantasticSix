@@ -1,0 +1,9 @@
+.scsErrorMsg {
+    color: #fa4e7f;
+}
+.scsSuccessMsg {
+    color: #4ae8ea;
+}
+.scsInputError {
+    border: 1px #fa4e7f solid !important;
+}

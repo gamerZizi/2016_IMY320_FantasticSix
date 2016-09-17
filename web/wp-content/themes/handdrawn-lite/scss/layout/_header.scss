@@ -1,0 +1,201 @@
+.main-header {
+  background-color: $color-prim;
+  color: $color-ter;
+  a {
+    color: $color-ter;
+  }
+  .menu {
+    font-size: 1.4rem;
+  }
+}
+
+.top-bar, .top-bar ul:first-of-type {
+  .dropdown.menu>li.is-dropdown-submenu-parent>a:after {
+    border-color: $color-ter transparent transparent;
+  }
+  .is-dropdown-submenu .is-dropdown-submenu-parent.opens-right>a:after {
+      border-color: transparent transparent transparent $color-ter;
+    } 
+  .submenu {
+    z-index: 10;
+  }
+}
+
+.top-bar {
+  background-color: $color-prim;
+  font-size: 1.25rem;
+  padding-left: 0;
+}
+
+.top-bar .submenu, .top-bar ul {
+  background-color: $color-prim;
+  border-color: $color-ter;
+}
+
+.off-canvas {
+  background: none;
+  overflow: visible;
+  .search-off-canv {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    .search-fill {
+    fill: $color-ter;
+  }
+  }
+  .login-icons {
+    left: 0;
+    text-align: center;
+  }
+  .off-canvas-social {
+    text-align: center;
+  }
+  .off-canvas-title {
+    font-size: 1.3rem;
+    margin: 1rem auto;
+  }
+  .is-accordion-submenu-parent>a:after {
+    border-color: $color-ter transparent transparent;
+  }
+  
+}
+
+.off-canvas-content {
+  background: #fff;
+  max-width: 68.75rem;
+  margin: 0 auto;
+}
+
+.custom-header {
+  width: 100%;
+}
+
+.header-large {
+  .custom-logo-link {
+    display: block;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.header-center {
+  text-align: center;
+  .dropdown.menu {
+    text-align: center;
+    display: inline-block;
+    .submenu {
+      text-align: left;
+    }
+  }
+}
+
+.site-title {
+  display: inline-block;
+  @media #{$only-mobile}{
+    font-size: 2.0rem;
+  }
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 0;
+  a {
+    color: $color-ter;
+  }
+}
+
+.header-social-section {
+  margin-top: 1rem;
+}
+
+.site-description {
+  position: relative;
+  top: -0.563rem;
+}
+
+ul.social-links {
+  display: inline-block;
+  margin: 0;
+  @media #{$brk-netbook}{
+    float: right;
+    position: relative;
+    top: 0.125rem;
+  }
+  li {
+    display: inline-block;
+    margin-right: 0.625rem;
+    a {
+      vertical-align: text-bottom;
+      text-align: center;
+      -moz-transition: color .1s ease-in 0;
+      -webkit-transition: color .1s ease-in 0;
+      display: inline-block;
+      font-family: "icomoon";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      line-height: 1;
+      text-decoration: inherit;
+      text-transform: none;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      speak: none;
+    }
+    a, span {
+      cursor: pointer;
+      font-size: 2.75rem;
+    }
+  }
+  li a[href*="facebook"]::before {
+    content: "\e903";
+  }
+  li a[href*="google"]::before {
+    content: "\e904";
+  }
+  li a[href*="twitter"]::before {
+    content: "\e90a";
+  }
+}
+
+.header-search-form-container {
+  position: relative;
+  top: 0.5rem;
+  .search-fill {
+    fill: $color-ter;
+  }
+}
+
+.login-icons {
+  position: relative;
+  top: -0.35rem;
+  left: 1rem;
+  a, span {
+      cursor: pointer;
+      font-size: 2.75rem;
+    }
+}
+
+.menu-bar {
+    display: block;
+	width: 1.563rem;
+	height: 0.188rem;
+	margin: 0.375rem auto;
+	border-radius: 0.063rem;
+}
+
+.current-menu-item a {
+  @media #{$brk-netbook}{
+    border-bottom: 2px solid $color-sec;
+  }
+}
+
+.title-bar {
+  background: none;
+  color: $color-ter;
+  .icon-menu, .icon-arrow-right {
+    font-size: 1.5rem;
+    position: relative;
+    top: 0.8rem;
+  }
+  .title-bar-center {
+    text-align: center;
+  }
+}

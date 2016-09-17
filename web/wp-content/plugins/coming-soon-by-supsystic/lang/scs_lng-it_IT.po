@@ -1,0 +1,970 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Coming Soon Supsystic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-23 15:58+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: supsystic.com <supsystic.team@gmail.com>\n"
+"Language-Team: giuseppemaxpugliese@gmail.com <supsystic.team@gmail.com>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../classes/controller.php:198 ../classes/controller.php:206
+#: ../modules/mail/controller.php:23 ../modules/octo/controller.php:7
+#: ../modules/octo/controller.php:33 ../modules/octo/controller.php:43
+#: ../modules/octo/controller.php:200 ../modules/octo/controller.php:208
+#: ../modules/octo/controller.php:216 ../modules/octo/controller.php:224
+#: ../modules/options/controller.php:6
+msgid "Done"
+msgstr "Fatto"
+
+#: ../classes/field.php:131
+msgid "Select"
+msgstr "Seleziona"
+
+#: ../classes/field.php:170 ../classes/field.php:179 ../classes/field.php:184
+msgid "N/A"
+msgstr "Non Disponibile"
+
+#: ../classes/field.php:277
+msgid "Add Checkbox"
+msgstr "Aggiungi Casella di Controllo"
+
+#: ../classes/field.php:282 ../classes/field.php:287
+msgid "Add Item"
+msgstr "Aggiungi Articolo"
+
+#: ../classes/field.php:293
+msgid "Add Radio Button"
+msgstr "Aggiungi Pulsanti di Opzione"
+
+#: ../classes/field.php:311
+msgid "Dimensions"
+msgstr "Dimensione"
+
+#: ../classes/field.php:314
+msgid "width"
+msgstr "larghezza"
+
+#: ../classes/field.php:316
+msgid "height"
+msgstr "altezza"
+
+#: ../classes/field.php:323
+msgid "Click to set field \"id\" and \"class\""
+msgstr "Clicca per impostre il campo \"id\" e \"class\""
+
+#: ../classes/field.php:324
+msgid "Attributes"
+msgstr "Attributi"
+
+#: ../classes/field.php:402
+msgid "There are no configuration options for this module"
+msgstr "Non ci sono alcune opziondi di configurazione per questo modulo"
+
+#: ../classes/fieldAdapter.php:93
+msgid "Apply To"
+msgstr "Applica a"
+
+#: ../classes/fieldAdapter.php:95
+msgid "Address"
+msgstr "Indirizzo"
+
+#: ../classes/fieldAdapter.php:96
+msgid "Destination"
+msgstr "Destinazione"
+
+#: ../classes/fieldAdapter.php:97
+msgid "Country"
+msgstr "Nazione"
+
+#: ../classes/fieldAdapter.php:100
+msgid "Categories"
+msgstr "Categorie"
+
+#: ../classes/fieldAdapter.php:101
+msgid "You have no categories"
+msgstr "Non hai alcuna categoria"
+
+#: ../classes/fieldAdapter.php:102
+msgid "Brands"
+msgstr "Marca"
+
+#: ../classes/fieldAdapter.php:103
+msgid "You have no brands"
+msgstr "Non hai acuna marca"
+
+#: ../classes/fieldAdapter.php:105
+msgid "Tax Rate"
+msgstr "aliquota d'imposta"
+
+#: ../classes/fieldAdapter.php:106
+msgid "Absolute"
+msgstr "Assoluto"
+
+#: ../classes/fieldAdapter.php:134
+msgid "Not selected"
+msgstr "Non selezionato"
+
+#: ../classes/fieldAdapter.php:184
+msgid "class"
+msgstr "class"
+
+#: ../classes/fieldAdapter.php:186
+msgid "id"
+msgstr "id"
+
+#: ../classes/html.php:225
+msgid "Upload"
+msgstr "Caricare"
+
+#: ../classes/html.php:633
+msgid "ON"
+msgstr "Attivato"
+
+#: ../classes/html.php:634
+msgid "OFF"
+msgstr "Disattivato"
+
+#: ../classes/html.php:658
+#, php-format
+msgid "Select %s"
+msgstr "Seleziona %s"
+
+#: ../classes/modInstaller.php:34
+#, php-format
+msgid "Move files for %s failed"
+msgstr "Spostamento file fallito per %s"
+
+#: ../classes/modInstaller.php:37
+#, php-format
+msgid "%s is not plugin module"
+msgstr "%s non è un modul del plugin"
+
+#: ../classes/modInstaller.php:76
+msgid "Can not create module directory. Try to set permission to "
+msgstr ""
+"Non è possibile creare la direcory del modulo. Prova ad impostare i permessi "
+"a"
+
+#: ../classes/modInstaller.php:103
+msgid "No modules were found in XML file"
+msgstr "Non sono stato trovati moduli nel file XML"
+
+#: ../classes/modInstaller.php:107
+msgid "Invalid XML file"
+msgstr "File XML non valido"
+
+#: ../classes/modInstaller.php:109
+msgid "No XML file were found"
+msgstr "Non è stato trovato alcun file XML"
+
+#: ../classes/modInstaller.php:131
+#, php-format
+msgid "Install %s failed"
+msgstr "Installazione di %s fallita"
+
+#: ../classes/modInstaller.php:137
+msgid "Error Activate module"
+msgstr "Errore Modulo attivo"
+
+#: ../classes/modInstaller.php:167
+msgid "Error Deactivation module"
+msgstr "Errore Deattivazione modulo"
+
+#: ../classes/modInstaller.php:188
+msgid "Error Activating module"
+msgstr "Errore Attivazione modulo"
+
+#: ../classes/model.php:181 ../classes/model.php:193
+#: ../modules/octo/models/octo.php:29 ../modules/octo/models/octo.php:41
+#: ../modules/octo/models/octo_blocks.php:32
+#: ../modules/octo/models/octo_blocks.php:44
+msgid "Database error detected"
+msgstr "Riscontrato un errore nel database"
+
+#: ../classes/model.php:183 ../modules/octo/models/octo.php:31
+#: ../modules/octo/models/octo.php:55 ../modules/octo/models/octo_blocks.php:34
+msgid "Invalid ID"
+msgstr "ID non valido"
+
+#: ../classes/model.php:216 ../modules/subscribe/models/subscribe.php:31
+#: ../modules/subscribe/models/subscribe.php:33
+msgid "Empty or invalid ID"
+msgstr "ID vuoto o non valido"
+
+#: ../classes/table.php:278
+msgid "Nothig to update"
+msgstr "Niente da aggiornare"
+
+#: ../classes/table.php:294
+msgid "Database error. Please contact your developer."
+msgstr "Errore nel database."
+
+#: ../classes/validator.php:30
+#, php-format
+msgid "Invalid length for %s, max length is %s"
+msgstr "Lunchezza non valida per %s, lungezza massima è %s"
+
+#: ../classes/validator.php:43
+#, php-format
+msgid "Invalid numeric value for %s"
+msgstr "Valore numerico non valido per %s"
+
+#: ../classes/validator.php:71 ../modules/subscribe/models/subscribe.php:46
+#: ../modules/supsystic_promo/controller.php:39
+#, php-format
+msgid "Please enter %s"
+msgstr "Prego digitare invio %s"
+
+#: ../classes/validator.php:78 ../modules/subscribe/models/subscribe.php:45
+#: ../modules/supsystic_promo/controller.php:39
+#, php-format
+msgid "Please select %s"
+msgstr "Preco selezionare %s"
+
+#: ../classes/validator.php:85 ../classes/validator.php:101
+#, php-format
+msgid "Invalid %s"
+msgstr "%s invalido"
+
+#: ../classes/validator.php:88
+#, php-format
+msgid "%s is already registered"
+msgstr "%s è già registrato"
+
+#: ../modules/adminmenu/mod.php:13
+#, php-format
+msgid ""
+"Cool WordPress plugins from supsystic.com developers. I tried %s - and this "
+"was what I need! #supsystic.com"
+msgstr ""
+"Il Cool WordPress Plugin dagli sviluppatori supsytic.com. Ho provato %s - ed "
+"è ciò di cui ho bisogno! #supsytic.com"
+
+#: ../modules/adminmenu/mod.php:14 ../modules/coming_soon/mod.php:24
+#: ../modules/options/mod.php:42
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: ../modules/adminmenu/mod.php:15
+msgid "More plugins for your WordPress site here!"
+msgstr "Altri plugin per il tuo sito WordPress qui!"
+
+#: ../modules/adminmenu/mod.php:16 ../modules/adminmenu/mod.php:17
+#: ../modules/adminmenu/mod.php:18
+msgid "Spread the word!"
+msgstr "Passa Parola!"
+
+#: ../modules/coming_soon/mod.php:18
+msgid ""
+"Please select template for your Coming Soon page before saving this mode"
+msgstr ""
+"Prego seleziona il template per la tua pagina Coming Soon prima di salvare "
+"questa modalità"
+
+#: ../modules/coming_soon/mod.php:33
+msgid "General"
+msgstr "Generale"
+
+#: ../modules/coming_soon/mod.php:38
+msgid "Coming Soon Mode"
+msgstr "Modalità Coming Soon"
+
+#: ../modules/coming_soon/mod.php:39
+msgid "Select in which mode do You want to use our plugin"
+msgstr "Seleziona in quale modalità vuoi utilizzare il nostro plugin"
+
+#: ../modules/coming_soon/mod.php:42
+msgid "Disabled"
+msgstr "Disabilitato"
+
+#: ../modules/coming_soon/mod.php:42
+msgid "Coming Soon Page"
+msgstr "Pagina Coming Soon"
+
+#: ../modules/coming_soon/mod.php:42
+msgid "Redirect to URL"
+msgstr "Reindirizza verso l'URL"
+
+#: ../modules/coming_soon/mod.php:42
+msgid "503 Header Response"
+msgstr "Header Response 503 "
+
+#: ../modules/coming_soon/mod.php:47
+msgid "Template Settings"
+msgstr "Impostazioni del Template"
+
+#: ../modules/coming_soon/mod.php:61
+msgid "Redirect Settings"
+msgstr "Impostazioni per il redirect"
+
+#: ../modules/coming_soon/mod.php:66
+msgid "Redirect URL"
+msgstr "URL di redirect"
+
+#: ../modules/coming_soon/mod.php:67
+msgid ""
+"Enter URL where visitors will be redirected when visit your site while it is "
+"in Maintenance mode"
+msgstr ""
+"Digitare l'URL dove i visitatri saranno reindirizzati qaundo visitano il tuo "
+"sito mentre è nella modalità in Manutenzione"
+
+#: ../modules/coming_soon/mod.php:74
+msgid "Site View Options"
+msgstr "Opzioni Vista Sito"
+
+#: ../modules/coming_soon/mod.php:78
+msgid "User Roles"
+msgstr "Regole utente"
+
+#: ../modules/coming_soon/mod.php:79
+msgid ""
+"By default only administrator can view site, but here you can select other "
+"user roles that can view your site while it is under construction. Note that "
+"administrator can always view site (even if de-selected in this list)."
+msgstr ""
+"Come impostazine predefinita solo l'amministratore può vedere il sito, ma "
+"qui puoi selezionare altri utenti che possono vedere il tuo sito mentre è in "
+"costruzione. Nota che l'amministratore può sempre vedere il sito (anche se "
+"de-selezionato in queta lista)"
+
+#: ../modules/coming_soon/mod.php:86
+msgid "Exclude URLs"
+msgstr "Escludi URL"
+
+#: ../modules/coming_soon/mod.php:87
+msgid ""
+"By default while your site is under construction - all users will see this "
+"in all links on your site. But here you can list links where you want to "
+"disable Under Contsruction mode. Just print links here, each link - from new "
+"line."
+msgstr ""
+"Come impostazione predefinita il tuo sito è in costruzione - tutti gli "
+"utenti vedranno questo in tutti i link sul tuo sito. Ma qui puoi elencare i "
+"link dove vuoi disabilitare la modalita In Costruzione."
+
+#: ../modules/coming_soon/mod.php:199 ../modules/coming_soon/mod.php:202
+msgid "Coming Soon Mode is Enabled"
+msgstr "La modalità Coming Soon è Abilitata"
+
+#: ../modules/coming_soon/views/tpl/csSettingsTabContent.php:97
+#: ../modules/mail/views/tpl/mailAdmin.php:47
+#: ../modules/options/views/tpl/optionsSettingsTabContent.php:60
+#, php-format
+msgid "Turned On %s"
+msgstr "Abilitato %s"
+
+#: ../modules/coming_soon/views/tpl/csSettingsTabContent.php:98
+#: ../modules/mail/views/tpl/mailAdmin.php:48
+#: ../modules/options/views/tpl/optionsSettingsTabContent.php:61
+#, php-format
+msgid "Turned Off %s"
+msgstr "Disabilitato %s"
+
+#: ../modules/mail/controller.php:7
+msgid "Now check your email inbox / spam folders for test mail."
+msgstr ""
+"Ora controlla la tua email cartelle inbox / antispam per la posta di prova."
+
+#: ../modules/mail/mod.php:37
+msgid "Can not send email - problem with send server"
+msgstr "Non è possibile inviare e-mail - problema con il server di invio"
+
+#: ../modules/mail/mod.php:50
+msgid "Mail"
+msgstr "Posta"
+
+#: ../modules/mail/mod.php:52
+msgid "Mail function tested and work"
+msgstr "Funzione di posta elettronica provato e finzionante"
+
+#: ../modules/mail/mod.php:53
+msgid "Notify Email"
+msgstr "Notifica Email"
+
+#: ../modules/mail/mod.php:53
+msgid "Email address used for all email notifications from plugin"
+msgstr "Indirizzo e-mail utilizzato per tutte le notifiche e-mail dal plug"
+
+#: ../modules/mail/models/mail.php:7
+msgid "Test email functionslity"
+msgstr "Email di prova"
+
+#: ../modules/mail/models/mail.php:8
+#, php-format
+msgid "This is test email for testing email functionality on your site, %s."
+msgstr ""
+"Questo è un messaggio di prova per testare la funzionalità e-mail sul sito,"
+"%s."
+
+#: ../modules/mail/models/mail.php:15
+msgid "Empty email address"
+msgstr "Indirizzo e-mail vuoto"
+
+#: ../modules/octo/controller.php:191
+msgid "Done, redirecting to new PopUp..."
+msgstr "Fatto, il reindirizzamento al nuovo PopUp ..."
+
+#: ../modules/octo/models/octo.php:107 ../modules/octo/models/octo.php:239
+msgid "Invalid Octo ID"
+msgstr "ID Octo non valido"
+
+#: ../modules/octo/models/octo_blocks.php:169
+msgid "Invalid Original ID"
+msgstr "ID Originale valido"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:500
+msgid "Text"
+msgstr "Prova"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:501
+msgid "Email"
+msgstr "Email"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:548
+msgid "You can find List ID under your Aweber account"
+msgstr "Puoi trovatre l'elenco degli ID sotto il tuo accout Aweber"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:554
+msgid ""
+"You can easy track your subscribers using this feature. You can find AD "
+"Tracking under your Aweber account."
+msgstr ""
+"Puoi facilmente tracciare i sottoscrittori utilizzando questa funzionalità. "
+"Puoi trovare il rintracciamento AD sotto il tuo account Aweber."
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:560
+msgid ""
+"To find your MailChimp API Key login to your mailchimp account at http://"
+"mailchimp.com then from the left main menu, click on your Username, then "
+"select \"Account\" in the flyout menu. From the account page select \"Extras"
+"\", \"API Keys\". Your API Key will be listed in the table labeled \"Your "
+"API Keys\". Copy / Paste your API key into \"MailChimp API key\" field here."
+msgstr ""
+"Per trovare la tua chiave API di MailChimp entra nel tuo account MailChimp "
+"all'idirizzo http://mailchimp.com  poi dal menu principale di sinistra, "
+"clicca sul tuo Nome Utente, poi seleziona \"Account\" nel menu  a scomparsa. "
+"Dalla pagina dell'account seleziona \"Extras\", \"API Keys\". La tua chiave "
+"API verrà elencata nella tabella etichettata \"Your Api Keys\" Copia ed "
+"incolla la tua chiave API qui nel campo \"MailChimp API Key\"."
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:567
+msgid "Choose Lists"
+msgstr "Elenco di scelta"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:576
+#: ../modules/subscribe/controller.php:27
+msgid "Confirmation link was sent to your email address. Check your email!"
+msgstr ""
+"Il link di confera è stato inviato al tuo indirizzo email. Controlla la tua "
+"email!"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:582
+#: ../modules/subscribe/controller.php:31
+#: ../modules/subscribe/views/tpl/subSuccessPage.php:55
+msgid "Thank you for subscribe!"
+msgstr "Grazie per la sottoscrizione!"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:588
+#: ../modules/subscribe/models/subscribe.php:112
+msgid "Empty or invalid email"
+msgstr "Email vuota o non valida."
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:606
+#: ../modules/subscribe/models/subscribe.php:240
+msgid "Confirm subscription on [sitename]"
+msgstr "Conferma la tua sottiscrizione sl [sitename]"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:618
+#: ../modules/subscribe/models/subscribe.php:243
+msgid ""
+"You subscribed on site <a href=\"[siteurl]\">[sitename]</a>. Follow <a href="
+"\"[confirm_link]\">this link</a> to complete your subscription. If you did "
+"not subscribe here - just ignore this message."
+msgstr ""
+"Ti sei iscritto sul sito <a href=\"[siteurl]\">[sitename].</a> Segui <a href="
+"\"[confirm_link]\">questo link</a> per completare l'iscrizione. Se non ti "
+"sei iscritto - basta ignorare questo messaggio."
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:626
+msgid "[sitename] Your username and password"
+msgstr "[sitename] Il tuo nome utente e password"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:638
+msgid "Username: [user_login]<br />Password: [password]<br />[login_url]"
+msgstr ""
+"Nome utente: [user_login] <br /> Password: [password] <br /> [login_url]"
+
+#: ../modules/octo/views/tpl/octoEditorFooter.php:663
+msgid "Search, for example - pencil, music, ..."
+msgstr "Ricerca, per esempio - matita, musica, ..."
+
+#: ../modules/octo/views/tpl/octoMainMetaBox.php:4
+#, php-format
+msgid "Activate %s"
+msgstr "Attiva %s"
+
+#: ../modules/octo/views/tpl/octoMainMetaBox.php:16
+#, php-format
+msgid "Deactivate %s"
+msgstr "Disattiva %s"
+
+#: ../modules/octo/views/tpl/octoRenderForPost.php:140
+msgid "Stretch"
+msgstr "Estendi"
+
+#: ../modules/octo/views/tpl/octoRenderForPost.php:140
+msgid "Center"
+msgstr "Centro"
+
+#: ../modules/octo/views/tpl/octoRenderForPost.php:140
+msgid "Tile"
+msgstr "Affianca"
+
+#: ../modules/options/mod.php:108
+msgid "System"
+msgstr "Sistema"
+
+#: ../modules/options/mod.php:111
+msgid "Send usage statistics"
+msgstr "Invia statistiche di utilizzo"
+
+#: ../modules/options/mod.php:111
+msgid ""
+"Send information about what plugin options you prefer to use, this will help "
+"us make our solution better for You."
+msgstr ""
+"Invia le informazioni su quali opzioni di plugin che preferisci utilizzare, "
+"in questo modo ci aiuterai ad induividuare la nostra migliore soluzione per "
+"Te."
+
+#: ../modules/options/mod.php:112
+msgid "Enable promo link"
+msgstr "Abilita collegamento promozione"
+
+#: ../modules/options/mod.php:112
+msgid ""
+"We are trying to make our plugin better for you, and you can help us with "
+"this. Just check this option - and small promotion link will be added in the "
+"bottom of your Coming Soon page. This is easy for you - but very helpful for "
+"us!"
+msgstr ""
+"Stiamo cercando di rendere migliore il nostro plugin migliore, e ci puoi "
+"aiutare con questo. Basta controllare questa opzione - e piccolo link "
+"promozione sarà aggiunto nella parte inferiore della pagina Coming Soon. "
+"Questo è facile per voi - ma molto utile per noi!"
+
+#: ../modules/options/models/modules.php:32
+msgid "Module Updated"
+msgstr "Modulo Aggiornato"
+
+#: ../modules/options/models/modules.php:47
+msgid "Module Update Failed"
+msgstr "Aggiornamento Modulo Fallito"
+
+#: ../modules/options/models/modules.php:50
+msgid "Error module ID"
+msgstr "Errore ID Modulo"
+
+#: ../modules/options/models/options.php:69
+msgid "Empty data to save option"
+msgstr "Cancella i dati vuoti per salvare l'opzione"
+
+#: ../modules/options/views/tpl/optionsAdminPage.php:37
+#, php-format
+msgid ""
+"Please be advised that this option is available only in <a target=\"_blank\" "
+"href=\"%s\">PRO version</a>. You can <a target=\"_blank\" href=\"%s\" class="
+"\"button\">Get PRO</a> today and get this and other PRO option for your "
+"PopUps!"
+msgstr ""
+"Prego notare che questa opzione è disponibile solo nella <a target=\"_blank"
+"\" href=\"%s\"> versione PRO </a>. Puoi <a target=\"_blank\" href=\"%s\" "
+"class=\"button\"> Ottenere la versione PRO </a> oggi ed ottenere questo e "
+"altre opzioni PRO per i tuoi PopUp!"
+
+#: ../modules/subscribe/mod.php:12
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../modules/subscribe/mod.php:13
+msgid "Aweber"
+msgstr "Aweber"
+
+#: ../modules/subscribe/mod.php:14
+msgid "MailChimp"
+msgstr "MailChimp"
+
+#: ../modules/subscribe/models/subscribe.php:29
+msgid "Something goes wrong"
+msgstr "Qualcosa è sbagliato"
+
+#: ../modules/subscribe/models/subscribe.php:72
+msgid "Can't detect your IP, please don't spam"
+msgstr "Impossibile rilevare il tuo IP, per favore non utilizzare santispam"
+
+#: ../modules/subscribe/models/subscribe.php:104
+msgid "You just subscribed from this IP"
+msgstr "Devi solo iscriverti da questo IP"
+
+#: ../modules/subscribe/models/subscribe.php:181
+msgid "Can't subscribe for now. Please try again latter."
+msgstr "Non puoi iscriverti per il momento. Prego provere più tardi."
+
+#: ../modules/subscribe/models/subscribe.php:214
+#, php-format
+msgid "New user registration on your site %s:"
+msgstr "Nuova registrazione utente sul tuo sito %s:"
+
+#: ../modules/subscribe/models/subscribe.php:215
+#, php-format
+msgid "Username: %s"
+msgstr "Username: %s"
+
+#: ../modules/subscribe/models/subscribe.php:216
+#, php-format
+msgid "E-mail: %s"
+msgstr "E-mail: %s"
+
+#: ../modules/subscribe/models/subscribe.php:218
+#, php-format
+msgid "[%s] New User Registration"
+msgstr "[%s] Registrazione Nuovo Utente"
+
+#: ../modules/subscribe/models/subscribe.php:279
+msgid "Send me some info, pls"
+msgstr "Inviami qualche informzione, prego"
+
+#: ../modules/subscribe/models/subscribe.php:310
+msgid ""
+"MailChimp require CURL to be setup on your server. Please contact your "
+"hosting provider and ask them to setup CURL libruary for you."
+msgstr ""
+"MailChimp richiede il CURL per essere imostata sul tuo server. Prego "
+"contattare il tuo fornitore di hosting e chiedere loro come impostare la "
+"libreria CURL."
+
+#: ../modules/subscribe/models/subscribe.php:334
+msgid ""
+"There was some problem while trying to get your lists. Make sure that your "
+"API key is correct."
+msgstr ""
+"C'è stato qualche problema durante il tentativo di ottenere il tuo elenco. "
+"Assicurati che la tua chiave API è corretta."
+
+#: ../modules/subscribe/models/subscribe.php:338
+msgid "Empty API key"
+msgstr "Chiave API vuota"
+
+#: ../modules/subscribe/models/subscribe.php:392
+msgid ""
+"Something going wrong while trying to send data to MailChimp. Please contact "
+"site owner."
+msgstr ""
+"Qualcosa sta funzionando durante il tentativo di inviare dati a MailChimp. "
+"Prego contattare il proprietario del sito."
+
+#: ../modules/subscribe/models/subscribe.php:405
+msgid ""
+"No API key entered in admin area - contact site owner to resolve this issue."
+msgstr ""
+"Nessuna chiave API è entrata all'interno dell'area amministrazione - "
+"contatta il proprietario del sito per risolvere il problema."
+
+#: ../modules/subscribe/models/subscribe.php:407
+msgid ""
+"No lists to add selected in admin area - contact site owner to resolve this "
+"issue."
+msgstr ""
+"Nessuna lista per aggiungere la selezione all'interno dell'area "
+"amministratore - contatta il proprietario del sito per risolvere il problema."
+
+#: ../modules/subscribe/models/subscribe.php:457
+msgid "Some error occured during subscription process"
+msgstr ""
+"Si sono verificati alcuni errori durante il processo di sottoscrizione."
+
+#: ../modules/subscribe/models/subscribe.php:460
+msgid "Can't find MailPoet on this server"
+msgstr "Non è possibile trovare MailPoet su questo server"
+
+#: ../modules/subscribe/views/tpl/subSuccessPage.php:70
+#, php-format
+msgid ""
+"<a href=\"%s\">Back to site</a> in <i id=\"octConfirmBackCounter\">%d</i> "
+"seconds"
+msgstr ""
+"<a href=\"%s\">Torna al sito</a> in <i id=\"octConfirmBackCounter\"> % d</i> "
+"secondi"
+
+#: ../modules/supsystic_promo/controller.php:7
+msgid "Information was saved. Thank you!"
+msgstr "Le informazioni sono state salvate. Grazie!"
+
+#: ../modules/supsystic_promo/controller.php:23
+msgid ""
+"Please don't send contact requests so often - wait for response for your "
+"previous requests."
+msgstr ""
+"Prego non inviare le richieste di contatto così frequentemente - attendi la "
+"risposta per le prossime richieste."
+
+#: ../modules/supsystic_promo/controller.php:45
+msgid "Please enter valid email address"
+msgstr "Prego inserire il tuo indirizzo email valido"
+
+#: ../modules/supsystic_promo/mod.php:35
+#, php-format
+msgid ""
+"<h3>Hey, I noticed you just use %s over a week – that’s awesome!</"
+"h3><p>Could you please do me a BIG favor and give it a 5-star rating on "
+"WordPress? Just to help us spread the word and boost our motivation.</p>"
+msgstr ""
+"<h3>Ehi, ho notato che utilizzi solo %s da più di una settimana - è "
+"grandioso!</h3><p>Potresti farmi un GRANDE favore dando una valutazione di 5 "
+"stelle su WordPress? Solo per aiutarci con il passa parola e rafforzare la "
+"nostra motivazione.</p>"
+
+#: ../modules/supsystic_promo/mod.php:36 ../modules/supsystic_promo/mod.php:42
+msgid "Ok, you deserve it"
+msgstr "Ok, te lo meriti"
+
+#: ../modules/supsystic_promo/mod.php:37 ../modules/supsystic_promo/mod.php:43
+msgid "Nope, maybe later"
+msgstr "No, forse più tardi"
+
+#: ../modules/supsystic_promo/mod.php:38
+msgid "I already did"
+msgstr "L'ho già registrato"
+
+#: ../modules/supsystic_promo/mod.php:39
+#, php-format
+msgid "<h3>More then eleven days with our %s plugin - Congratulations!</h3>"
+msgstr ""
+"<h3>Più di undici giorni con il nostro plugin %s - Congratulazioni!</h3>"
+
+#: ../modules/supsystic_promo/mod.php:40
+msgid ""
+"<p>On behalf of the entire <a href=\"https://supsystic.com/\" target=\"_blank"
+"\">supsystic.com</a> company I would like to thank you for been with us, and "
+"I really hope that our software helped you.</p>"
+msgstr ""
+"<p>A nome di tutta l'azienda <a href=\"https://supsystic.com/\" target="
+"\"_blank\">supsystic.com</a> Vorrei ringraziarvi per essere stato con noi, e "
+"spero davvero che il nostro software ti ha aiutato.</p>"
+
+#: ../modules/supsystic_promo/mod.php:41
+msgid ""
+"<p>And today, if you want, - you can help us. This is really simple - you "
+"can just add small promo link to our site at the bottom of your Coming Soon "
+"page. This is small step for you, but a big help for us! Sure, if you don't "
+"want - just skip this and continue enjoy our software!</p>"
+msgstr ""
+"<p>Ed oggi, se vuoi, - pui aiutarci. Questo è davvero semplice - pui "
+"semplicemente aggiungere piccolo link promozionale verso il nostro sito "
+"nella parte inferiore della pagina Coming Soon. Questo è piccolo passo per "
+"te, ma un grande aiuto per noi! Se non lo vuoi fare di certo - semplicemente "
+"ignora questo e continua a fruire del nostro software!</p>"
+
+#: ../modules/supsystic_promo/mod.php:44
+msgid "Skip"
+msgstr "Salta"
+
+#: ../modules/supsystic_promo/mod.php:91
+msgid "Overview"
+msgstr "Panoramica"
+
+#: ../modules/supsystic_promo/mod.php:117
+msgid "Welcome to Supsystic"
+msgstr "Benvenuti a Supsystic"
+
+#: ../modules/supsystic_promo/mod.php:187
+msgid "Your name"
+msgstr "Il tuo nome"
+
+#: ../modules/supsystic_promo/mod.php:188
+msgid "Your email"
+msgstr "Il tuo indirizzo email"
+
+#: ../modules/supsystic_promo/mod.php:189
+msgid "Website"
+msgstr "Sito"
+
+#: ../modules/supsystic_promo/mod.php:190
+msgid "Subject"
+msgstr "Oggetto"
+
+#: ../modules/supsystic_promo/mod.php:191
+msgid "Topic"
+msgstr "Argomento"
+
+#: ../modules/supsystic_promo/mod.php:192
+msgid "Plugin options"
+msgstr "Opzioni del plugin"
+
+#: ../modules/supsystic_promo/mod.php:193
+msgid "Report a bug"
+msgstr "Segnala un bug"
+
+#: ../modules/supsystic_promo/mod.php:194
+msgid "Require a new functionallity"
+msgstr "Richiedi una nuova funzionalità"
+
+#: ../modules/supsystic_promo/mod.php:195
+msgid "Other"
+msgstr "Altro"
+
+#: ../modules/supsystic_promo/mod.php:197
+msgid "Message"
+msgstr "Messaggio"
+
+#: ../modules/supsystic_promo/mod.php:197
+msgid "Hello Supsystic Team!"
+msgstr "Ciao Squadra Supsystic!"
+
+#: ../modules/supsystic_promo/views/supsystic_promo.php:44
+msgid "Undefined"
+msgstr "Non definito"
+
+#: ../modules/supsystic_promo/views/supsystic_promo.php:45
+#: ../modules/supsystic_promo/views/supsystic_promo.php:46
+#: ../modules/supsystic_promo/views/supsystic_promo.php:51
+#: ../modules/supsystic_promo/views/supsystic_promo.php:53
+#: ../modules/supsystic_promo/views/supsystic_promo.php:54
+msgid "Yes"
+msgstr "Sì"
+
+#: ../modules/supsystic_promo/views/supsystic_promo.php:45
+#: ../modules/supsystic_promo/views/supsystic_promo.php:46
+#: ../modules/supsystic_promo/views/supsystic_promo.php:51
+#: ../modules/supsystic_promo/views/supsystic_promo.php:53
+#: ../modules/supsystic_promo/views/supsystic_promo.php:54
+msgid "No"
+msgstr "No"
+
+#~ msgid "All Blocks"
+#~ msgstr "Tutti i Blocci"
+
+#~ msgid "Empty Label"
+#~ msgstr "Eticetta vuota"
+
+#~ msgid "Editor Block %s"
+#~ msgstr "Editor del Blocco %s"
+
+#~ msgid "Param Key"
+#~ msgstr "Chiave della voce"
+
+#~ msgid "Param Value"
+#~ msgstr "Valore della voce"
+
+#~ msgid ""
+#~ "An Unexpected HTTP Error occurred during the API request.</p> <p><a href="
+#~ "\"?\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+#~ msgstr ""
+#~ "Si è verificato un errore HTTP inaspettato durante una richiesta API. </"
+#~ "p> <p><a href=\"?\" onclick=\"document.location.reload(); return false;"
+#~ "\">Prova ancora</a>"
+
+#~ msgid "An unknown error occurred"
+#~ msgstr "Si è verificato un errore sconosciuto"
+
+#~ msgid ""
+#~ "Your license is expired. Once you extend your license - you will be able "
+#~ "to Update PRO version. To extend PRO version license - follow <a href=\"%s"
+#~ "\" target=\"_blank\">this link</a>, then - go to <a href=\"%s\">License</"
+#~ "a> tab anc click on \"Re-activate\" button to re-activate your PRO "
+#~ "version."
+#~ msgstr ""
+#~ "La tua licenza è scaduta. Non appena estenderai la licenza - potrai "
+#~ "aggiornare la versione PRO. Per estendere la versione PRO - segui <a href="
+#~ "\"%s\" target=\"_blank\">questo link</a>, poi - vai sulla scheda <a href="
+#~ "\"%s\">Licenza</a> e clicca sul bottone \"Ri-attiva\" per riattivare la "
+#~ "tua versione PRO."
+
+#~ msgid ""
+#~ "Your license for PRO version of %s plugin - expired. You can <a href=\"%s"
+#~ "\" target=\"_blank\">click here</a> to extend your license, then - go to "
+#~ "<a href=\"%s\">License</a> tab anc click on \"Re-activate\" button to re-"
+#~ "activate your PRO version."
+#~ msgstr ""
+#~ "La tua licenza per la versine PRO del plugin %s -  scaduta. Non appena la "
+#~ "tua licenza verrà estesa - verrai potrai aggiornare alla versione PRO. "
+#~ "Per estendere alla versione PRO - segui <a href=\"%s\" target=\"_blank"
+#~ "\">questo link</a>, poi - vai sulla <a href=\"%s\">License</a> scheda e "
+#~ "clicca sul bottone \"Ri-attiva\" per riattivare la tua versione PRO."
+
+#~ msgid "License"
+#~ msgstr "Licenza"
+
+#~ msgid "Please enter your License Key"
+#~ msgstr "Prego inserire il tuo Codice Licenza"
+
+#~ msgid "Please enter your Email address"
+#~ msgstr "Prego inserire il tuo indirizzo email"
+
+#~ msgid ""
+#~ "There was a problem with sending request to our autentification server. "
+#~ "Please try latter."
+#~ msgstr ""
+#~ "C'è stato un problema con l'invio della richiesta al nostro server di "
+#~ "autoidentificazione. Prego riprovare più tardi"
+
+#~ msgid "License for plugin %s will expire today."
+#~ msgstr "La lincenza per il plugin %s scadrà oggi."
+
+#~ msgid "License for plugin %s will expire tomorrow."
+#~ msgstr "La lincenza per il plugin %s scadrà domani."
+
+#~ msgid "License for plugin %s will expire in %d days."
+#~ msgstr "La lincenza per il plugin %s scadrà fra %d giorni."
+
+#~ msgid ""
+#~ "Congradulations! PRO version of %s plugin is activated and working fine!"
+#~ msgstr ""
+#~ "Congratulazioni! La versione PRO del plugin %s è stata attivata e "
+#~ "funziona benissimo!"
+
+#~ msgid ""
+#~ "Your license for PRO version of %s plugin - expired. You can <a href=\"%s"
+#~ "\" target=\"_blank\">click here</a> to extend your license, then - click "
+#~ "on \"Re-activate\" button to re-activate your PRO version."
+#~ msgstr ""
+#~ "La licenza per la versione PRO del plugin %s - scaduta. Puoi <a href=\"%s"
+#~ "\" target=\"_blank\">cliccare su qui</a> per estendere la licenza, quindi "
+#~ "- clicca sul pulsante \"Ri-attiva\" per ri-attivare la versione PRO."
+
+#~ msgid ""
+#~ "Congradulations! You have successfully installed PRO version of %s "
+#~ "plugin. Final step to finish Your PRO version setup - is to enter your "
+#~ "Email and License Key on this page. This will activate Your copy of "
+#~ "software on this site."
+#~ msgstr ""
+#~ "Congratulazioni! Hai installato con successo la versione PRO del plugin "
+#~ "%s. Il passaggio finale per terminare l'impostazione della Tua versione "
+#~ "PRO - è di inserire la tua Email ed il Codice Licenza in questa pagina. "
+#~ "In queso modo verrà attivata la Tua copia del programma sul questo sito."
+
+#~ msgid ""
+#~ "Your email address, used on checkout procedure on <a href=\"%\" target="
+#~ "\"_blank\">%s</a>"
+#~ msgstr ""
+#~ "Il tuo indirizzo email, usato durante la procedura di acquisto sul <a "
+#~ "href=\"%\" target=\"_blank\">%s</a>"
+
+#~ msgid ""
+#~ "Your License Key from your account on <a href=\"%\" target=\"_blank\">%s</"
+#~ "a>"
+#~ msgstr ""
+#~ "Il tuo Codice Licenza dal tuo account sul <a href=\"%\" target=\"_blank\">"
+#~ "%s</a>"

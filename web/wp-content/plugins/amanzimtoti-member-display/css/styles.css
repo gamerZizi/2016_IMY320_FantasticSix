@@ -29,7 +29,7 @@
 }
 
 .amanzi-parent #phone {
-    width: 92% !important;
+    width: 89% !important;
 }
 
 .amanzi-parent label {
@@ -40,7 +40,11 @@
     margin-bottom: 10px;
 }
 
-.amanzi-parent .gender-span {
+.amanzi-parent input[type='checkbox'], .amanzi-parent input[type='radio'] {
+    cursor: pointer;
+}
+
+.amanzi-parent .gender-span, .amanzi-parent .checkbox-title {
     margin-right: 20px;
 }
 
@@ -94,3 +98,18 @@
     width: 20em;
 }
 
+
+/**
+ "Helvetica Neue",Helvetica,Arial,sans-serif
+ Georgia,Times,"Times New Roman",serif
+ "ARS Maquette","Helvetica Neue",Arial,sans-serif
+**/
+
+/* Events Override */
+.postarea #tribe-events {
+    margin-top: -2.5em !important;
+}
+
+.postarea .tribe-events-back {
+    display: none !important;
+}

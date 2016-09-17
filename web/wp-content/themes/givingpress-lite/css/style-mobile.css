@@ -1,0 +1,523 @@
+/************************************************
+*	Desktop Grid								*
+************************************************/
+
+.row {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+.row .row {
+	min-width: 0;
+}
+.column, .columns {
+	float: left;
+	min-height: 1px;
+	position: relative;
+}
+[class*="column"] + [class*="column"]:last-child {
+	float: right;
+}
+
+.single 	{ width: 100%; }
+.half 		{ width: 49.9%; }
+.third 		{ width: 33.3%; }
+.fourth 	{ width: 25%; }
+.fifth 		{ width: 20%; }
+
+.half,
+.third,
+.fourth,
+.fifth 	{ float: left; }
+
+.row .one 		{ width: 6.25%; }
+.row .two 		{ width: 12.5%; }
+.row .three 	{ width: 18.75%; }
+.row .four 		{ width: 25%; }
+.row .five 		{ width: 31.25%; }
+.row .six 		{ width: 37.5%; }
+.row .seven 	{ width: 43.75%; }
+.row .eight 	{ width: 50%; }
+.row .nine 		{ width: 56.25%; }
+.row .ten 		{ width: 62.5%; }
+.row .eleven 	{ width: 68.75%; }
+.row .twelve 	{ width: 75%; }
+.row .thirteen 	{ width: 81.25%; }
+.row .fourteen 	{ width: 87.5%; }
+.row .fifteen 	{ width: 93.75%; }
+.row .sixteen 	{ width: 100%; }
+
+.row .centered { float: none; margin: 0 auto; width: 100%; }
+
+/* Nicolas Gallagher's micro clearfix */
+.row:before, .row:after, .clearfix:before, .clearfix:after { content:""; display:table; }
+.row:after, .clearfix:after { clear: both; }
+.row, .clearfix { zoom: 1; }
+
+/************************************************
+*	Tablet Grid									*
+************************************************/
+
+@media handheld, only screen and (max-width: 1179px) {
+
+	/* Typography iPad */
+
+	body {
+		font-size: 0.9rem;
+		line-height: 1.8;
+	}
+	blockquote {
+		font-size: 1.4rem;
+	}
+	.headline {
+		font-size: 2rem;
+		padding-bottom: 6px;
+	}
+	.headline.img-headline {
+		font-size: 1.8rem;
+		padding: 12px 18px;
+	}
+}
+
+@media handheld, only screen and (max-width: 1179px) {
+
+	/* Navigation iPad */
+
+	#top-nav {
+		padding: 12px;
+	}
+	#top-nav #navigation {
+		float: none;
+		display: block;
+		max-width: 100%;
+	}
+	#navigation {
+		position: relative !important;
+		right: auto;
+		top: auto;
+		text-align: left;
+		margin: 0px;
+		padding: 0px;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+	.mobile-menu {
+		margin: 0px;
+		padding: 0px;
+	}
+	.menu-toggle,
+	.main-small-navigation ul.mobile-menu.toggled-on {
+		display: block;
+	}
+	.navigation-main .menu,
+	.sf-arrows .sf-with-ul::after {
+		display: none;
+	}
+	.menu-toggle {
+		display: block;
+		color: #999999;
+		background: none !important;
+		position: relative;
+		margin: 18px auto 18px;
+		padding: 0px;
+		border: none;
+		z-index: 9;
+	}
+	.givingpress-lite-logo-center .menu-toggle {
+		margin-top: 0px;
+	}
+	.givingpress-lite-logo-left .menu-toggle {
+		float: right;
+	}
+	.givingpress-lite-logo-right .menu-toggle {
+		float: left;
+	}
+	.menu-toggle:hover {
+		color: #000000;
+		background: none !important;
+		box-shadow: none !important;
+	}
+	.mobile-menu-full-menu-container,
+	.mobile-menu-main-menu-container {
+		float: left;
+		width: 100%;
+	}
+	.menu-toggle .fa {
+		background: #ffffff;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: 0;
+		text-transform: none;
+		text-align: center;
+		margin: 0px;
+		padding: 12px;
+		border-radius: 3px;
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+	}
+	.mobile-menu ul.sub-menu,
+	.mobile-menu ul.children {
+		display: block !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+		left: auto;
+		margin: 0;
+		padding: 0;
+	}
+	.mobile-menu ul,
+	.mobile-menu li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.mobile-menu li {
+		display: block;
+		list-style: none;
+		text-align: left;
+		line-height: 30px;
+	}
+	.mobile-menu li li a:before {
+		content: '- ';
+	}
+	.mobile-menu li li li a:before {
+		content: '-- ';
+	}
+	.mobile-menu li li li li a:before {
+		content: '--- ';
+	}
+	.mobile-menu a {
+		display: block;
+		color: rgba(0, 0, 0, 0.6);
+		font-size: 1.1em;
+		text-decoration: none;
+		padding: 6px 12px;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
+	}
+	.mobile-menu a:hover {
+		color: #000000;
+		background: rgba(0, 0, 0, 0.04);
+		text-decoration: none;
+	}
+
+	/* Theme iPad */
+
+	#contact-info .align-left {
+		padding-left: 18px;
+	}
+	#masthead .site-description {
+		font-size: 2.6em;
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+	.slideshow .information {
+		padding: 36px;
+	}
+	.slideshow .information .excerpt {
+		font-size: 0.9rem;
+	}
+	.slideshow .loading,
+	.slideshow.gallery-slideshow .loading {
+		min-height: 360px;
+	}
+	.slideshow .preloader,
+	.flex-direction-nav li a {
+		margin-top: -16px;
+	}
+	.featured-donation .donations {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+	.featured-donation .donations .holder {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.featured-donation .columns {
+		width: 100%;
+		text-align: center;
+	}
+	.featured-donation .vertical-center {
+		position: relative !important;
+		top: auto;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+	.featured-donation a.button {
+		margin: 36px 0px 0px 0px;
+	}
+	.featured-donation .align-right {
+		float: none;
+	}
+	.featured-pages .information {
+		padding: 18px;
+	}
+	.postarea {
+		padding: 24px 4%;
+	}
+	.postarea.full {
+		padding: 36px 12%;
+	}
+	.blog .sidebar,
+	.category .sidebar {
+		padding: 24px;
+	}
+	.feature-img.page-banner {
+		max-height: 480px;
+	}
+	.search-results .post-date p {
+		float: left;
+		display: block;
+		width: 100%;
+		font-size: 0.9em;
+	}
+	.footer-content {
+		text-align: center;
+	}
+	.footer-information .align-left {
+		float: none;
+		display: block;
+		text-align: center;
+	}
+	.footer-information .align-right {
+		float: none;
+		display: block;
+		text-align: center;
+		margin-top: 12px;
+	}
+}
+
+/************************************************
+*	Phone Grid									*
+************************************************/
+
+@media handheld, only screen and (max-width: 767px) {
+
+	/* Typography iPhone */
+
+	h1 {
+		font-size: 1.8rem;
+		line-height: 1.4;
+	}
+	h2 {
+		font-size: 1.6rem;
+		line-height: 1.4;
+	}
+	h3 {
+		font-size: 1.4rem;
+		line-height: 1.4;
+	}
+	h4 {
+		font-size: 1.2rem;
+		line-height: 1.4;
+	}
+	h5 {
+		font-size: 1.1rem;
+		line-height: 1.4;
+	}
+	h6 {
+		font-size: 1.0rem;
+		line-height: 1.4;
+	}
+	.headline {
+		font-size: 1.8rem;
+		padding-bottom: 6px;
+	}
+	.headline.img-headline {
+		background: none;
+		font-size: 1.6rem;
+		padding: 8px 12px;
+	}
+	.title {
+		font-size: 1.2rem;
+	}
+	body, p {
+		font-size: 0.9rem;
+		line-height: 1.7;
+	}
+	blockquote {
+		padding: 12px 0px;
+		border-left: none;
+	}
+	blockquote p {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	/* Theme iPhone */
+
+	#contact-info {
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+	#contact-info span {
+		padding: 4px !important;
+		text-align: center;
+	}
+	#contact-info .align-left {
+		float: none;
+		text-align: center;
+		padding-left: 0px;
+	}
+	#contact-info .align-right {
+		display: none;
+	}
+	#masthead .site-description {
+		font-size: 2em;
+		font-weight: 400;
+		letter-spacing: -1px;
+	}
+	.slideshow .loading,
+	.slideshow.gallery-slideshow .loading {
+		min-height: 280px;
+	}
+	.slideshow .information {
+		padding: 12px 18px;
+	}
+	.slideshow .information .headline {
+		font-size: 1.6rem;
+	}
+	.slideshow .information .excerpt {
+		display: none;
+	}
+	.flex-direction-nav .flex-next {
+		right: 0px;
+		border-radius: 2px 0px 0px 2px;
+	}
+	.flex-direction-nav .flex-prev {
+		left: 0px;
+		border-radius: 0px 2px 2px 0px;
+	}
+	.homepage .content {
+		margin-top: 12px;
+	}
+	.featured-donation .content.donation {
+		padding: 36px 0px;
+	}
+	.featured-donation .donation .holder {
+		padding: 0px 24px;
+	}
+	.featured-pages {
+		padding: 12px 0px;
+	}
+	.featured-pages .holder .content {
+		margin: 12px !important;
+	}
+	.featured-pages .information {
+		padding: 12px;
+	}
+	.featured-bottom {
+		margin: 12px;
+	}
+	.blog-holder {
+		margin: 12px;
+	}
+	.blog-holder .headline.img-headline {
+		font-size: 1.8rem;
+		width: 92%;
+		padding: 8px 4%;
+		border: none;
+	}
+	.post-date p {
+		font-size: 0.9em;
+	}
+	.archive-column {
+		width: 100%;
+		padding-right: 0;
+		padding-bottom: 12px;
+	}
+	.givingpress-lite-header-active.blog .container,
+	.givingpress-lite-header-active.category .container,
+	.givingpress-lite-header-active.single .container {
+		margin-top: -24px;
+	}
+	.sidebar {
+		margin-top: 12px;
+		padding: 24px;
+	}
+	.sidebar.blog {
+		padding: 0px 24px;
+	}
+	.sidebar.left {
+		display: none;
+	}
+	.type-page.has-post-thumbnail .sidebar.blog {
+		margin-top: 0px;
+	}
+	#comments {
+		padding: 0px 18px;
+	}
+	.footer-widget {
+		padding: 24px;
+	}
+	.footer-widgets {
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	.footer-widgets .widget {
+		width: 100% !important;
+		margin: 0px;
+		padding: 0px;
+	}
+	.footer-information .align-left,
+	.footer-information .align-right {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.footer-information .align-left p {
+		font-size: 0.9em;
+	}
+
+	/* Grid */
+
+	body {
+		-webkit-text-size-adjust: none;
+		-ms-text-size-adjust: none;
+		width: 100%;
+		min-width: 0;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.row {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0;
+		margin-right: 0;
+		overflow: visible !important;
+	}
+	.row .single,
+	.row .half,
+	.row .third,
+	.row .fourth {
+		width: 100%;
+	}
+	.row .row .column, .row .row .columns {
+		padding: 0;
+	}
+	.column, .columns {
+		width: auto !important;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.column:last-child, .columns:last-child {
+		margin-right: 0;
+		float: none;
+	}
+	[class*="column"] + [class*="column"]:last-child {
+		float: none;
+	}
+	[class*="column"]:before, [class*="column"]:after {
+		content:"";
+		display:table;
+	}
+	[class*="column"]:after {
+		clear: both;
+	}
+}

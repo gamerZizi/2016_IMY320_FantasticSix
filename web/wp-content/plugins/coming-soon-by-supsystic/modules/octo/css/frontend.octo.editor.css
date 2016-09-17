@@ -1,0 +1,1016 @@
+/*buttons*/
+.button,
+.button-primary {
+	font-size: 12px;
+	height: 34px;
+	/*font-weight: bold;*/
+	text-transform: uppercase;
+	padding: 2px 21px;
+	/*border: none;*/
+	text-decoration: none !important;
+}
+.button-primary {
+	color: #fff;
+	background-color: #09c9da;
+	border-radius: 3px;
+	-webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.4);
+}
+.button-primary:hover {
+	background-color: #ff5ea8;
+}
+.button-primary[disabled="disabled"],
+.button[disabled="disabled"] {
+	cursor: default;
+}
+.button {
+	border-radius: 3px;
+	color: #09c9da;
+	background-color: transparent;
+}
+.button:hover {
+	color: #ff5ea8;
+}
+/*****/
+.scsBlocksBar, .scsMainBar {
+	border: none;
+	z-index: 99999;
+}
+.scsBlocksBar {
+	right: auto; 
+	left: -340px; 
+	width: 340px;
+	overflow: visible;
+	background-color: #263238;
+}
+.scsBlockElement {
+	z-index: 2030 !important;
+	list-style: none;
+	cursor: pointer;
+	margin: 10px auto;
+	width: 340px;
+	text-align: center;
+}
+.scsBlockElement:hover .scsBlockElementImg {
+	outline: 1px solid #09c9da;
+}
+.scsBlockElement.ui-draggable-dragging {
+	cursor: move;
+}
+/*.scsCatElementIcon {
+	width: 23px;
+	height: 23px;
+	background-repeat: no-repeat;
+	margin: 5px auto;
+}*/
+.scsCatElement {
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+	color: #b3bdc2;
+	position: relative;
+}
+.scsCatElement.active:before {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #263238;
+	float: right;
+	content: "";
+	margin-top: 10px;
+}
+.scsCatElement.active:after {
+	border-left: 2px solid #09c9da;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.scsCatElement.active a, .scsCatElement.active a:focus {
+	background-color: transparent !important;
+	color: #fff !important;
+}
+/*.scsCatElement.active .scsCatElementIcon {
+	background-position: -23px 0;
+}*/
+.scsBlocksBar .scsBlockElement .scsBlockElementImg {
+	max-width: 320px;
+	width: 320px;
+	height: auto;
+}
+.scsMainIcon {
+	color: #09c9da;
+	display: inline-block;
+	margin: 20px 0 10px;
+}
+.scsMainIcon:hover {
+	color: #4ae8ea;
+}
+.scsMainBar {
+	right: auto; 
+	left: -120px; 
+	width: 120px;
+	background-color: #37474f;
+	text-align: center;
+}
+.scsMainBar a {
+	color: #b3bdc2 !important;
+    padding: 10px !important;
+}
+.scsMainBarHandle {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #09c9da;
+	cursor: pointer;
+	left: 30px;
+	bottom: 30px;
+	z-index: 99990;
+	color: #fff;
+	font-size: 20px;
+	padding-top: 13px;
+}
+.scsMainBarHandle:hover,
+.scsMainBarHandle.active {
+	background-color: rgba(61, 70, 85, 0.96);
+}
+.scsMainTopBar, 
+.scsMainBar,
+.scsBlocksBar,
+.context-menu-list,
+.modal,
+.button,
+.button-primary,
+.scsWpTabs {
+	font-family: Roboto;
+}
+/*main top bar settings*/
+.scsMainTopBar,
+.scsMainTopSubBar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 93px;
+	background-color: #09c9da;
+	z-index: 99995;
+	-webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.1);
+}
+#scsMainTopSubBar {
+	height: auto;
+	display: none;
+	top: 93px;
+	left: 0;
+	padding: 10px;
+	z-index: 99994;
+}
+#scsMainTopSubBar.active {
+	display: block;
+}
+.supsystic-plugin.scsMainTopBar a,
+.supsystic-plugin.scsMainTopBar i:not(.fa),
+.supsystic-plugin.scsMainTopSubBar a,
+.supsystic-plugin.scsMainTopSubBar i:not(.fa) {
+	color: #fff;
+}
+.supsystic-plugin.scsMainTopBar .fa-question.supsystic-tooltip,
+.supsystic-plugin.scsMainTopSubBar .fa-question.supsystic-tooltip {
+	border-color: #fff;
+	margin-right: 3px;
+}
+.supsystic-plugin.scsMainTopBar .button,
+.supsystic-plugin.scsMainTopBar .button-primary,
+.supsystic-plugin.scsMainTopSubBar .button,
+.supsystic-plugin.scsMainTopSubBar .button-primary {
+	color: #fff;
+	border-color: #fff !important;
+}
+.scsMainTopBarBtn {
+	padding: 5px;
+	text-decoration: none !important;
+	font-size: 14px;
+}
+.scsMainTopBarBtn:hover {
+	text-shadow: 2px 2px 2px #000;
+}
+.scsMainTopBarRight .scsPreviewTplBtn,
+.scsMainTopBarRight .scsMainSaveBtn {
+	display: block;
+	float: left;
+}
+.scsMainTopBarRight .scsPreviewTplBtn {
+	padding-top: 9px;
+}
+.supsystic-plugin.scsMainTopBar .scsMainTopBarDelimiter,
+.supsystic-plugin.scsMainTopSubBar .scsMainTopBarDelimiter {
+	color: #bff4f9;
+	font-size: 17px;
+}
+.scsMainTopBarLeft {
+	float: left;
+	width: 110px;
+	padding-top: 18px;
+}
+.scsMainTopBarCenter {
+	float: left;
+	padding-top: 1px;
+	display: none;	/* it is hidden until whole page will be loaded because elements there is unsorted */
+}
+.scsMainTopBarRight {
+	float: right;
+	width: 155px;
+	padding-top: 15px;
+}
+#scsMainOctoOptMoreBtn {
+	line-height: 10px;
+	text-align: center;
+	text-decoration: none !important;
+	width: 50px;
+	display: block;
+}
+#scsMainOctoOptMoreBtn i {
+	transform-origin: center center;
+	transition: all 0.3s linear;
+}
+#scsMainOctoOptMoreBtn.active i {
+	transform: rotate(180deg);
+}
+/*.scsMainTopBarLeft a.scsMainTopBarDimBtn,
+.scsMainTopBarRight a.scsMainTopBarDimBtn {
+	color: #ef85bf;
+}*/
+/*main canvas styles*/
+#scsCanvas {
+	min-height: 200px;
+	background-color: #e9f4f4;
+}
+.ui-state-highlight {
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #eeeeee 1px, #eeeeee 7px);
+	border: 2px solid #09c9da;
+	display: block;
+}
+#scsCanvas .ui-state-highlight {
+	height: 90px !important;
+	width: 100% !important;
+	margin: 0;
+	padding: 0;
+	z-index: 9999999;
+}
+/*Blocks settings*/
+.scsBlock:hover {
+	/*outline: 2px solid #f2684d;
+	border-left: 2px solid #f2684d;
+	border-right: 2px solid #f2684d;*/
+	/*border: 2px solid #f2684d;
+	padding: 0;*/
+}
+.scsBlock.ui-sortable-helper {
+	margin-top: 0 !important;
+}
+.scsBlock.scsInSortProcess {
+	-webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+	box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.75);
+	
+	overflow: hidden;
+	/*margin-top: 20px;
+	height: 178px !important;*/
+}
+/*Block Elements settings*/
+.scsEl:not(.scsElImg):not(.scsElInput):not(.scsElWithArea):hover, 
+.scsElImg:hover .scsGalItemImgShell, 
+.scsElInput:hover .scsInputShell,
+.scsElWithArea:hover .scsElArea,
+.scsEl.mce-edit-focus {
+	outline: 1px solid #09c9da;
+}
+.scsElArea {
+	position: relative;
+}
+/*Element menus*/
+.scsElMenu {
+	position: absolute;
+	/*bottom: calc(100%);*/
+	/*left: 0;*/
+	background-color: transparent;
+	color: #fff;
+	z-index: 9999;
+	
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+}
+.scsElMenu.active {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+}
+.scsElMenu .scsElMenuMainPanel {
+	background-color: rgba(45, 34, 52, 0.96);
+	padding: 5px 10px;
+	border-radius: 3px;
+	font-size: 16px;
+}
+.scsElMenu.scsMenuSubOpened .scsElMenuMainPanel {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.scsElMenu label,
+label.scsElMenuSubPanelRow {
+	font-weight: normal;
+}
+label.scsElMenuSubPanelRow {
+	width: 100%;
+	color: #fff;
+	margin: 0;
+	padding: 5px 0;
+	display: table;
+	text-align: left;
+}
+.scsElMenuSubPanelRow .mce-input-name-txt:not(.mce-input-name-not-first) {
+	display: table-cell;
+	padding-right: 10px;
+	padding-top: 5px;
+	width: 1px;
+}
+.scsElMenu input[type=text]:not(.scsColorpickerInput),
+.scsElMenuSubPanelRow input[type=text]:not(.scsColorpickerInput),
+.scsElMenuSubPanelRow textarea,
+.scsElMenuSubPanelRow select {
+	color: #fff;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	display: table-cell;
+}
+#scsCanvas .scsElMenu input[type=text]:not(.scsColorpickerInput),
+#scsCanvas .scsElMenuSubPanelRow input[type=text]:not(.scsColorpickerInput),
+#scsCanvas .scsElMenuSubPanelRow textarea,
+#scsCanvas .scsElMenuSubPanelRow select {
+	color: #fff;
+}
+/*same - but for modal dialogs*/
+.modal-body label.scsElMenuSubPanelRow,
+.modal-body label.scsElMenuSubPanelRow input,
+.modal-body label.scsElMenuSubPanelRow select,
+.modal-body label.scsElMenuSubPanelRow textarea {
+	color: #000 !important;
+}
+#scsCanvas .modal-body label.scsElMenuSubPanelRow input[type=text],
+#scsCanvas .modal-body label.scsElMenuSubPanelRow textarea,
+#scsCanvas .modal-body label.scsElMenuSubPanelRow select {
+	color: #000;
+	margin-top: 5px;
+}
+#scsCanvas .modal-body label.scsElMenuSubPanelRow .mce-input-name-txt {
+	vertical-align: top;
+}
+.scsElMenu .scsElMenuContent:after {
+	border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+	border-top: 5px solid rgba(45, 34, 52, 0.96);
+    clear: both;
+    content: "";
+    height: 0;
+    left: calc(50% - 2.5px);	/*Total center of our panel*/
+    position: absolute;
+    bottom: 0;
+    width: 0;
+}
+.scsElMenu .scsElMenuContent {
+	margin-bottom: 5px;
+}
+.scsElMenu.scsElMenuBottom {
+	/*bottom: 0;
+	top: 100%;*/
+}
+.scsElMenu.scsElMenuBottom .scsElMenuContent {
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+.scsElMenu.scsElMenuBottom .scsElMenuContent:after {
+	bottom: calc(100% - 5px);
+	border-top: none;
+	border-bottom: 5px solid rgba(45, 34, 52, 0.96);
+}
+.scsMainTopBar, 
+.scsMainTopSubBar,
+.scsMainBar,
+.scsBlocksBar,
+.context-menu-list,
+.modal,
+.button,
+.button-primary,
+.scsWpTabs {
+	font-family: Roboto;
+}
+/*.scsElMenu:after {
+	border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+	border-top: 5px solid #263238;
+    clear: both;
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+.scsElMenu.scsElMenuBottom:after {
+	top: -5px;
+	border-top: none;
+	border-bottom: 5px solid #263238;
+}*/
+.scsElMenu .scsElMenuBtn {
+	display: inline-block;
+	cursor: pointer;
+	color: #fff;
+}
+.scsElMenu .scsElMenuBtn label {
+	cursor: pointer;
+}
+.scsElMenu .scsElMenuBtn:hover {
+	color: #09c9da;
+}
+.scsElMenu .scsElMenuBtn.scsColorpickerInputShell {
+	display: inline-block;
+}
+.scsElMenuSubPanel {
+	padding-top: 10px;
+	display: none;
+	background-color: rgba(57, 45, 63, 0.96);
+	padding: 5px 10px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.scsElMenuSubPanel .scsElMenuSubPanelRow:not(:last-of-type) {
+	border-bottom: 1px solid #dddddd;
+}
+#scsCanvas .scsElMenuSubPanel .scsElMenuSubPanelRow:not(:last-of-type) {
+	border-bottom: 1px solid #37474f;
+}
+.modal-content .scsElMenuSubPanel {
+	display: block;
+}
+.scsElMenu .scsElMenuBtnDelimiter {
+	display: inline;
+	background-color: #5b4b63;
+	padding: 0 1px;
+	margin: 0 7px;
+}
+/*.scsEl:hover .scsElMenu {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+}*/
+/*Block Toolbar*/
+#scsBlockToolbarEx {
+	display: none !important;
+}
+.scsToolbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	z-index: 9999;
+	color: #fff;
+	font-size: 20px;
+	padding: 5px 5px 0 0;
+}
+.scsToolbar .scsToolItem {
+	cursor: pointer;
+	border-radius: 50%;
+	padding: 5px;
+	font-size: 30px;
+	background-color: #555555;
+	display: inline-block;
+}
+.scsToolbar .scsToolItem:hover {
+	background-color: #09c9da;
+}
+.scsBlock:hover .scsBlockToolbar {
+	display: block;
+}
+.ui-state-highlight + .scsBlock,
+.ui-sortable-helper + .scsBlock,
+.scsBlock:first-child {
+	margin-top: 0 !important;
+    /*height: 100%;*/
+}
+/*.scsBlockContent {
+    height: 100%;
+}*/
+/*Main ajax (or other events) loader*/
+#scsMainLoder {
+	position: fixed;
+	top: 0;
+	left: calc(50% - 20px);
+	width: 40px;
+	height: 8px;
+	background-repeat: no-repeat;
+	background-image: url(../../../img/loading.gif);
+	background-color: #fff;
+	border: 1px solid #000;
+	padding: 5px;
+	z-index: 999999;
+	display: none;
+}
+/*Set image button*/
+.scsChangeImgBtn {
+	width: 150px;
+	height: 150px;
+	top: calc(50% - 75px);
+	left: calc(50% - 75px);
+	background-color: rgba(61, 70, 85, 0.5);
+	text-transform: uppercase;
+	position: absolute;
+	z-index: 9999;
+	border: 2px solid #f2684d;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+}
+.scsChangeImgBtn .scsChangeImgBtnTxt {
+	color: #fff;
+    font-size: 12px;
+    padding: 10px;
+}
+.scsChangeImgBtn .scsChangeImgBtnIcon {
+	font-size: 80px;
+    left: calc(50% - 35px);
+    position: absolute;
+    top: calc(50% - 35px);
+}
+.scsElImg:hover .scsChangeImgBtn  {
+	display: block;
+}
+/*fix for wp-admin/css/common.css*/
+body a:focus {
+	box-shadow: none;
+}
+html, body {
+	height: auto;
+}
+/*fix for context menu*/
+.context-menu-list {
+	min-width: 300px;
+	background-color: #263238;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	z-index: 99999;
+}
+.context-menu-item {
+	padding: 15px 20px;
+	margin-bottom: 1px;
+	font-size: 16px;
+}
+.context-menu-item:hover .scsBlockMenuElAct,
+.context-menu-item:hover .scsBlockMenuElTitle,
+.context-menu-item:hover .scsBlockMenuElRightAct {
+	color: #09c9da;
+}
+/*.scsBlockMenuElTitle  {
+	color: #f72497;
+}*/
+.scsBlockMenuDelim {
+	width: 100%;
+	height: 1px;
+	background-color: #37474f;
+	clear: both;
+	margin: 10px auto 0;
+}
+/*.context-menu-item .glyphicon {
+	color: #00c3aa;
+}*/
+.context-menu-item,
+.context-menu-item:hover,
+.context-menu-item:active,
+.context-menu-item:focus {
+	background-color: transparent;
+}
+/*fix for colorpicker (spectrum)*/
+.sp-replacer, .sp-preview, .sp-preview-inner {
+	border-radius: 50%;
+}
+.sp-dd {
+	display: none;
+}
+.sp-replacer {
+	/*height: 30px;
+	width: 30px;*/
+	background-color: transparent;
+	border: none;
+	margin-top: -3px;
+	overflow: auto;
+	padding: 0;
+}
+.sp-preview {
+	width: 30px;
+	height: 30px;
+	border: 2px solid #fff;
+}
+.sp-palette .sp-thumb-el {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin: 5px;
+}
+.sp-palette .sp-thumb-inner {
+	border-radius: 50%;
+}
+.sp-container {
+	background-color: #3d4655;
+	border: 2px solid #f2684d;
+	border-radius: 5px;
+}
+.sp-container:hover {
+	background-color: #2a313c;
+}
+/*block menus*/
+#scsBlockMenuExl {
+	display: none;
+}
+.scsBlockMenuElTitle {
+	padding-left: 10px;
+}
+.scsBlockMenuElTitle, .scsBlockMenuElAct, .scsBlockMenuElRightAct {
+	display: inline;
+}
+.scsBlockMenuElRightAct {
+	float: right;
+	/*width: 40px;*/	/*Maybe we will need to change this in future - so be carefull*/
+	text-align: center;
+}
+/*block menu - align*/
+/*.scsBlockMenuEl[data-menu="align"] {
+	padding: 15px 30px;
+}*/
+.scsBlockMenuElTitle.scsBlockMenuElAlignTitle {
+	display: block;
+	padding-left: 0;
+}
+.scsBlockMenuElAlignContent {
+	padding-top: 10px;
+}
+/*.scsBlockMenuElAlignContent .iradio_minimal {
+	vertical-align: top;
+}
+.scsBlockMenuElAlignContent .iradio_minimal:first-of-type {
+	float: left;
+}
+.scsBlockMenuElAlignContent .iradio_minimal:last-of-type {
+	float: right;
+}*/
+.scsBlockMenuElTitle.scsBlockMenuElAlignTitle, .scsBlockMenuElAlignContent {
+	text-align: left;
+}
+.scsBlockMenuElElignBtn .glyphicon {
+	color: #5c727d;
+	font-size: 26px;
+}
+.scsBlockMenuElElignBtn:hover,
+.scsBlockMenuElElignBtn.active {
+	color: #09c9da;
+}
+.scsBlockMenuElElignBtn[data-align="left"] {
+	text-align: left;
+}
+.scsBlockMenuElElignBtn[data-align="center"] {
+	text-align: center;
+}
+.scsBlockMenuElElignBtn[data-align="right"] {
+	text-align: right;
+}
+/*wp admin toolbar fix*/
+#wpadminbar {
+	/*z-index: 1;*/
+	display: block;
+}
+/*slider slides manager*/
+#scsSlideManageItemExl {
+	display: none;
+}
+.scsSlidesListPrev {
+	text-align: center;
+}
+.scsSlideManageItem {
+	display: inline-block;
+	position: relative;
+	max-height: 150px;
+	overflow: hidden;
+	vertical-align: top;
+	cursor: move;
+	margin: 0 5px 10px;
+	outline: 1px solid #dddddd;
+}
+.scsSlideManageItemToolbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+.scsSlideManageItem:hover .scsSlideManageItemToolbar {
+	display: block;
+}
+.scsSlideManageItem img {
+	max-width: 150px;
+	height: auto;
+}
+.scsSlideManageItem:hover img {
+	opacity: 0.7;
+}
+.scsSlidesListPrev .ui-state-highlight {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+	margin: 0 5px;
+}
+/*.scsSlidesListPrev .scsSlideManageAddBtn {
+	color: #fff;
+	text-decoration: none;
+	padding-top: 40px;
+	font-size: 40px;
+}
+.scsSlidesListPrev .scsSlideManageAddBtn:hover {
+	color: #f72497;
+	border-color: #f72497;
+}*/
+#scsManageSlidesWnd .modal-dialog {
+	/*width: 90%;*/
+}
+#scsManageSlidesWnd {
+	z-index: 99999;
+}
+/*bootstrap popup settings*/
+.modal {
+	text-align: center;
+	z-index: 10050 !important;
+}
+.modal:before {
+	display: inline-block;
+	vertical-align: middle;
+	content: " ";
+	height: 100%;
+}
+.close {
+	background-color: transparent !important;
+	color: #09c9da;
+	opacity: 1 !important;
+}
+.close:hover {
+	color: #ff5ea8;
+}
+/*.modal-dialog .close {
+	margin-top: 2px;
+}*/
+.modal-dialog {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+.modal-dialog .modal-content {
+	border: none;
+}
+.modal-dialog .modal-content .modal-title {
+	text-transform: uppercase;
+	color: #263238;
+}
+.modal-dialog .modal-content .modal-body {
+	background-color: #fff;
+}
+.modal-dialog .modal-content .modal-footer {
+	background-color: #eeeeee;
+	border-top: none;
+}
+.modal-dialog .modal-content {
+	border-radius: 0px;	/*Let it be 0 for now - as it have some problems*/
+}
+/*Gallery items*/
+#scsCanvas .ui-state-highlight-gal-item {
+	outline: 2px #09c9da dashed;
+}
+#scsCanvas .ui-state-highlight-gal-item * {
+	opacity: 0.6;
+}
+.mce-ico.mce-i-octo_remove {
+	display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+}
+.mce-ico.mce-i-octo_remove:before{content:"\e020"}
+
+.scsMainSaveBtnLoader {
+	display: none;
+	/*position: absolute;
+	top: 5px;
+	left: calc(50% - 10px);*/
+}
+.scsMainSaveBtn {
+	position: relative;
+}
+/*tabs*/
+.scsWpTabs .nav-tab-wrapper {
+	border: none;
+	padding-left: 0;
+	padding-bottom: 20px;
+}
+.scsWpTabs .nav-tab-wrapper .nav-tab {
+	color: #dddddd;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	background-color: #fff;
+	border: 2px solid #dddddd;
+	padding: 9px 20px;
+	margin: 0;
+	margin-right: -2px;
+	display: inline;
+	
+}
+.scsWpTabs .nav-tab-wrapper .nav-tab:hover,
+.scsWpTabs .nav-tab-wrapper .nav-tab.nav-tab-active {
+	color: #263238;
+	background-color: #dddddd;
+}
+.scsWpTabs .nav-tab-wrapper .nav-tab:first-of-type {
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+}
+.scsWpTabs .nav-tab-wrapper .nav-tab:last-of-type {
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+}
+/*****/
+#scsSubSettingsWnd .mce-input-name-txt {
+	min-width: 200px;
+}
+#scsSubSettingsWnd .modal-dialog,
+#scsAddFieldWnd .modal-dialog {
+	width: 430px;
+}
+a.scsEditArea {
+	outline: 0px solid transparent;
+}
+.scsIconsLibList {
+	padding: 5px 15px 0;
+}
+.scsIconLibItem {
+	font-size: 18px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	color: #000;
+	cursor: pointer;
+}
+.scsIconLibItem:hover {
+	background-color: #ff41a3;
+	color: #fff;
+}
+/*.scsIconLibItem:hover .scsIconLibPrev {
+	font-size: 24px;
+}*/
+.scsIconLibTitle {
+	margin-left: 5px;
+}
+.scsIconsLibSearchTxt {
+	width: 100%;
+	padding: 5px;
+}
+.scsNothingFoundKeys {
+	background-color: #ff41a3;
+	border-radius: 3px;
+	padding: 2px 7px;
+}
+/*Movable elements*/
+#scsCanvas .scsMoveHandler {
+	position: absolute;
+	z-index: 10000;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+#scsCanvas .scsMoveHandler.sortInProgress {
+	background-color: rgba(45, 34, 52, 0.96);
+	border-radius: 3px;
+}
+#scsCanvas .scsMoveHandler i {
+	color: #fff;
+}
+#scsCanvas .scsMoveHandler i:hover,
+#scsCanvas .scsMoveHandler.sortInProgress i{
+	color: #ff41a3;
+}
+.scsElMenuMoveHandlerPlace {
+	width: 16px;	/*Size of real icon*/
+	height: 19px;	/*Size of real icon*/
+	display: inline-block;
+}
+.scsMainTopBar,
+.scsMainTopSubBar {
+	padding-top: 10px;
+}
+.scsMainTopBar .scsMainOctoOpt,
+.scsMainTopSubBar .scsMainOctoOpt {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.scsMainTopBar .scsMainOctoOpt label,
+.scsMainTopSubBar .scsMainOctoOpt label {
+	font-weight: normal;
+	color: #fff;
+}
+.scsMainTopBar .scsMainOctoOpt label select,
+.scsMainTopSubBar .scsMainOctoOpt label select,
+.scsMainTopBar .scsMainOctoOpt label textarea,
+.scsMainTopSubBar .scsMainOctoOpt label textarea {
+	color: #000;
+}
+.scsMainTopBar .scsMainOctoOpt textarea,
+.scsMainTopSubBar .scsMainOctoOpt textarea {
+	width: 220px;
+	height: 50px;
+}
+/*octo settings - bg  and favicon img*/
+.scsOctoBgImg, .scsOctoFavImg {
+	height: 60px;
+	width: auto;
+}
+.scsMainBgImgOscshell, .scsMainFavImgOscshell {
+	position: relative;
+}
+.scsOctoBgImgRemove, .scsOctoFavImgRemove {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/**/
+.scsTxtMiddle {
+	vertical-align: middle;
+}
+.scsTxtTop {
+	vertical-align: top;
+}
+/*Subscribe options*/
+.scsSubDestRow {
+	display: none;
+}
+.scsMainOctoOpt {
+	    position: relative;
+}
+.scsHeaderColorPicker {
+	position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 999;
+}
+.scsHeaderColorPicker.hidden {
+	display: none;
+}
+.scsElMenuSubPanelIconSize [data-size] {
+    padding: 5px 8px;
+    cursor: pointer;
+}
+.scsElMenuSubPanelIconSize [data-size].active,
+.scsElMenuSubPanelIconSize [data-size]:hover {
+    background: #F72497;
+}
+.xdsoft_datetimepicker {
+	z-index: 99999;
+}
+.scsPostLinkList {
+	padding: 3px 15px !important;
+}
+.scsElMenuSubPanel .octPostLinkList {
+	padding: 3px 7px 0 0 !important;
+}
+.scsPostLinkList li {
+	padding: 5px;
+    cursor: pointer;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	text-align: left !important;
+}
+.scsPostLinkList li:hover {
+    background: #F72497;
+}
+.scsPostLinkList+.slimScrollBar {
+	max-width: 4px;
+}
+.scsElMenu .scsElMenuSubPanel[data-sub-panel="iconlink"] input[name="icon_item_link"]:focus,
+.scsElMenu .scsElMenuSubPanel[data-sub-panel="link"] input[name="btn_item_link"]:focus {
+	outline-color: #C81878;
+    outline-style: auto;
+    outline-width: 5px;
+}

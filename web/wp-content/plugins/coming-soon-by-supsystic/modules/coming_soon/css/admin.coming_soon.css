@@ -1,0 +1,51 @@
+#containerWrapper h3, 
+#containerWrapper h4 {
+	margin: 0;
+}
+.temlplate-list .temlplate-list-item {
+	max-width: 400px;
+	border: 1px solid transparent;
+	padding: 5px;
+	margin: 6px;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	overflow: hidden;
+}
+.temlplate-list .temlplate-list-item.active ,
+.temlplate-list .temlplate-list-item:active  {
+	outline: 5px solid rgba(0, 0, 0, 0.52);
+}
+.temlplate-list .temlplate-list-item img {
+	max-width: 400px;
+	height: auto;
+}
+.temlplate-list .temlplate-list-item .template-list-main-select {
+	position: absolute;
+	top: 115px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #fff;
+	font-size: 13px;
+	-moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+}
+.temlplate-list .temlplate-list-item.active .template-list-main-select {
+	opacity: 0;
+	visibility: hidden;
+}
+.temlplate-list .temlplate-list-item .preset-select-btn {
+	background-color: #fff;
+}
+.scsOptCat_cs_mode_coming_soon td {
+	padding-left: 0;
+}
+.excludeOrShow {
+	cursor: pointer;
+}
+.hideForIpBtn {
+	cursor: pointer;
+}

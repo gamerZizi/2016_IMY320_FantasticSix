@@ -1,0 +1,17 @@
+/*remove duplicated WP menu item*/
+#toplevel_page_coming-soon-supsystic .wp-submenu.wp-submenu-wrap .wp-first-item {
+	display: none;
+}
+/*coming soon feature top amin menu btn*/
+.scsHidden {
+	display: none;
+}
+#wp-toolbar #wp-admin-bar-top-secondary #wp-admin-bar-comingsoon-supsystic,
+#wp-toolbar #wp-admin-bar-top-secondary #wp-admin-bar-comingsoon-supsystic:hover,
+#wp-toolbar #wp-admin-bar-top-secondary #wp-admin-bar-comingsoon-supsystic a:hover {
+	background-color: #e01710;
+}
+#wp-toolbar #wp-admin-bar-top-secondary #wp-admin-bar-comingsoon-supsystic:hover,
+#wp-toolbar #wp-admin-bar-top-secondary #wp-admin-bar-comingsoon-supsystic a:hover {
+	color: #444;
+}

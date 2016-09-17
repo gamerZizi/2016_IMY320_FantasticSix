@@ -1,0 +1,305 @@
+# Translation of Bouquet in Greek (Polytonic)
+# This file is distributed under the same license as the Bouquet package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-06-01 14:33:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
+"Project-Id-Version: Bouquet\n"
+
+#. Author URI of the plugin/theme
+#: wp-content/themes/pub/bouquet/style.css
+msgid "https://wordpress.com/themes/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+#: wp-content/themes/pub/bouquet/full-width-page.php
+msgid "Full-width, no sidebar"
+msgstr "Πλῆρες φάρδος χωρὶς πλαϊνὴ στήλη"
+
+#. Description of the plugin/theme
+#: wp-content/themes/pub/bouquet/style.css
+msgid "Bouquet is an elegant, simple theme inspired by the beauty found in flowers. Notable features include two floral schemes, a responsive layout structure that adapts to smaller devices, a right sidebar, a full-width template, support for post formats, custom background, and custom header."
+msgstr ""
+
+#: search.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Λυπούμεθα, ἀλλὰ τίποτε δὲν ταιριάζει μὲ τὶς λέξεις ἀναζήτησης. Παρακαλοῦμε ξαναδοκιμάστε μὲ διαφορετικὲς λέξεις-κλειδιά."
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Ἀναζήτηση ἀποτελεσμάτων γιά: %s"
+
+#: inc/theme-options.php:106
+msgid "Save Options"
+msgstr "Ἀποθηκεῦστε τὶς ἐπιλογὲς"
+
+#: inc/theme-options.php:61
+msgid "Options saved"
+msgstr "Οἱ ἐπιλογὲς σας ἀποθηκεύθηκαν"
+
+#: inc/theme-options.php:71 inc/theme-options.php:73
+msgid "Color Scheme"
+msgstr "Συνδυασμὸς χρωμάτων"
+
+#: inc/theme-options.php:38
+msgid "Forget-Me-Not"
+msgstr ""
+
+#: inc/theme-options.php:42
+msgid "Tiger Lily"
+msgstr ""
+
+#: inc/theme-options.php:58
+msgid " Theme Options"
+msgstr "Ρυθμίσεις θέματος"
+
+#: inc/theme-options.php:34
+msgid "Pink Dogwood (Default)"
+msgstr ""
+
+#: inc/theme-options.php:26
+msgid "Theme Options"
+msgstr "Ἐπιλογές θέματος ἐμφάνισης"
+
+#: image.php:96
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Σχόλια καὶ εἰδοποιήσεις συνδέσεων εἶναι ἐπὶ τοῦ παρόντος κλειστά."
+
+#: image.php:94
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Οἱ εἰδοποιήσεις συνδέσεως ἔχουν κλείσει, ἀλλὰ μπορεῖτε νὰ <a class=\"comment-link\" href=\"#respond\" title=\"Ἀναρτῆστε σχόλιο\">ἀναρτήσετε σχόλιο</a>."
+
+#: image.php:92
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Τὰ σχόλια ἔχουν κλείσει ἀλλὰ μπορεῖτε νὰ ἀφήσετε μιὰ εἰδοποίηση σύνδεσης: <a class=\"trackback-link\" href=\"%s\" title=\"URL γιὰ εἰδοποίηση σύνδεσης πρὸς τὸ σχόλιό σας\" rel=\"trackback\">URL γιὰ εἰδοποίηση σύνδεσης</a>."
+
+#: image.php:90
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Σχολιάστε\">Σχολιάστε</a> ἢ ἀφῆστε εἰδοποίηση σύνδεσης: <a class=\"trackback-link\" href=\"%s\" title=\"Ἡ URL γιὰ εἰδοποίηση σύνδεσης πρὸς τὸ ἄρθρο σας\" rel=\"trackback\">URL γιὰ εἰδοποίηση σύνδεσης</a>. "
+
+#: image.php:37
+msgid "Next &rarr;"
+msgstr "Ἑπόμενο &rarr;"
+
+#: image.php:24
+msgid "Published at <a href=\"%1$s\" title=\"Link to full-size image\">%2$s &times; %3$s</a> in <a href=\"%4$s\" title=\"Return to %5$s\" rel=\"gallery\">%5$s</a>"
+msgstr ""
+
+#: image.php:36
+msgid "&larr; Previous"
+msgstr "&larr; Προηγούμενα"
+
+#: header.php:46
+msgid "Skip to content"
+msgstr "Πηγαίνετε στὸ περιεχόμενο τοῦ ἱστολογίου"
+
+#: header.php:45
+msgid "Menu"
+msgstr "Μενού"
+
+#: functions.php:394
+msgid "This entry was posted on %3$s, in %1$s."
+msgstr "Ἡ καταχώριση αὐτὴ ἀναρτήθηκε στὶς %3$s, %1$s."
+
+#: functions.php:519
+msgid "Page %s"
+msgstr "Σελίδα %s"
+
+#: functions.php:361
+msgid "This entry was posted on %5$s, in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Ἡ καταχώριση αὐτὴ ἀναρτήθηκε στὶς %5$s στὸ %1$s. Φυλάξτε τὸν <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">μόνιμο σύνδεσμο</a> στοὺς σελιδοδεῖκτες σας."
+
+#. translators: used between list items, there is a space after the comma
+#: functions.php:384
+msgid "This entry was posted on %3$s and tagged %2$s."
+msgstr "Ἡ καταχώριση αὐτὴ ἀναρτήθηκε στὶς %3$s καὶ σημειώθηκε ὡς %2$s."
+
+#: functions.php:386
+msgid "This entry was posted on %3$s."
+msgstr "Ἡ καταχώριση αὐτὴ ἀναρτήθηκε στὶς %3$s."
+
+#: functions.php:392
+msgid "This entry was posted on %3$s, in %1$s and tagged %2$s."
+msgstr "Ἡ καταχώριση αὐτὴ ἀναρτήθηκε στὶς %3$s, %1$s καὶ σημειώθηκε ὡς %2$s."
+
+#. translators: used between list items, there is a space after the comma
+#: functions.php:351
+msgid "This entry was posted on %5$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Καταχώριση τῆς %5$s σημειωμένη ὡς %2$s. Φυλάξτε τὸν <a href=\"%3$s\" title=\"Μόνιμος σύνδεσμος πρὸς %4$s\" rel=\"bookmark\">μόνιμο σύνδεσμο</a>."
+
+#: functions.php:353
+msgid "This entry was posted on %5$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Καταχώριση τῆς %5$s. Φυλάξτε τὸν <a href=\"%3$s\" title=\"Μόνιμος σύνδεσμος πρὸς %4$s\" rel=\"bookmark\">μόνιμο σύνδεσμο</a>."
+
+#: functions.php:359
+msgid "This entry was posted on %5$s, in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr "Ἡ καταχώριση αὐτὴ δημοσιεύθηκε στὶς %5$s, στὸ %1$s καὶ σημειώθηκε ὡς %2$s. Φυλάξτε τὸν <a href=\"%3$s\" title=\"Μόνιμος σύνδεσμος πρὸς %4$s\" rel=\"bookmark\">μόνιμο σύνδεσμο</a> στὰ ἀγαπημένα σας."
+
+#. translators: used between list items, there is a space after the comma
+#: functions.php:343 functions.php:376
+msgid ", "
+msgstr ","
+
+#. translators: 1: date, 2: time
+#: functions.php:307
+msgid "%1$s at %2$s"
+msgstr "%1$s,  %2$s "
+
+#: functions.php:299
+msgid "Your comment is awaiting moderation."
+msgstr "Τὸ σχόλιό σας περιμένει ἔλεγχο γιὰ ἐνδεχόμενες ἀκρότητες."
+
+#: functions.php:296
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "Ὁ/ἡ %s <span class=\"says\">γράφει:</span>"
+
+#: functions.php:286
+msgid "Pingback:"
+msgstr "Αὐτόματη εἰδοποίηση σύνδεσης:"
+
+#: functions.php:265
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Νεώτερα ἄρθρα <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:261
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Παλαιότερα ἄρθρα"
+
+#: functions.php:256
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: functions.php:255
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: functions.php:232
+msgid "Sidebar 1"
+msgstr "Πλαϊνὴ στήλη 1"
+
+#: functions.php:234
+msgid "Drag widgets here to activate the sidebar."
+msgstr "Ἐνεργοποιῆστε τὴν πλαϊνὴ στήλη σύροντας ἐδῶ πλαϊνὲς προσθῆκες."
+
+#: functions.php:251
+msgid "Post navigation"
+msgstr "Περιήγηση ἄρθρων"
+
+#: functions.php:36
+msgid "Primary Menu"
+msgstr "Πρωτεῦον μενού"
+
+#: footer.php:20
+msgid "Theme: %1$s by %2$s."
+msgstr "Θέμα: %1$s ἀπὸ τὸν/τὴν %2$s."
+
+#: footer.php:18
+msgid "Proudly powered by %s"
+msgstr "Λειτουργεῖ μὲ τὴν βοήθεια τοῦ %s"
+
+#: footer.php:18
+msgid "Semantic Personal Publishing Platform"
+msgstr "Πλατφόρμα σημασιολογικῶν προσωπικῶν ἐκδόσεων"
+
+#: footer.php:18
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: content-gallery.php:73 content-page.php:20 content-single.php:25
+#: content.php:26 functions.php:286 functions.php:309 image.php:32 image.php:98
+msgid "Edit"
+msgstr "Ἐπεξεργασία"
+
+#: content-gallery.php:71 content-page.php:18 content-single.php:23
+#: content.php:24
+msgid "1 Comment"
+msgstr ""
+
+#: content-gallery.php:71 content-page.php:18 content-single.php:23
+#: content.php:24
+msgid "% Comments"
+msgstr "% Σχόλια"
+
+#: content-gallery.php:71 content-page.php:18 content-single.php:23
+#: content.php:24
+msgid "Leave a comment"
+msgstr "Σχολιάστε"
+
+#: content-gallery.php:64 content-page.php:16 content-single.php:17
+#: content.php:18 image.php:84
+msgid "Pages:"
+msgstr "Σελίδες:"
+
+#: content-gallery.php:58
+msgid "Permalink to %s"
+msgstr "Μόνιμος σύνδεσμος πρὸς %s"
+
+#: content-gallery.php:57
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "Ἡ συλλογὴ περιέχει <a %1$s>%2$s φωτογραφία</a>."
+msgstr[1] "Ἡ συλλογὴ περιέχει <a %1$s>%2$s φωτογραφίες</a>."
+
+#: content-gallery.php:24 content.php:17
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Συνέχεια <span class=\"meta-nav\">&rarr;</span>"
+
+#: comments.php:61
+msgid "Comments are closed."
+msgstr "Ἡ ὑποβολὴ σχολίων ἔχει κλείσει."
+
+#: comments.php:31 comments.php:51
+msgid "Newer Comments &rarr;"
+msgstr "Νεότερα σχόλια &rarr;"
+
+#: comments.php:30 comments.php:50
+msgid "&larr; Older Comments"
+msgstr "&larr; Παλαιότερα σχόλια"
+
+#: comments.php:22
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:29 comments.php:49
+msgid "Comment navigation"
+msgstr "Πλοήγηση στὰ σχόλια"
+
+#: archive.php:61 index.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Μᾶλλον δὲν μποροῦμε νὰ βροῦμε αὐτὸ ποὺ ψάχνετε. Ἴσως βοηθήσει μιὰ ἀναζήτηση."
+
+#: archive.php:57 index.php:40 search.php:34
+msgid "Nothing Found"
+msgstr "Οὑδὲν εὑρέθη!"
+
+#: archive.php:31
+msgid "Archives"
+msgstr "Ἀρχεῖα"
+
+#: archive.php:21 archive.php:23 archive.php:25
+msgid "Archive | %s"
+msgstr "Ἀρχεῖο | %s"
+
+#: archive.php:27
+msgid "Archive by Author | %s"
+msgstr "Ἀρχεῖο ἀνὰ συγγραφέα | %s"
+
+#: archive.php:29
+msgid "Tag Archive | %s"
+msgstr "Ἀρχεῖο ἐτικεττῶν | %s"
+
+#: 404.php:15
+msgid "Well this is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Ἐλαφρῶς ἐνοχλητικὸ ἤ ὄχι;"
+
+#: 404.php:19
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Μᾶλλον δὲν μποροῦμε νὰ βροῦμε αὐτὸ ποὺ θέλετε. Ἴσως βοηθοῦσε μία ἀναζήτηση ἢ ἕνας ἀπὸ τοὺς παρακάτω συνδέσμους."
