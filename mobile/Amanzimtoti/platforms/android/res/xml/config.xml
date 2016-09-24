@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.byethost33.amanzimtoti" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <name>Amanzimtoti</name>
+    <description>
+        Amanzimtoti App - for Registered users
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="*" />
+    <icon src="www/icon.png" />
+    <splash density="land-hdpi" src="www/screen/android/splash-land-hdpi.png" />
+    <splash density="land-ldpi" src="www/screen/android/splash-land-ldpi.png" />
+    <splash density="land-mdpi" src="www/screen/android/splash-land-mdpi.png" />
+    <splash density="land-xhdpi" src="www/screen/android/splash-land-xhdpi.png" />
+    <splash density="land-xxhdpi" src="www/screen/android/splash-land-xxhdpi.png" />
+    <splash density="land-xxxhdpi" src="www/screen/android/splash-land-xxxhdpi.png" />
+    <splash density="port-hdpi" src="www/screen/android/splash-port-hdpi.png" />
+    <splash density="port-ldpi" src="www/screen/android/splash-port-ldpi.png" />
+    <splash density="port-mdpi" src="www/screen/android/splash-port-mdpi.png" />
+    <splash density="port-xhdpi" src="www/screen/android/splash-port-xhdpi.png" />
+    <splash density="port-xxhdpi" src="www/screen/android/splash-port-xxhdpi.png" />
+    <splash density="port-xxxhdpi" src="www/screen/android/splash-port-xxxhdpi.png" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+</widget>

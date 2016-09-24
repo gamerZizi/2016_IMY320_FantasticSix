@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amanzimtoti App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+
+  <body id="main-body">
+    <input type="hidden" id="logged-in" value="false" />
+
+    <!-- ===================== LOGIN SECTION ======================= -->
+    <!-- home page -->
+    <section id="login" data-role="page" data-title="Login">
+      <div class="ui-content">
+        <form action="" method="post" onsubmit="signOn(this);">
+          <input required="required" type="text" name="uname" id="uname" value="" placeholder="User Name" />
+          <input required="required" type="password" name="pword" id="pword" value="" autocomplete="off" placeholder="*******" />
+          <button type="submit" name="login-btn" id="login-btn" data-textonly="false" data-textvisible="true" data-msgtext="" data-inline="true" class="ui-shadow ui-btn ui-corner-all">Sign-In</button>
+        </form>
+        <div id="login-error" class="error-msg"></div>
+      </div><!-- /content -->
+    </section><!-- /home page -->
+
+    <!-- panel menu -->
+    <div data-role="panel" data-theme="b" data-position-fixed="true" data-position="left" data-display="overlay" id="main-menu-panel">
+      <div class="" id="main-profile"></div>
+      <nav>
+        <ul data-role="listview">
+          <li><a href="#news" onclick="loadNews();" class="ui-btn ui-icon-info ui-btn-icon-left">News</a></li>
+          <li><a href="#events" onclick="loadEvents();" class="ui-btn ui-icon-calendar ui-btn-icon-left">Events</a></li>
+          <li><a href="#login" onclick="signOut();" class="ui-btn ui-icon-power ui-btn-icon-left">Logout</a></li>
+          <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+        </ul>
+      </nav>
+    </div><!-- /panel menu -->
+    <!-- Header Section -->
+    <header data-role="header" data-theme="b" data-position="fixed" data-tab-toggle="false">
+      <a href="#main-menu-panel" class="ui-btn ui-icon-bars ui-btn-icon-left ui-btn-icon-notext ui-nodisc-icon">Menu</a>
+      <h1>Home</h1>
+    </header><!-- /Header Section -->
+
+
+
+    <!-- ===================== HOME SECTION ======================= -->
+    <!-- home page -->
+    <section id="home" data-role="page" data-title="Home">
+      <!-- content -->
+      <article class="ui-content">
+        <div class="ui-corner-all custom-corners">
+          <div class="ui-bar ui-bar-a top">
+            <h3>Some heading</h3>
+          </div>
+          <div class="ui-body ui-body-a">
+            <p>
+              content goes here....content goes here....content goes here....content goes here....content goes here....
+            </p>
+          </div>
+          <div class="ui-bar ui-bar-a bottom">
+            <div class="ui-nodisc-icon"><!-- Class added to the wrapper -->
+              <a href="#" class="ui-btn ui-corner-all ui-icon-comment ui-btn-icon-notext ui-btn-b ui-btn-inline">Comments</a>Comments&nbsp;&nbsp;
+              <a href="#" class="ui-btn ui-corner-all ui-icon-check ui-btn-icon-notext ui-btn-b ui-btn-inline">Likes</a>Likes
+            </div>
+          </div>
+        </div>
+      </article><!-- /content -->
+    </section><!-- home page -->
+
+    <!-- ===================== NEWS SECTION ======================= -->
+    <input type="hidden" id="news-loaded" value="false" />
+    <!-- news page -->
+    <section data-role="page" data-title="News" id="news"></section><!-- /news page -->
+
+    <!-- news single page -->
+    <section data-role="page" data-title="News" id="news-single">
+      <!-- content -->
+      <article class="ui-content">
+        <div id="news-content" class="ui-corner-all custom-corners"></div>
+      </article><!-- /content -->
+    </section><!-- /news single page -->
+
+    <!-- ===================== EVENTS SECTION ======================= -->
+    <input type="hidden" id="events-loaded" value="false" />
+    <!-- events calendar page -->
+    <section data-role="page" data-title="Events" id="events">
+      <div class="calendar_wrap ui-content" id="calendar_wrap"></div>
+    </section><!-- /events calendar page -->
+
+    <!-- event page -->
+    <section data-role="page" data-title="Event" id="event">
+      <div class="ui-content"></div>
+    </section><!-- /event page -->
+
+    <!-- ===================== NOTIFICATIONS SECTION ======================= -->
+    <!-- notifications page -->
+    <section data-role="page" data-title="Notifications" id="notifications">
+      <article class="ui-content">
+        <p>there are no notifications at the moment</p>
+      </article>
+    </section><!-- /notifications page -->
+
+    <!-- notification page -->
+    <section data-role="page" data-title="Notification" id="notification">
+
+    </section><!-- /notification page -->
+
+
+    <!-- footer page -->
+    <footer data-role="footer" data-theme="b" data-position="absolute" data-fullscreen="true">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#home" class="ui-icon-home ui-btn-icon-top">Home</a></li>
+          <li><a href="#notifications" class="ui-icon-comment ui-btn-icon-top">Notifications</a></li>
+        </ul>
+      </div>
+    </footer><!-- footer -->
+  </body>
+</html>

@@ -7,11 +7,11 @@
 add_shortcode("amanzimtoti-member-display", "amanzimtoti_member_display");
 
 function amanzimtoti_member_display( $attribs ) {
-	if (!is_user_logged_in() || is_admin()) {
+    if (!is_user_logged_in() || is_admin()) {
 		echo "You are not logged in, please login to access this page.";
 		return;	
-	}
-	include_once AMANZIMTOTI_MEMBERS_PLUGIN_DIR . "/pages/amanzimtoti-member-shortcode-form.php";	
+    }
+    include_once AMANZIMTOTI_MEMBERS_PLUGIN_DIR . "/pages/amanzimtoti-member-shortcode-form.php";	
 }
 
 // Add Ajax if logged in
