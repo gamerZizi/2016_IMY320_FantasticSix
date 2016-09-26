@@ -11,6 +11,7 @@ $(document).ready(function(){
   } else {
     $( "#main-menu-panel" ).css("display", "block");
   }*/
+
   // Update the contents of the toolbars
   $( document ).on( "pagecontainerchange", function() {
     // Remove active class from nav buttons
@@ -47,9 +48,14 @@ $(document).ready(function(){
   });
 });
 
+function jsonpCallback(data) {
+  console.log("Executed!!!!");
+  console.log(data);
+}
 
-var URL = "http://196.249.57.169/2016_IMY320_FantasticSix/web/wp-json/";
-//var URL = "http://amanzimtoti.byethost33.com/?i=1/wp-json";
+
+var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
+//var URL = "http://amanzimtoti.byethost33.com/wp-json";
 
 function signOn() {
   if ( $("#uname").val() === "" || $("#pword").val() === "" ) {
@@ -256,7 +262,7 @@ function execJSONRESTRequest(paramObj, hideSpinner) {
     url       : URL + paramObj.route
   })
   .done(function(response){
-    paramObj.callback(response);
+      paramObj.callback(response);
   })
   .fail(function(){
 
