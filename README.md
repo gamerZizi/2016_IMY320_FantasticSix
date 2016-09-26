@@ -149,7 +149,17 @@ Based on your stated needs we have come up with user friendly web and mobile app
 <div>
     <b>Deadline: </b>29 August 2016<br />
     <ul>
-        <li><b>Branch (<span style="color: green;">dev_phase1</span>) - </b><i> Web directory for the website, we'll later add mobile directory for the App (in <span style="color: green;">dev_phase2</span>).</i></li>
+        <li><b>Branch (<span style="color: green;">dev_phase1</span>) - </b><i> Web directory for the website, we'll later add mobile directory for the App (in <span style="color: green;">dev_phase_mobile</span>).</i></li>
         <li><b>Amanzimtoti Webpage: </b><a href="http://amanzimtoti.byethost33.com" target="_blank">http://amanzimtoti.byethost33.com</a></li>
     </ul>
 </div>
+<h2><u>Phase 2 to 3 - Website(Beta -> Complete Version) + Mobile (Alpha -> Beta Version)</u></h2>
+<div>
+    <b>Deadline: </b>19 August - 20 October 2016<br />
+    <ul>
+        <li><b>Branch (<span style="color: green;">dev_phase_mobile</span>) - </b><i> Mobile directory under dev_phase_mobile branch.</i></li>
+        <li><b>Mobile Description: </b><p>App can view news and events for now, only works locally since our free hosting has blocked non-HTML request. (cannot access data via REST API), therefore we'll have to demo on an emulator.</p></li>
+        
+    </ul>
+</div>
+
