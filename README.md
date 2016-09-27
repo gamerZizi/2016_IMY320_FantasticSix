@@ -25,6 +25,12 @@ C Nkhwashu  - 14296684 <br />
             <li><i>Site URL here in this section.</i></li>
         </ul>
     </li>
+    <li>
+        <h3>Phase 2 to 3 - Website(Beta -> Complete Version) + Mobile (Alpha -> Beta Version)</h3>
+        <ul>
+            <li><i>Details about Website and Mobile App progress.</i></li>
+        </ul>
+    </li>
 </ol>
 <hr />
 <br />
@@ -58,7 +64,7 @@ Communities without proper sanitation suffer from major diseases and pollution b
     <li>A way to announce information to all members</li>
     <li>A login system for members</li>
 </ul>
-  
+
  <h3> Types of users</h3>
 <ul>
     <li>Volunteers</li>
@@ -97,7 +103,7 @@ Communities without proper sanitation suffer from major diseases and pollution b
     </ul>
 </ul>    
 
-  
+
 <h2>Solutions</h2>
 Based on your stated needs we have come up with user friendly web and mobile application technologies to meet the requirements.<br />
 
@@ -159,7 +165,6 @@ Based on your stated needs we have come up with user friendly web and mobile app
     <ul>
         <li><b>Branch (<span style="color: green;">dev_phase_mobile</span>) - </b><i> Mobile directory under dev_phase_mobile branch.</i></li>
         <li><b>Mobile Description: </b><p>App can view news and events for now, only works locally since our free hosting has blocked non-HTML request. (cannot access data via REST API), therefore we'll have to demo on an emulator.</p></li>
-        
+
     </ul>
 </div>
-
