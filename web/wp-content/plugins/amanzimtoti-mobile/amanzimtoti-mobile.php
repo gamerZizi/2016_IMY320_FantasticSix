@@ -1,5 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: http://amanzimtoti.byethost33.com/');
 /*
   Plugin Name:	Amanzimtoti Mobile
   Description:	Handles all the mobile specific functionality utilizing the WP REST API v2.
@@ -229,6 +228,7 @@ function amanzi_get_event_postmeta_data($event_post_id) {
 	
 	if (isset($event_postmeta["_EventDuration"])) {
 		$formated_event_postmeta->event_duration = (int)$event_postmeta["_EventDuration"][0] / 3600;
+		$formated_event_postmeta->event_duration = round($formated_event_postmeta->event_duration);
 	}
 	
 	if (isset($event_postmeta["_EventCurrencySymbol"])) {
