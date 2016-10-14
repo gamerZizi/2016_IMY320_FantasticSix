@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"-->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <title>Amanzimtoti</title>
+    </head>
+    <body>
+      <input type="hidden" id="logged-in" value="false"/>
+
+      <!-- ===================== LOGIN SECTION ======================= -->
+      <!-- login page -->
+      <section id="login" data-role="page" data-title="Login">
+          <div class="ui-content">
+              <form id="login-form" action="" method="post">
+                  <input required="required" type="text" name="uname" id="uname" value="" placeholder="User Name"/>
+                  <input required="required" type="password" name="pword" id="pword" value="" autocomplete="off"
+                         placeholder="*******"/>
+                  <button type="submit" name="login-btn" id="login-btn" data-textonly="false" data-textvisible="true"
+                          data-msgtext="" data-inline="true" class="ui-shadow ui-btn ui-corner-all">Sign-In
+                  </button>
+              </form>
+              <div id="login-error" class="error-msg"></div>
+              <!--div id="connection-test">Offline</div-->
+          </div><!-- /content -->
+      </section><!-- /login page -->
+
+      <!-- Header Section -->
+      <header data-role="header" data-theme="b" data-position="fixed" data-tab-toggle="false">
+          <a href="#main-menu-panel" class="ui-btn ui-icon-bars ui-btn-icon-left ui-btn-icon-notext ui-nodisc-icon">Menu</a>
+          <h1>Home</h1>
+
+      </header><!-- /Header Section -->
+      <!-- panel menu -->
+      <div data-role="panel" data-theme="b" data-position-fixed="true" data-position="left" data-display="overlay" id="main-menu-panel">
+          <div class="" id="main-profile"></div>
+          <nav>
+              <ul data-role="listview">
+                  <li><a href="#news" id="to-news" class="ui-btn ui-icon-info ui-btn-icon-left">News</a></li>
+                  <li><a href="#events" id="to-events" class="ui-btn ui-icon-calendar ui-btn-icon-left">Events</a></li>
+                  <li><a href="#login" id="to-logout" class="ui-btn ui-icon-power ui-btn-icon-left">Exit</a></li>
+                  <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                  <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                  <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                  <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+              </ul>
+          </nav>
+      </div><!-- /panel menu -->
+
+      <!-- ===================== NEWS SECTION ======================= -->
+      <input type="hidden" id="news-loaded" value="false"/>
+      <!-- news page -->
+      <section data-role="page" data-title="News" id="news"></section><!-- /news page -->
+
+      <!-- news single page -->
+      <section data-role="page" data-title="News" id="news-single">
+          <!-- content -->
+          <article class="ui-content">
+              <div id="news-content" class="ui-corner-all custom-corners"></div>
+          </article><!-- /content -->
+      </section><!-- /news single page -->
+
+      <!-- ===================== EVENTS SECTION ======================= -->
+      <input type="hidden" id="events-loaded" value="false"/>
+      <!-- events calendar page -->
+      <section data-role="page" data-title="Events" id="events">
+          <div class="calendar_wrap ui-content" id="calendar_wrap"></div>
+      </section><!-- /events calendar page -->
+
+      <!-- event page -->
+      <section data-role="page" data-title="Event" id="event">
+          <div class="ui-content"></div>
+      </section><!-- /event page -->
+
+      <!-- ===================== NOTIFICATIONS SECTION ======================= -->
+      <!-- notifications page -->
+      <section data-role="page" data-title="Notifications" id="notifications">
+          <article class="ui-content">
+              <p>there are no notifications at the moment</p>
+          </article>
+      </section><!-- /notifications page -->
+
+      <!-- notification page -->
+      <section data-role="page" data-title="Notification" id="notification">
+
+      </section><!-- /notification page -->
+
+      <!-- footer page -->
+      <footer data-role="footer" data-theme="b" data-position="absolute" data-fullscreen="true">
+          <div data-role="navbar">
+              <ul>
+                  <li><a href="#notifications" class="ui-icon-comment ui-btn-icon-top">Notifications</a></li>
+              </ul>
+          </div>
+      </footer><!-- footer -->
+    </body>
+</html>
