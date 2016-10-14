@@ -31,6 +31,12 @@ C Nkhwashu  - 14296684 <br />
             <li><i>Details about Website and Mobile App progress.</i></li>
         </ul>
     </li>
+    <li>
+        <h3>Updated Mobile Final Deadline and Progress</h3>
+        <ul>
+            <li><i>More details and progress regarding the Mobile App.</i></li>
+        </ul>
+    </li>
 </ol>
 <hr />
 <br />
@@ -165,5 +171,12 @@ Based on your stated needs we have come up with user friendly web and mobile app
     <ul>
         <li><b>Branch (<span style="color: green;">dev_phase_mobile</span>) - </b><i> Mobile directory under dev_phase_mobile branch.</i></li>
         <li><b>Mobile Description: </b><p>App can view news and events for now, only works locally since our free hosting has blocked non-HTML request. (cannot access data via REST API), therefore we'll have to demo on an emulator.</p></li>        
+    </ul>
+</div>
+<h2><u>Updated Mobile Final Deadline and Progress</u></h2>
+<div>
+    <b>Deadline: </b>28 October 2016<br />
+    <ul>
+        <li><b>Mobile Description: </b><p>Mobile App now works live (Used a different hosting just to store the database to be in sync with our site). User can login, view news, view old, current, and upcoming events. Still missing Notification functionality (someone must work on that guys), and the Look and Feel of the app.</p></li>        
     </ul>
 </div>
