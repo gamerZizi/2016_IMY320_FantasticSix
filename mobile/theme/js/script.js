@@ -48,14 +48,8 @@ $(document).ready(function(){
   });
 });
 
-function jsonpCallback(data) {
-  console.log("Executed!!!!");
-  console.log(data);
-}
-
-
-var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
-//var URL = "http://amanzimtoti.byethost33.com/wp-json";
+//var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
+var URL = "http://amanzimtoti.co.nf/wp-json/";
 
 function signOn() {
   if ( $("#uname").val() === "" || $("#pword").val() === "" ) {
@@ -259,7 +253,10 @@ function execJSONRESTRequest(paramObj, hideSpinner) {
   $.ajax({
     dataType  : "json",
     type      : paramObj.type,
-    url       : URL + paramObj.route
+    url       : URL + paramObj.route,
+    xhrFields : {
+      withCredentials: false
+    }
   })
   .done(function(response){
       paramObj.callback(response);

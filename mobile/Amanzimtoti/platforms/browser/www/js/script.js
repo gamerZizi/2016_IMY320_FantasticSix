@@ -63,8 +63,8 @@ $(document).ready(function(){
 });
 
 
-var URL = "http://196.249.57.169/2016_IMY320_FantasticSix/web/wp-json/";
-// var URL = "http://amanzimtoti.byethost33.com/wp-json";
+// var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
+var URL = "http://amanzimtoti.co.nf/wp-json/";
 
 function signOn() {
   if ( $("#uname").val() === "" || $("#pword").val() === "" ) {
@@ -178,7 +178,7 @@ function loadEventByID(evt, eventID, title) {
       content    +=     '<b>Time: </b>' + startDateTime[1].trim() + " - " + endDateTime[1].trim() + "<br />";
       content    +=     '<b>Duration: </b>' + response.postmeta.event_duration + " hrs" + "<br />";
       if (response.postmeta.event_currency_symbol !== "" && response.postmeta.event_cost !== "") {
-        content    +=     '<b>Entrance Fee: </b>' + response.postmeta.event_currency_symbol + " " + response.postmeta.event_cost + "<br />";
+        content    +=     '<b>Entrance Fee: </b>' + response.postmeta.event_currency_symbol + " " + response.postmeta.event_cost.toFixed(0) + "<br />";
       }
       if (response.postmeta.event_organizer != null && response.postmeta.event_organizer !== "") {
         content    +=     '<b>Organized By: </b>' + response.postmeta.event_organizer.trim() + "<br />";
@@ -274,7 +274,10 @@ function execJSONRESTRequest(paramObj, hideSpinner) {
   $.ajax({
     dataType  : "json",
     type      : paramObj.type,
-    url       : URL + paramObj.route
+    url       : URL + paramObj.route,
+    xhrFields : {
+      withCredentials: false
+    }
   })
   .done(function(response){
     paramObj.callback(response);
