@@ -16,8 +16,8 @@
 @font-face {
     font-family: helveticaneue-light;
     src: url(fonts/helveticaneue-light.eot);
-    src: url(fonts/helveticaneue-light.eot?#iefix) format('embedded-opentype'), 
-		 url(fonts/helveticaneue-light.woff) format('woff'), 
+    src: url(fonts/helveticaneue-light.eot?#iefix) format('embedded-opentype'),
+		 url(fonts/helveticaneue-light.woff) format('woff'),
 		 url(fonts/helveticaneue-light.ttf) format('truetype'),
 		 url(fonts/helveticaneue-light.svg#helveticaneue-light) format('svg');
     font-weight: 400;
@@ -1463,7 +1463,7 @@ ul.tab_2_email_sec li .radio {
 	-webkit-appearance:none;
 	background-image: url(images/select-arrow.png);
 	background-repeat:no-repeat;
-	background-position:right 15px center; 
+	background-position:right 15px center;
 }
 .sfsi_mainContainer .tab8 .sfsi_same_width {
     display: inline-block;
@@ -1566,7 +1566,7 @@ ul.sfsi_floaticon_margin_sec li ins {
 .sfsi_feedClaimingOverlay input[type="email"]::-moz-placeholder {  /* Firefox 19+ */
 	color: #bebebe !important;
 }
-.sfsi_feedClaimingOverlay input[type="email"]:-ms-input-placeholder {  
+.sfsi_feedClaimingOverlay input[type="email"]:-ms-input-placeholder {
 	color: #bebebe !important;
 }
 .sfsi_feedClaimingOverlay .save_button {

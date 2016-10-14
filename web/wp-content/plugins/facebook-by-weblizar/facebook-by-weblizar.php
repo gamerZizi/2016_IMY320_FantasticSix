@@ -52,10 +52,10 @@ class WeblizarFacebook extends WP_Widget {
 		// Outputs the content of the widget
 		extract($args); // Make before_widget, etc available.
 		$title = apply_filters('title', $instance['title']);
-		
+
 		echo $before_widget;
-		if (!empty($title)) {	echo $before_title . $title . $after_title;	}	
-	
+		if (!empty($title)) {	echo $before_title . $title . $after_title;	}
+
         $FbAppId = apply_filters( 'facebook_app_id', $instance['FbAppId'] );
         //$ColorScheme = apply_filters( 'facebook_color_scheme', $instance['ColorScheme'] );
         $ForceWall = apply_filters( 'facebook_force_wall', $instance['ForceWall'] );
@@ -159,7 +159,7 @@ class WeblizarFacebook extends WP_Widget {
         if ( isset( $instance[ 'FbAppId' ] ) ) {
             $FbAppId = $instance[ 'FbAppId' ];
         }
-        
+
 		if ( isset( $instance[ 'title' ] ) ) {
 			 $title = $instance[ 'title' ];
 		}
@@ -168,7 +168,7 @@ class WeblizarFacebook extends WP_Widget {
 		}
 		?>
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
         <p>
@@ -202,10 +202,10 @@ class WeblizarFacebook extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'FbAppId' ); ?>" name="<?php echo $this->get_field_name( 'FbAppId' ); ?>" type="text" value="<?php echo esc_attr( $FbAppId ); ?>">
             <?php _e("Get Your Facebook App. Id",WEBLIZAR_FACEBOOK_TEXT_DOMAIN); ?>: <a href="http://weblizar.com/get-facebook-app-id/" target="_blank">HERE</a>
         </p>
-		
+
 		<p>
 		<a style="display:block;" target="_new" href="https://wordpress.org/plugins/facebook-by-weblizar/"><img src="<?php echo WEBLIZAR_FACEBOOK_PLUGIN_URL.'images/star.png' ;?>" /> </a>
-		<a href="https://wordpress.org/plugins/facebook-by-weblizar/" target="_new">Rate Us on Wordpress.org </a> 
+		<a href="https://wordpress.org/plugins/facebook-by-weblizar/" target="_new">Rate Us on Wordpress.org </a>
 		</p>
         <?php
     }
@@ -269,4 +269,5 @@ function facebooky_by_weblizar_page_function() {
  * Load Facebook Like Box Shortcode
  */
 	require_once("facebook-by-weblizar-short-code.php");
+>>>>>>> dev_phase_mobile
 ?>

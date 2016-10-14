@@ -1,7 +1,7 @@
 <?php
 /**
  * Shorcode For Facebook By Weblizar
- */ 
+ */
 add_shortcode("FBW", "FacebookLikeBox");
 function FacebookLikeBox() {
 
@@ -64,4 +64,5 @@ function FacebookLikeBox() {
 	<?php
 	return ob_get_clean();
 }
+>>>>>>> dev_phase_mobile
 ?>

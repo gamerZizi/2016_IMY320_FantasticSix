@@ -1,5 +1,5 @@
 === WP News and Scrolling Widgets  ===
-Contributors: wponlinesupport, anoopranawat 
+Contributors: wponlinesupport, anoopranawat
 Tags: wponlinesupport, wordpress news plugin, main news page scrolling , wordpress vertical news plugin widget, wordpress horizontal news plugin widget , Free scrolling news wordpress plugin, Free scrolling news widget wordpress plugin, WordPress set post or page as news, WordPress dynamic news, news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
 Requires at least: 3.1
 Tested up to: 4.6
@@ -34,17 +34,17 @@ View [Masonry Add-on](http://wponlinesupport.com/wordpress-plugin-addon/masonry-
 >
 
 = Important Note For How to Install =
-* Please make sure that Permalink link should not be "/news" Otherwise all your news will go to archive page. You can give it other name like "/ournews, /latestnews etc"  
-* Now you can Display news post with the help of short code : 
+* Please make sure that Permalink link should not be "/news" Otherwise all your news will go to archive page. You can give it other name like "/ournews, /latestnews etc"
+* Now you can Display news post with the help of short code :
 <code> [sp_news] </code>
 * Also you can Display the news post with category wise :
 <code> Sports news [sp_news category="category_id"] </code>
 * Display News with Grid:
 <code>[sp_news grid="2"] </code>
-* Also you can Display the news post with Multiple categories wise 
-<code> Sports news : 
+* Also you can Display the news post with Multiple categories wise
+<code> Sports news :
 [sp_news category="category_id"]
-Arts news 
+Arts news
 [sp_news category="category_id"]
 </code>
 * **Complete shortcode example:**
@@ -53,9 +53,9 @@ Arts news
 show_date="false" content_words_limit="30" ]</code>
 * Comments for the news
 * Added Widget Options like Show News date, Show News Categories, Select News Categories.
-* Template code : 
+* Template code :
 <code><?php echo do_shortcode('[sp_news]'); ?></code>
-* [Check video](https://wordpress.org/plugins/sp-news-and-widget/installation/) How to install. 
+* [Check video](https://wordpress.org/plugins/sp-news-and-widget/installation/) How to install.
 
 = Following are News Parameters: =
 
@@ -70,8 +70,8 @@ show_date="false" content_words_limit="30" ]</code>
 
 The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts.
 
-If you are getting any kind of problum with news page means your are not able to see all news items then please remodify your permalinks Structure for example 
-first select "Default" and save then again select "Custom Structure "  and save. 
+If you are getting any kind of problum with news page means your are not able to see all news items then please remodify your permalinks Structure for example
+first select "Default" and save then again select "Custom Structure "  and save.
 
 = Languages Support  : =
 * Added translation in German, French (France), Polish languages (Beta)
@@ -105,9 +105,9 @@ first select "Default" and save then again select "Custom Structure "  and save.
 > * Drag & Drop feature to display News post in your desired order and other 6 types of order parameter.
 > * 'Publicize' support with Jetpack to publish your News post on your social network.
 > * 100% Multilanguage.
-> * Template code : 
-> <code><?php echo do_shortcode('[sp_news]'); ?> </code> 
-> <code> <?php echo do_shortcode('[sp_news_slider]'); ?> </code> 
+> * Template code :
+> <code><?php echo do_shortcode('[sp_news]'); ?> </code>
+> <code> <?php echo do_shortcode('[sp_news_slider]'); ?> </code>
 >
 > View [PRO DEMO and Features](http://wponlinesupport.com/wp-plugin/sp-news-and-scrolling-widgets/) for additional information.
 >
@@ -115,18 +115,18 @@ first select "Default" and save then again select "Custom Structure "  and save.
 >
 
 = How to install : =
-[youtube https://www.youtube.com/watch?v=07IRBn1oXrU] 
- 
- 
+[youtube https://www.youtube.com/watch?v=07IRBn1oXrU]
+
+
 == Installation ==
 
 1. Upload the 'sp-news-and-widget' folder to the '/wp-content/plugins/' directory.
 1. Activate the SP News plugin through the 'Plugins' menu in WordPress.
 1. Add and manage news items on your site by clicking on the  'News' tab that appears in your admin menu.
 1. Create a page with the any name and paste this short code  <code> [sp_news] </code>.
- 
+
 = How to install : =
-[youtube https://www.youtube.com/watch?v=07IRBn1oXrU]  
+[youtube https://www.youtube.com/watch?v=07IRBn1oXrU]
 
 
 
@@ -138,7 +138,7 @@ Yes. Just as you can display a list of your regular posts by year, month, or day
 
 = Do I need to update my permalinks after I activate this plugin? =
 
-No, not usually. But if you are geting "/news" page OR 404 error on single news then please  update your permalinks to Custom Structure.   
+No, not usually. But if you are geting "/news" page OR 404 error on single news then please  update your permalinks to Custom Structure.
 
 = Are there shortcodes for news items? =
 
@@ -154,7 +154,7 @@ Yse  <code> [sp_news] </code>
 6. Widgets
 7. Widgets Options
 
-== Changelog == 
+== Changelog ==
 
 = 3.2.8 =
 * Fixed image display issue.
@@ -206,7 +206,7 @@ Yse  <code> [sp_news] </code>
 * Added pagination [sp_news limit="10"]
 
 = 2.2.1 =
-* fixed the bug : Shows news on top of static page 
+* fixed the bug : Shows news on top of static page
 
 = 2.2 =
 * Call the news post with shortcode

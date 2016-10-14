@@ -88,84 +88,84 @@ For more information, see [Weblizar](http://wwww.weblizar.com/) .
 = 2.4.5.1 16/09/2016 =
 * update
 
-= 2.4.5 07/09/2016 = 
+= 2.4.5 07/09/2016 =
 * API version has been changed to latest
 
-= 2.4.4 28/05/2016 = 
+= 2.4.4 28/05/2016 =
 * New: Brasilian Portuguese Translation contributed by Rafael Dumas
 
-= 2.4.3 16/05/2016 = 
+= 2.4.3 16/05/2016 =
 * Small Update
 
-= 2.4.2 02/04/2016 = 
+= 2.4.2 02/04/2016 =
 * Small Bug Fixed
 
-= 2.4.1 14/03/2016 = 
+= 2.4.1 14/03/2016 =
 * Small Bug Fixed
 
-= 2.4 28/12/2015 = 
+= 2.4 28/12/2015 =
 * Small Bug Fixed
 
-= 2.3 11/12/2015 = 
+= 2.3 11/12/2015 =
 * Small Bug Fixed
 
-= 2.2 19/11/2015 = 
+= 2.2 19/11/2015 =
 * Compatible With wordpress 4.4.
 
-= 2.1 28/10/2015 = 
+= 2.1 28/10/2015 =
 * Small bug fixed.
 
-= 2.0 19/10/2015 = 
+= 2.0 19/10/2015 =
 * Bug fixed in facebook plugin.
 
-= 1.9 12/10/2015 = 
+= 1.9 12/10/2015 =
 * Resolved small design issue
 
-= 1.8 29/09/2015 = 
+= 1.8 29/09/2015 =
 * Update admin panel css
 
-= 1.7 22/09/2015 = 
+= 1.7 22/09/2015 =
 * Compatible with wordpress 4.3.1
 * Small update in css file
 
-= 1.6 26/08/2015 = 
+= 1.6 26/08/2015 =
 * Update: widget & shortcode theme setting removed
 * Update: Header show/hide option depricated in API v2.4
 
-= 1.5 14/07/2015 = 
+= 1.5 14/07/2015 =
 * Resolved small bug issue
 
-= 1.4 21/04/2015 = 
+= 1.4 21/04/2015 =
 * Compatible with WordPess 4.2 version
 
-= 1.3 01/04/2015 = 
+= 1.3 01/04/2015 =
 * Small Updates in file
 
-= 1.2 31/03/2015 = 
+= 1.2 31/03/2015 =
 * New: Added Widget title for plugin widget
 
-= 1.1 06/02/2015 = 
+= 1.1 06/02/2015 =
 * New: Serbian Translation contributed by Borisa Djuraskovic
 
-= 1.0 17/12/2014 = 
+= 1.0 17/12/2014 =
 * Compatible with WordPress 4.1 version
 * Remove some unused css code from bootstrap.css
 * Update facebook-by-weblizar.php file
 
-= 0.9 06/11/2014 = 
+= 0.9 06/11/2014 =
 * code update
 
-= 0.8 27/10/2014 = 
-* Remove minor bug 
+= 0.8 27/10/2014 =
+* Remove minor bug
 * Update css
 
 
-= 0.7 05/09/2014 = 
+= 0.7 05/09/2014 =
 * New: [FBW] shortcode added
 * New: Fan Faces Hide & Show Option
 * New: Translation Ready With .po & .mo File
 
-= 0.6 20/08/2014 = 
+= 0.6 20/08/2014 =
 * New: Compatible with WordPress 4.0
 
 = 0.5 =
@@ -180,5 +180,5 @@ For more information, see [Weblizar](http://wwww.weblizar.com/) .
 * Now compatible with all mobile devices.
 
 = 0.1 =
-* Feature - Facebook Widget 
+* Feature - Facebook Widget
 * Feature - Facebook Widget Settings Panel

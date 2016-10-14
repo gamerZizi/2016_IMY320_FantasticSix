@@ -17,13 +17,13 @@ if (!class_exists('OAuthConsumer'))
 	{
 		public $key;
 	  	public $secret;
-	
+
 		function __construct($key, $secret, $callback_url=NULL) {
 			$this->key = $key;
 			$this->secret = $secret;
 			$this->callback_url = $callback_url;
 		}
-		
+
 		function __toString() {
 			return "OAuthConsumer[key=$this->key,secret=$this->secret]";
 		}
@@ -37,7 +37,7 @@ if (!class_exists('OAuthToken'))
 	  // access tokens and request tokens
 	  public $key;
 	  public $secret;
-	
+
 	  /**
 	   * key = the token
 	   * secret = the token secret
@@ -47,7 +47,7 @@ if (!class_exists('OAuthToken'))
 		$this->key = $key;
 		$this->secret = $secret;
 	  }
-	
+
 	  /**
 	   * generates the basic string serialization of a token that a server
 	   * would respond to request_token and access_token calls with
@@ -59,7 +59,7 @@ if (!class_exists('OAuthToken'))
 			   "&oauth_token_secret=" .
 			   OAuthUtil::urlencode_rfc3986($this->secret);
 	  }
-	
+
 	  function __toString()
 	  {
 		return $this->to_string();
@@ -70,7 +70,7 @@ if (!class_exists('OAuthToken'))
  * A class for implementing a Signature Method
  * See section 9 ("Signing Requests") in the spec
  */
- 
+
 if (!class_exists('OAuthSignatureMethod'))
 {
 	abstract class OAuthSignatureMethod {
@@ -79,7 +79,7 @@ if (!class_exists('OAuthSignatureMethod'))
 	* @return string
 	*/
 	abstract public function get_name();
-	
+
 	/**
 	* Build up the signature
 	* NOTE: The output of this function MUST NOT be urlencoded.
@@ -91,7 +91,7 @@ if (!class_exists('OAuthSignatureMethod'))
 	* @return string
 	*/
 	abstract public function build_signature($request, $consumer, $token);
-	
+
 	/**
 	* Verifies that a given signature is correct
 	* @param OAuthRequest $request
@@ -107,13 +107,13 @@ if (!class_exists('OAuthSignatureMethod'))
 	}
 }
 /**
- * The HMAC-SHA1 signature method uses the HMAC-SHA1 signature algorithm as defined in [RFC2104] 
- * where the Signature Base String is the text and the key is the concatenated values (each first 
- * encoded per Parameter Encoding) of the Consumer Secret and Token Secret, separated by an '&' 
+ * The HMAC-SHA1 signature method uses the HMAC-SHA1 signature algorithm as defined in [RFC2104]
+ * where the Signature Base String is the text and the key is the concatenated values (each first
+ * encoded per Parameter Encoding) of the Consumer Secret and Token Secret, separated by an '&'
  * character (ASCII code 38) even if empty.
  *   - Chapter 9.2 ("HMAC-SHA1")
  */
- 
+
 if (!class_exists('OAuthSignatureMethod_HMAC_SHA1'))
 {
 	class OAuthSignatureMethod_HMAC_SHA1 extends OAuthSignatureMethod
@@ -122,27 +122,27 @@ if (!class_exists('OAuthSignatureMethod_HMAC_SHA1'))
 		{
 			return "HMAC-SHA1";
 		}
-		
+
 		public function build_signature($request, $consumer, $token)
 		{
 			$base_string = $request->get_signature_base_string();
 			$request->base_string = $base_string;
-			
+
 			$key_parts = array(
 			  $consumer->secret,
 			  ($token) ? $token->secret : ""
 			);
-			
+
 			$key_parts = OAuthUtil::urlencode_rfc3986($key_parts);
 			$key = implode('&', $key_parts);
-			
+
 			return base64_encode(hash_hmac('sha1', $base_string, $key, true));
 		}
 	}
 }
 
 /**
- * The PLAINTEXT method does not provide any security protection and SHOULD only be used 
+ * The PLAINTEXT method does not provide any security protection and SHOULD only be used
  * over a secure channel such as HTTPS. It does not use the Signature Base String.
  *   - Chapter 9.4 ("PLAINTEXT")
  */
@@ -155,8 +155,8 @@ if (!class_exists('OAuthSignatureMethod_PLAINTEXT'))
 	  }
 
 	  /**
-	   * oauth_signature is set to the concatenated encoded values of the Consumer Secret and 
-	   * Token Secret, separated by a '&' character (ASCII code 38), even if either secret is 
+	   * oauth_signature is set to the concatenated encoded values of the Consumer Secret and
+	   * Token Secret, separated by a '&' character (ASCII code 38), even if either secret is
 	   * empty. The result MUST be encoded again.
 	   *   - Chapter 9.4.1 ("Generating Signatures")
 	   *
@@ -172,21 +172,21 @@ if (!class_exists('OAuthSignatureMethod_PLAINTEXT'))
 		$key_parts = OAuthUtil::urlencode_rfc3986($key_parts);
 		$key = implode('&', $key_parts);
 		$request->base_string = $key;
-	
+
 		return $key;
 	  }
 	}
 }
 
 /**
- * The RSA-SHA1 signature method uses the RSASSA-PKCS1-v1_5 signature algorithm as defined in 
- * [RFC3447] section 8.2 (more simply known as PKCS#1), using SHA-1 as the hash function for 
- * EMSA-PKCS1-v1_5. It is assumed that the Consumer has provided its RSA public key in a 
- * verified way to the Service Provider, in a manner which is beyond the scope of this 
+ * The RSA-SHA1 signature method uses the RSASSA-PKCS1-v1_5 signature algorithm as defined in
+ * [RFC3447] section 8.2 (more simply known as PKCS#1), using SHA-1 as the hash function for
+ * EMSA-PKCS1-v1_5. It is assumed that the Consumer has provided its RSA public key in a
+ * verified way to the Service Provider, in a manner which is beyond the scope of this
  * specification.
  *   - Chapter 9.3 ("RSA-SHA1")
  */
- 
+
 if (!class_exists('OAuthSignatureMethod_RSA_SHA1'))
 {
 	abstract class OAuthSignatureMethod_RSA_SHA1 extends OAuthSignatureMethod {
@@ -229,21 +229,21 @@ if (!class_exists('OAuthSignatureMethod_RSA_SHA1'))
 
 	  public function check_signature($request, $consumer, $token, $signature) {
 		$decoded_sig = base64_decode($signature);
-	
+
 		$base_string = $request->get_signature_base_string();
-	
+
 		// Fetch the public key cert based on the request
 		$cert = $this->fetch_public_cert($request);
-	
+
 		// Pull the public key ID from the certificate
 		$publickeyid = openssl_get_publickey($cert);
-	
+
 		// Check the computed signature against the one passed in the query
 		$ok = openssl_verify($base_string, $decoded_sig, $publickeyid);
-	
+
 		// Release the key resource
 		openssl_free_key($publickeyid);
-	
+
 		return $ok == 1;
 	  }
 	}
@@ -260,7 +260,7 @@ if (!class_exists('OAuthRequest'))
 	  public $base_string;
 	  public static $version = '1.0';
 	  public static $POST_INPUT = 'php://input';
-	
+
 	  function __construct($http_method, $http_url, $parameters=NULL) {
 		@$parameters or $parameters = array();
 		$parameters = array_merge( OAuthUtil::parse_parameters(parse_url($http_url, PHP_URL_QUERY)), $parameters);
@@ -499,14 +499,14 @@ if (!class_exists('OAuthRequest'))
   private static function generate_timestamp() {
     return time();
   }
-	
+
 	  /**
 	   * util function: current nonce
 	   */
 	  private static function generate_nonce() {
 		$mt = microtime();
 		$rand = mt_rand();
-	
+
 		return md5($mt . $rand); // md5s look nicer than numbers
 	  }
 	}
@@ -518,7 +518,7 @@ if (!class_exists('OAuthServer'))
 	  protected $timestamp_threshold = 300; // in seconds, five minutes
 	  protected $version = '1.0';             // hi blaine
 	  protected $signature_methods = array();
-	
+
 	  protected $data_store;
 
   function __construct($data_store) {
@@ -592,7 +592,7 @@ if (!class_exists('OAuthServer'))
   private function get_version(&$request) {
     $version = $request->get_parameter("oauth_version");
     if (!$version) {
-      // Service Providers MUST assume the protocol version to be 1.0 if this parameter is not present. 
+      // Service Providers MUST assume the protocol version to be 1.0 if this parameter is not present.
       // Chapter 7.0 ("Accessing Protected Ressources")
       $version = '1.0';
     }
@@ -692,7 +692,7 @@ if (!class_exists('OAuthServer'))
       throw new OAuthException(
         'Missing timestamp parameter. The parameter is required'
       );
-    
+
     // verify that timestamp is recentish
     $now = time();
     if (abs($now - $timestamp) > $this->timestamp_threshold) {
@@ -769,7 +769,7 @@ if (!class_exists('OAuthUtil'))
     return '';
   }
 }
- 
+
 
   // This decode function isn't taking into consideration the above
   // modifications to the encoding process. However, this method doesn't

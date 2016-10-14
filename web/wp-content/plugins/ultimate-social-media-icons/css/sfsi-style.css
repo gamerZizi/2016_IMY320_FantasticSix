@@ -16,8 +16,8 @@
 @font-face {
     font-family: helveticaneue-light;
     src: url(fonts/helveticaneue-light.eot);
-    src: url(fonts/helveticaneue-light.eot?#iefix) format('embedded-opentype'), 
-		 url(fonts/helveticaneue-light.woff) format('woff'), 
+    src: url(fonts/helveticaneue-light.eot?#iefix) format('embedded-opentype'),
+		 url(fonts/helveticaneue-light.woff) format('woff'),
 		 url(fonts/helveticaneue-light.ttf) format('truetype'),
 		 url(fonts/helveticaneue-light.svg#helveticaneue-light) format('svg');
     font-weight: 400;
@@ -849,7 +849,7 @@ ul.tab_3_icns li .icns_tab_3, ul.tab_3_icns li .radio {
 }
 .sfsi_widget
 {
-	min-height: 55px;	
+	min-height: 55px;
 }
 .sfsi_widget a img {
     box-shadow: none!important;
@@ -2031,8 +2031,8 @@ ul.SFSI_instructions li {
     margin: 0!important;
     padding: 0 0 0 15px!important;
     width: 100%}
-	
-/*{Monad}*/	
+
+/*{Monad}*/
 /*Upload Skins css*/
 .cstmskin_popup
 {
@@ -2046,7 +2046,7 @@ ul.SFSI_instructions li {
     height: auto;
 	float: left;
 	position: relative;
-	left: 35%;	
+	left: 35%;
 }
 .cstomskins_wrpr {
     float: left;
@@ -2194,7 +2194,7 @@ ul.cstmskin_iconlist {
 	min-height: 20px;
 }
 .sf_google > div
-{ 
+{
 	float: left !important;
 }
 .sfsi_socialwpr .sf_addthis
@@ -2254,7 +2254,7 @@ ul.cstmskin_iconlist {
 {
 	background: none repeat scroll 0 0 #e5e5e5;
 	float: left;
-	padding: 5px 10px 8px;	
+	padding: 5px 10px 8px;
 	margin-top: 25px;
 }
 .sfsinewplgndesc>.clear>a

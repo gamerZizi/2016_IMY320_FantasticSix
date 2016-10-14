@@ -39,7 +39,7 @@ function freenews_admin_notice() {
             }
         }
     }
-} 
+}
 
 add_action('plugins_loaded', 'sp_news_load_textdomain');
 function sp_news_load_textdomain() {
@@ -60,8 +60,8 @@ function sp_cpt_news_init() {
     'view_item'            => __('View News Item', 'sp-news-and-widget'),
     'search_items'         => __('Search  News Items','sp-news-and-widget'),
     'not_found'            =>  __('No News Items found', 'sp-news-and-widget'),
-    'not_found_in_trash'   => __('No News Items found in Trash', 'sp-news-and-widget'), 
-    '_builtin'             =>  false, 
+    'not_found_in_trash'   => __('No News Items found in Trash', 'sp-news-and-widget'),
+    '_builtin'             =>  false,
     'parent_item_colon'    => '',
     'menu_name'          => _x( 'News', 'admin menu', 'sp-news-and-widget' )
   );
@@ -71,9 +71,9 @@ function sp_cpt_news_init() {
     'publicly_queryable'  => true,
     'exclude_from_search' => false,
     'show_ui'             => true,
-    'show_in_menu'        => true, 
+    'show_in_menu'        => true,
     'query_var'           => true,
-    'rewrite'             => array( 
+    'rewrite'             => array(
 							'slug' => 'news',
 							'with_front' => false
 							),
@@ -116,8 +116,8 @@ function news_taxonomies() {
     register_taxonomy( 'news-category', array( 'news' ), $args );
 }
 
-function wpnaw_rewrite_flush() {  
-		sp_cpt_news_init();  
+function wpnaw_rewrite_flush() {
+		sp_cpt_news_init();
     flush_rewrite_rules();
 }
 register_activation_hook( __FILE__, 'wpnaw_rewrite_flush' );
@@ -127,13 +127,13 @@ add_action( 'wp_enqueue_scripts','wpnawstyle_css_script' );
         wp_enqueue_script( 'vnewsticker', plugin_dir_url( __FILE__ ) . 'js/jquery.newstape.js', array( 'jquery' ), WPNW_VERSION);
     }
 
-require_once( 'widget_function.php' );	
-require_once( 'news_menu_function.php' );	
+require_once( 'widget_function.php' );
+require_once( 'news_menu_function.php' );
 
 function wpnaw_get_news( $atts, $content = null ){
             // setup the query
             extract(shortcode_atts(array(
-		"limit" => '',	
+		"limit" => '',
 		"category" => '',
 		"grid" => '',
         "show_date" => '',
@@ -143,69 +143,69 @@ function wpnaw_get_news( $atts, $content = null ){
         "content_words_limit" => '',
 	), $atts));
 	// Define limit
-	if( $limit ) { 
-		$posts_per_page = $limit; 
+	if( $limit ) {
+		$posts_per_page = $limit;
 	} else {
 		$posts_per_page = '-1';
 	}
-	if( $category ) { 
-		$cat = $category; 
+	if( $category ) {
+		$cat = $category;
 	} else {
 		$cat = '';
 	}
-	if( $grid ) { 
-		$gridcol = $grid; 
+	if( $grid ) {
+		$gridcol = $grid;
 	} else {
 		$gridcol = '1';
 	}
-    if( $show_date ) { 
-        $showDate = $show_date; 
+    if( $show_date ) {
+        $showDate = $show_date;
     } else {
         $showDate = 'true';
     }
-	if( $show_category_name ) { 
-        $showCategory = $show_category_name; 
+	if( $show_category_name ) {
+        $showCategory = $show_category_name;
     } else {
         $showCategory = 'true';
     }
-    if( $show_content ) { 
-        $showContent = $show_content; 
+    if( $show_content ) {
+        $showContent = $show_content;
     } else {
         $showContent = 'true';
     }
-	 if( $show_full_content ) { 
-        $showFullContent = $show_full_content; 
+	 if( $show_full_content ) {
+        $showFullContent = $show_full_content;
     } else {
         $showFullContent = 'false';
     }
-	 if( $content_words_limit ) { 
-        $words_limit = $content_words_limit; 
+	 if( $content_words_limit ) {
+        $words_limit = $content_words_limit;
     } else {
         $words_limit = '20';
     }
 	ob_start();
-	
+
 	global $paged;
 		if(is_home() || is_front_page()) {
 			  $paged = get_query_var('page');
 		} else {
 			 $paged = get_query_var('paged');
 		}
-	
+
 	$post_type 		= 'news';
 	$orderby 		= 'post_date';
 	$order 			= 'DESC';
-				 
-        $args = array ( 
-            'post_type'      => $post_type, 
-            'orderby'        => $orderby, 
+
+        $args = array (
+            'post_type'      => $post_type,
+            'orderby'        => $orderby,
             'order'          => $order,
-            'posts_per_page' => $posts_per_page,   
+            'posts_per_page' => $posts_per_page,
             'paged'          => $paged,
             );
 	if($cat != ""){
             	$args['tax_query'] = array( array( 'taxonomy' => 'news-category', 'field' => 'id', 'terms' => $cat) );
-            }        
+            }
       $query = new WP_Query($args);
 	  global $post;
       $post_count = $query->post_count;
@@ -227,35 +227,35 @@ function wpnaw_get_news( $atts, $content = null ){
                 if ( ( is_numeric( $grid ) && ( $grid > 0 ) && ( 0 == $count % $grid ) ) || $post_count == $count ) { $css_class .= ' last'; }
                 if($showDate == 'true'){ $date_class = "has-date";}else{$date_class = "has-no-date";}
                 ?>
-			
+
             	<div id="post-<?php the_ID(); ?>" class="news type-news news-col-<?php echo $gridcol.' '.$css_class.' '.$date_class; ?>">
 					<div class="news-thumb">
 					<?php
-						
+
 						if ( has_post_thumbnail())  {
 							if($gridcol == '1'){ ?>
 							<div class="grid-news-thumb">
 						 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('url'); ?></a>
 						 </div>
 						<?php } else if($gridcol > '2') { ?>
-							<div class="grid-news-thumb">	
+							<div class="grid-news-thumb">
 						 <a href="<?php the_permalink(); ?>">	<?php the_post_thumbnail('large'); ?></a>
 							</div>
 					<?php	} else { ?>
-					<div class="grid-news-thumb">	
+					<div class="grid-news-thumb">
 							 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('large'); ?></a>
 							</div>
 					<?php } }?>
 					</div>
 					<div class="news-content">
-					<?php if($gridcol == '1') { 
+					<?php if($gridcol == '1') {
                         if($showDate == 'true'){?>
-						<div class="date-post">					
+						<div class="date-post">
 						<h2><span><?php echo get_the_date('j'); ?></span></h2>
 						<p><?php echo get_the_date('M y'); ?></p>
 						</div>
                         <?php }?>
-					<?php } else { 
+					<?php } else {
 
                         ?>
 						<div class="grid-date-post">
@@ -266,31 +266,31 @@ function wpnaw_get_news( $atts, $content = null ){
 					<?php  } ?>
 					<div class="post-content-text">
 						<?php the_title( sprintf( '<h3 class="news-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );	?>
-					    
+
 						<?php if($showCategory == 'true' && $gridcol == '1'){ ?>
 						<div class="news-cat">
                             <?php echo $cate_name; ?>
 							</div>
                        <?php }?>
                       <?php if($showContent == 'true'){?>
-					<div class="news-content-excerpt">							
+					<div class="news-content-excerpt">
 						<?php  if($showFullContent == "false" ) {
 							$excerpt = get_the_content();?>
-						<p class="news-short-content"><?php echo string_limit_newswords( $post->ID, $excerpt, $words_limit, '...'); ?></p>            
-                            
-						  <a href="<?php the_permalink(); ?>" class="more-link"><?php _e( 'Read More', 'sp-news-and-widget' ); ?></a>	
-						<?php } else { 
+						<p class="news-short-content"><?php echo string_limit_newswords( $post->ID, $excerpt, $words_limit, '...'); ?></p>
+
+						  <a href="<?php the_permalink(); ?>" class="more-link"><?php _e( 'Read More', 'sp-news-and-widget' ); ?></a>
+						<?php } else {
 							the_content();
 						 } ?>
 					</div><!-- .entry-content -->
                     <?php }?>
 					</div>
 				</div>
-</div><!-- #post-## -->			  
+</div><!-- #post-## -->
           <?php  endwhile;
             endif; ?>
-			
-<div class="news_pagination">				 	
+
+<div class="news_pagination">
 
 <div class="button-news-p"><?php next_posts_link( ' Next >>', $query->max_num_pages ); ?></div>
 <div class="button-news-n"><?php previous_posts_link( '<< Previous' ); ?> </div>
@@ -298,9 +298,9 @@ function wpnaw_get_news( $atts, $content = null ){
 
 
 			<?php
-             wp_reset_query(); 
-				
-		return ob_get_clean();			             
+             wp_reset_query();
+
+		return ob_get_clean();
 	}
 add_shortcode('sp_news','wpnaw_get_news');
 
@@ -330,7 +330,7 @@ function string_limit_newswords( $post_id = null, $content = '', $word_length = 
 }
 
 function spnews_display_tags( $query ) {
-    if( is_tag() && $query->is_main_query() ) {       
+    if( is_tag() && $query->is_main_query() ) {
        $post_types = array( 'post', 'news' );
         $query->set( 'post_type', $post_types );
     }
@@ -341,7 +341,7 @@ add_filter( 'pre_get_posts', 'spnews_display_tags' );
 // Manage Category Shortcode Columns
 
 add_filter("manage_news-category_custom_column", 'news_category_columns', 10, 3);
-add_filter("manage_edit-news-category_columns", 'news_category_manage_columns'); 
+add_filter("manage_edit-news-category_columns", 'news_category_manage_columns');
 function news_category_manage_columns($theme_columns) {
     $new_columns = array(
             'cb' => '<input type="checkbox" />',
@@ -355,12 +355,12 @@ function news_category_manage_columns($theme_columns) {
 
 function news_category_columns($out, $column_name, $theme_id) {
     $theme = get_term($theme_id, 'news-category');
-    switch ($column_name) {      
+    switch ($column_name) {
 
         case 'title':
             echo get_the_title();
         break;
-        case 'news_shortcode':        
+        case 'news_shortcode':
 
              echo '[sp_news category="' . $theme_id. '"]';
         break;
@@ -368,6 +368,5 @@ function news_category_columns($out, $column_name, $theme_id) {
         default:
             break;
     }
-    return $out;   
-
+    return $out;
 }

@@ -11,7 +11,7 @@
         $defaults = array(
         'limit'             => 5,
         'title'             => '',
-        "date"              => false, 
+        "date"              => false,
         'show_category'     => false,
         'category'          => 0,
         );
@@ -36,7 +36,7 @@
                 $dropdown_args = array( 'taxonomy' => 'news-category', 'class' => 'widefat', 'show_option_all' => __( 'All', 'sp-news-and-widget' ), 'id' => $this->get_field_id( 'category' ), 'name' => $this->get_field_name( 'category' ), 'selected' => $instance['category'] );
                 wp_dropdown_categories( $dropdown_args );
             ?>
-        </p>	
+        </p>
     <?php
     }
 
@@ -46,7 +46,7 @@
         $instance['num_items'] = $new_instance['num_items'];
         $instance['date'] = (bool) esc_attr( $new_instance['date'] );
         $instance['show_category'] = (bool) esc_attr( $new_instance['show_category'] );
-        $instance['category']      = intval( $new_instance['category'] );   
+        $instance['category']      = intval( $new_instance['category'] );
         return $instance;
     }
     function widget($news_args, $instance) {
@@ -68,7 +68,7 @@
             <!--visual-columns-->
             <?php
 			$no_p = '';
-			if($date == "false" && $show_category == "false"){ 
+			if($date == "false" && $show_category == "false"){
                 $no_p = "no_p";
                 }?>
             <div class="recent-news-items <?php echo $no_p?>">
@@ -87,7 +87,7 @@
 			global $post;
                $post_count = $cust_loop->post_count;
           $count = 0;
-           
+
             if ($cust_loop->have_posts()) : while ($cust_loop->have_posts()) : $cust_loop->the_post(); $postcount++;
                     $count++;
                $terms = get_the_terms( $post->ID, 'news-category' );
@@ -139,17 +139,17 @@ class SP_News_scrolling_Widget extends WP_Widget {
         $defaults = array(
         'limit'             => 5,
         'title'             => '',
-        'date'             => false, 
+        'date'             => false,
         'show_category'     => false,
         'category'          => 0,
-		'height'          	=> 400,      
-        'pause'  			=> 2000,                
+		'height'          	=> 400,
+        'pause'  			=> 2000,
         'speed'             => 500,
         );
 
         $instance = wp_parse_args( (array) $instance, $defaults );
         $title = isset($instance['title']) ? esc_attr($instance['title']) : '';
-        $num_items = isset($instance['num_items']) ? absint($instance['num_items']) : 5;              
+        $num_items = isset($instance['num_items']) ? absint($instance['num_items']) : 5;
     ?>
       <p><label for="<?php echo $this->get_field_id('title'); ?>"> <?php _e( 'Title:', 'sp-news-and-widget' ); ?> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label></p>
       <p><label for="<?php echo $this->get_field_id('num_items'); ?>"><?php _e( 'Number of Items: ', 'sp-news-and-widget' ); ?>  <input class="widefat" id="<?php echo $this->get_field_id('num_items'); ?>" name="<?php echo $this->get_field_name('num_items'); ?>" type="text" value="<?php echo esc_attr($num_items); ?>" /></label></p>
@@ -189,17 +189,17 @@ class SP_News_scrolling_Widget extends WP_Widget {
         $instance['num_items'] = $new_instance['num_items'];
         $instance['date'] = (bool) esc_attr( $new_instance['date'] );
         $instance['show_category'] = (bool) esc_attr( $new_instance['show_category'] );
-        $instance['category']      = intval( $new_instance['category'] ); 
+        $instance['category']      = intval( $new_instance['category'] );
 		$instance['height']   = intval( $new_instance['height'] );
-        $instance['pause']              = intval( $new_instance['pause'] ); 
-		$instance['speed']              = intval( $new_instance['speed'] ); 	
+        $instance['pause']              = intval( $new_instance['pause'] );
+		$instance['speed']              = intval( $new_instance['speed'] );
         return $instance;
     }
     function widget($news_args, $instance) {
         extract($news_args, EXTR_SKIP);
         $current_post_name = get_query_var('name');
-        $title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);  
-		$num_items = empty($instance['num_items']) ? '5' : apply_filters('widget_title', $instance['num_items']);  
+        $title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);
+		$num_items = empty($instance['num_items']) ? '5' : apply_filters('widget_title', $instance['num_items']);
         if ( isset( $instance['date'] ) && ( 1 == $instance['date'] ) ) { $date = "true"; } else { $date = "false"; }
         if ( isset( $instance['show_category'] ) && ( 1 == $instance['show_category'] ) ) { $show_category = "true"; } else { $show_category = "false"; }
         if ( isset( $instance['category'] ) && is_numeric( $instance['category'] ) ) $category = intval( $instance['category'] );
@@ -215,7 +215,7 @@ class SP_News_scrolling_Widget extends WP_Widget {
             <!--visual-columns-->
             <?php
 				$no_p = '';
-			if($date == "false" && $show_category == "false"){ 
+			if($date == "false" && $show_category == "false"){
                 $no_p = "no_p";
                 }?>
             <div class="recent-news-items-scroll <?php echo $no_p;?>">
@@ -223,7 +223,7 @@ class SP_News_scrolling_Widget extends WP_Widget {
 			   <ul>
             <?php // setup the query
             $news_args = array( 'suppress_filters' => true,
-       							'posts_per_page' => $num_items,                   
+       							'posts_per_page' => $num_items,
                            'post_type' => 'news',
                            'order' => 'DESC'
                          );
@@ -234,7 +234,7 @@ class SP_News_scrolling_Widget extends WP_Widget {
 			global $post;
                $post_count = $cust_loop->post_count;
           $count = 0;
-           
+
             if ($cust_loop->have_posts()) : while ($cust_loop->have_posts()) : $cust_loop->the_post(); $postcount++;
                     $count++;
                $terms = get_the_terms( $post->ID, 'news-category' );
@@ -272,7 +272,7 @@ class SP_News_scrolling_Widget extends WP_Widget {
 	  height:<?php echo $instance['height']?>,
 	  padding:5,
 	  pause:<?php echo $instance['pause']?>
-	  
+
   });
 });
 </script>
@@ -299,11 +299,11 @@ class SP_News_thmb_Widget extends WP_Widget {
         parent::__construct( 'sp_news_sthumb_widget', __('Latest News with thumb', 'sp-news-and-widget'), $widget_ops, $control_ops );
     }
 
-    function form($instance) {	
+    function form($instance) {
         $defaults = array(
         'limit'             => 5,
         'title'             => '',
-        "date"              => false, 
+        "date"              => false,
         'show_category'     => false,
         'category'          => 0,
         );
@@ -358,11 +358,11 @@ class SP_News_thmb_Widget extends WP_Widget {
             <!--visual-columns-->
             <?php
 				$no_p = '';
-				if($date == "false" && $show_category == "false"){ 
+				if($date == "false" && $show_category == "false"){
                 $no_p = "no_p";
                 }?>
             <div class="recent-news-items <?php echo $no_p;?>">
-			 
+
                 <ul>
             <?php // setup the query
             $news_args = array( 'suppress_filters' => true,
@@ -393,8 +393,8 @@ class SP_News_thmb_Widget extends WP_Widget {
                     ?>
                     <li class="news_li">
 						<div class="news_thumb_left">
-					   <a  href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> 
-                  		
+					   <a  href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+
                   	<?php
                   if ( function_exists('has_post_thumbnail') && has_post_thumbnail() ) {
                    the_post_thumbnail( array(80,80) );
@@ -410,7 +410,7 @@ class SP_News_thmb_Widget extends WP_Widget {
 						</div>
 					   <?php } ?>
 						</div>
-						
+
                     </li>
             <?php endwhile;
             endif;

@@ -20,7 +20,7 @@ class LinkedIn {
 		if($oauth_callback) {
 			$this->oauth_callback = $oauth_callback;
 		}
-                $this->request_token=    
+                $this->request_token=
 		$this->consumer = new OAuthConsumer($consumer_key, $consumer_secret, $this->oauth_callback);
 		$this->signature_method = new OAuthSignatureMethod_HMAC_SHA1();
 		$this->request_token_path = $this->secure_base_url . "/uas/oauth/requestToken?scope=r_basicprofile+r_emailaddress+r_network+w_messages";
@@ -76,11 +76,11 @@ class LinkedIn {
 		$request->sign_request($this->signature_method, $this->consumer, $this->access_token);
 		$auth_header = $request->to_header("https://api.linkedin.com"); # this is the realm
 		$response = $this->httpRequest($api_url, $auth_header, "GET");
-		
+
                 return $response;
 	}
 
-	
+
 
 	function httpRequest($url, $auth_header, $method, $body = NULL)
 	{

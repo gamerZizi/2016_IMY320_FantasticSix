@@ -26,9 +26,9 @@
 
 .gallery-shortcode-label
 {
-	color:#5A5A5A!important; 
-	font-family:Georgia,Times New Roman,Times,serif!important; 
-	font-size:1.8em!important; 
+	color:#5A5A5A!important;
+	font-family:Georgia,Times New Roman,Times,serif!important;
+	font-size:1.8em!important;
 	font-weight:normal!important;
 }
 
@@ -2403,13 +2403,13 @@ Popover
 {
 	padding: 0px 10px 0 16px;
 }
-.gallery_bank_layout > a 
+.gallery_bank_layout > a
 {
 	margin-top:15px;
 	margin-bottom:10px;
 	text-decoration:none !important;
 }
-.gallery_bank_layout > .btn 
+.gallery_bank_layout > .btn
 {
 	margin-top:15px;
 	margin-bottom:10px;
@@ -2420,7 +2420,7 @@ Popover
 	max-width      : 45%;
 	float          : left;
 	padding-right  : 2.5%;
-	
+
 	padding-bottom : 2em;
 }
 
@@ -2481,19 +2481,19 @@ Popover
 
 
 
-.framework_tabs 
+.framework_tabs
 {
  width:100%;
  display:inline-block;
 }
-.framework_tab-links:after 
+.framework_tab-links:after
 {
  display:inline-block;
  clear:both;
  content:'';
 }
- 
-.framework_tab-links li 
+
+.framework_tab-links li
 {
  margin:0px 5px;
  float:left;
@@ -2501,8 +2501,8 @@ Popover
  border :1px solid #e5e5e5;
  border-bottom:none;
 }
- 
-.framework_tab-links a 
+
+.framework_tab-links a
 {
  padding:9px 15px;
  display:inline-block;
@@ -2511,20 +2511,20 @@ Popover
  color:#4c4c4c;
  transition:all linear 0.15s;
 }
- 
-.framework_tab-links a:hover 
+
+.framework_tab-links a:hover
 {
  background:#ffffff;
  text-decoration:none;
 }
- 
-li.active a, li.active a:hover 
+
+li.active a, li.active a:hover
 {
  background:#fff;
  color:#4c4c4c;
 }
- 
-.framework_tab-content 
+
+.framework_tab-content
 {
  border-radius:3px;
  border:1px solid #e5e5e5;
@@ -2534,13 +2534,13 @@ li.active a, li.active a:hover
  padding: 10px 10px 10px 10px;
  margin-left: 4px;
 }
- 
-.framework_tab 
+
+.framework_tab
 {
  display:none;
 }
- 
-.framework_tab.active 
+
+.framework_tab.active
 {
  display:block;
 }
@@ -2553,7 +2553,7 @@ li.active a, li.active a:hover
 {
 	vertical-align: middle !important;
 }
-.plugin-div 
+.plugin-div
 {
 	float: left;
 	margin: 0 8px 16px;
@@ -2567,18 +2567,18 @@ li.active a, li.active a:hover
 	box-sizing: border-box
 }
 
-.plugin-div:nth-child(odd) 
+.plugin-div:nth-child(odd)
 {
 	clear: both;
 	margin-left: 0
 }
 
-.plugin-div:nth-child(even) 
+.plugin-div:nth-child(even)
 {
 	margin-right: 0
 }
 
-@media screen and (max-width:782px) 
+@media screen and (max-width:782px)
 {
 	.plugin-card {
 		margin-left: 0;
@@ -2587,7 +2587,7 @@ li.active a, li.active a:hover
 	}
 }
 
-.plugin-div-top 
+.plugin-div-top
 {
 	position: relative;
 	padding: 20px 20px 10px;
@@ -2597,7 +2597,7 @@ li.active a, li.active a:hover
 {
 	min-height:150px;
 }
-.plugin-action-buttons, div.action-links 
+.plugin-action-buttons, div.action-links
 {
 	margin: 0
 }
@@ -2610,18 +2610,18 @@ li.active a, li.active a:hover
 .plugin-div .desc, .plugin-div .name
  {
 	margin-left: 148px;
-	
+
 }
 
-.plugin-div .action-links 
+.plugin-div .action-links
 {
 
 }
-.plugin-div-button 
+.plugin-div-button
 {
 	margin-left: 5px !important;
 }
-.plugin-div-settings 
+.plugin-div-settings
 {
 	display:inline-block;
 	margin: 0 0px 16px;
@@ -2643,44 +2643,44 @@ li.active a, li.active a:hover
 	margin-left: 0
 }
 
-.plugin-div-settings:nth-child(even) 
+.plugin-div-settings:nth-child(even)
 {
 	margin-right: 0;
 	margin-left: 8px;
-	
+
 }
 
 
-.plugin-div-settings-top 
+.plugin-div-settings-top
 {
 	position: relative;
 	padding: 20px 20px 10px;
 	background-color: #fff;
 }
 
-.plugin-action-buttons, div.action-links 
+.plugin-action-buttons, div.action-links
 {
 	margin: 0
 }
-.plugin-div-settings h4 
+.plugin-div-settings h4
 {
 	margin: 0 0 12px;
 	font-size: 16px;
 	line-height: 1.3
 }
 
-.plugin-div-settings .desc, .plugin-div-settings .name 
+.plugin-div-settings .desc, .plugin-div-settings .name
 {
 	margin-left: 148px;
-	
+
 }
 
-.plugin-div-settings-button 
+.plugin-div-settings-button
 {
 	margin-left: 5px !important;
 
 }
-.plugin-card-bottom_settings 
+.plugin-card-bottom_settings
 {
 	clear: both;
 	padding: 8px 20px;
@@ -2720,7 +2720,7 @@ li.active a, li.active a:hover
 }
 
 
-.service-div-settings 
+.service-div-settings
 {
     display:inline-block;
     margin: 0 0px 16px;
@@ -2742,17 +2742,17 @@ li.active a, li.active a:hover
     margin-left: 0
 }
 
-.service-div-settings:nth-child(even) 
+.service-div-settings:nth-child(even)
 {
     margin-right: 0;
     margin-left: 8px;
-    
+
 }
-.service-div-settings .desc, .service-div-settings .name 
+.service-div-settings .desc, .service-div-settings .name
 {
-    
+
 }
-.service-div-settings-top 
+.service-div-settings-top
 {
     position: relative;
     padding: 5px 20px;

@@ -24,16 +24,16 @@
 .news-col-1, .news-col-list{width:100%; float:left;}
 
 .grid-news-thumb{float: left; height: 200px;line-height: 0;  overflow: hidden;  position: relative;  width: 100%;background: #f1f1f1;  }
-.grid-news-thumb img{height: 100% !important;width: 100% !important;object-fit: cover;object-position: top center;}  
-  
+.grid-news-thumb img{height: 100% !important;width: 100% !important;object-fit: cover;object-position: top center;}
+
 .news-col-1 .grid-news-thumb{height:400px;}
 .news-col-2 .grid-news-thumb{height: 250px;}
 
 .news-col-list .news-thumb{float:left; width:33%;}
 .news-col-list .news-content{float:left;  margin-left:2% ; width:65%; clear:none; }.no-thumb.blog-col-0 .blog-content{ margin-left:0 ; width:100%; }
-.news-col-list .news-content .post-content-text{margin-left:0px;}  
-  
-/* widget */  
+.news-col-list .news-content .post-content-text{margin-left:0px;}
+
+/* widget */
 .news_li h6{clear: none !important; margin-bottom:5px !important; margin-top:8px !important; padding-bottom:0px !important; }
 .news_li h6 a.post-title{font-size:auto !important; font-size:16px !important;}
 .news_li p{padding-bottom:0px !important}
@@ -43,7 +43,7 @@ p.news-short-content{margin-bottom:5px !important}.first.last {clear: both !impo
 .news.first{clear: both !important;}
 
 
-.recent-news-items .news_li{padding:5px 0 !important; clear:both;}  
+.recent-news-items .news_li{padding:5px 0 !important; clear:both;}
 .news_li{border-bottom:1px solid #ddd; margin:0 !important; list-style:none !important}
 .newstickerthumb .news_li{float:left; width:100%;}
 .news_thumb_left{display:table-cell; vertical-align:top; width:100px;  }
@@ -70,12 +70,12 @@ p.news-short-content{margin-bottom:5px !important}.first.last {clear: both !impo
 }
 
 @media all and (max-width: 500px) {
-	
-	.news-col-list .news-thumb{float:left; width:100%;}	
+
+	.news-col-list .news-thumb{float:left; width:100%;}
 	.news-col-list .news-content{float:left;  margin-left:0% ; width:100%; clear:both; }
 	.news-col-1 .grid-news-thumb{height:250px}
 	}
-	
-@media all and (max-width: 400px) {	
+
+@media all and (max-width: 400px) {
 	.news-col-1 .grid-news-thumb{height:200px}
 }
