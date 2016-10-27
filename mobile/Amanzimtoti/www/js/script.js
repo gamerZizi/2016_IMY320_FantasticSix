@@ -75,7 +75,7 @@ $(document).ready(function(){
 
     currentPageObj = $(evt.target).pagecontainer("getActivePage")[0];
 
-    if (currentPageObj.id !== "notifications") {
+    if ($("#uid") && $("#uid").val() > 0 && currentPageObj.id !== "notifications") {
         timedCron();
     } else {
         clearTimeout(cron);
@@ -103,7 +103,7 @@ function timedCron() {
     cron = setTimeout(notificationsCron, duration);
 }
 
-var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
+var URL = "http://196.249.57.163/2016_IMY320_FantasticSix/web/wp-json/";
 // var URL = "http://amanzimtoti.co.nf/wp-json/";
 
 function signOn() {
@@ -139,7 +139,7 @@ function signOut() {
     var seenOldNotifications = seenNotifications.concat(oldNotifications);
     var seenOldMNoDuplicatesNotifications = [];
     $.each(seenOldNotifications, function(index, value) {
-        if ($.inArray(value) < 0 && !isNaN(value) && typeof value !== "undefined") {
+        if ($.inArray(value, seenOldMNoDuplicatesNotifications) < 0 && !isNaN(value) && typeof value !== "undefined") {
             seenOldMNoDuplicatesNotifications.push(value);
         }
     });
@@ -184,6 +184,7 @@ function notificationsCron(redirect) {
                 }
                 totalNotifications[index] = parseInt(obj.id);
                 var classes = "ui-btn";
+                classes += ($.inArray(parseInt(obj.id), oldNotifications) >= 0 || $.inArray(parseInt(obj.id), seenNotifications) >= 0) ? "" : " ui-btn-icon-right ui-icon-mail";
                 list +=     '<li>';
                 list +=         '<a href="#notification" onclick="loadNotificationByID(event, ' + parseInt(obj.id) + ', \'' + obj.heading + '\');" class="'+classes+'">' + obj.heading + '</a>';
                 list +=     '</li>';
@@ -219,7 +220,7 @@ function loadNotificationByID(evt, notificationID, heading) {
 
     // $(evt.target).removeClass("not-read");
     if (seenNotifications.indexOf(notificationID) < 0) {
-        seenNotifications[totalNotifications.indexOf(notificationID)] = notificationID;
+        seenNotifications[totalNotifications.indexOf(notificationID)] = parseInt(notificationID);
         $("#read-notifications-count").val(parseInt($("#read-notifications-count").val()) + newNotifications);
         newNotifications--;
     }
