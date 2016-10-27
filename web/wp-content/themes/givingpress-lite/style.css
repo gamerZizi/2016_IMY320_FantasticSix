@@ -2587,9 +2587,9 @@ a, a:link, button, #submit, #searchsubmit {
 }
 
 #top-info #contact-info .align-right #auth-navigation li {
-    background-color: #7dba03; /*#6482A7; */   
+    background-color: #3498db;/*#7dba03; *//*#6482A7; */
     width: 48%;
-    margin: 0px;    
+    margin: 0px;
     border-right: 1px solid #F5F5F5;
     text-align: center;
 }
@@ -2606,10 +2606,10 @@ a, a:link, button, #submit, #searchsubmit {
 #top-info #contact-info .align-right #auth-navigation li:hover,
 #top-info #contact-info .align-right #auth-navigation li:active,
 #top-info #contact-info .align-right #auth-navigation li.current-menu-item{
-    background-color: #5b8702;/*#4a607a;*/
+    background-color: #153d58;/*#5b8702;*//*#4a607a;*/
 }
 
-#top-info #contact-info .align-right #auth-navigation li a {    
+#top-info #contact-info .align-right #auth-navigation li a {
     color: #F5F5F5;
     text-transform: uppercase;
     height: inherit;

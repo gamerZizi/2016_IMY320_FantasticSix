@@ -18,15 +18,28 @@ $(function() {
     loadEvents();
   });
 
+  $("#to-notifications").click(function(evt) {
+    evt.preventDefault();
+    loadNotifications();
+  });
+
   $("#to-logout").click(function (evt) {
     evt.preventDefault();
     signOut();
   });
 });
 
+var oldNotifications = [];
+var currentPageObj = {};
+var seenNotifications = [];
+var totalNotifications = [];
+var newNotifications = 0;
+var cron;
+var duration = 3 * 1000;
+
 $(document).ready(function(){
   // Update the contents of the toolbars
-  $( document ).on( "pagecontainerchange", function() {
+  $( document ).on( "pagecontainerchange", function(evt) {
 
     // Remove active class from nav buttons
     $( "[data-role='navbar'] a.ui-btn-active" ).removeClass( "ui-btn-active" );
@@ -59,12 +72,42 @@ $(document).ready(function(){
     $("#main-menu-panel").click(function(){
       $(this).panel("close");
     });
+
+    currentPageObj = $(evt.target).pagecontainer("getActivePage")[0];
+
+    if (currentPageObj.id !== "notifications") {
+        timedCron();
+    } else {
+        clearTimeout(cron);
+    }
+
+console.log("newNotifications: " + newNotifications);
+    if (newNotifications > 0 && !arrayValuesPresent()) {
+        $("#new-num-notifications").css("display", "inline-block").html(newNotifications);
+    } else {
+        $("#new-num-notifications").css("display", "none").html(0);
+    }
   });
 });
 
+function arrayValuesPresent() {
+    var count = 0;
+    console.log(oldNotifications);
+    $.each(oldNotifications, function(index, value){
+        if ($.inArray(value, totalNotifications) >= 0) {
+            count++;
+        }
+    });
+    console.log(count);
+    return oldNotifications.length > 0 && count === oldNotifications.length && oldNotifications.length == newNotifications.length;
+}
 
-// var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
-var URL = "http://amanzimtoti.co.nf/wp-json/";
+function timedCron() {
+    cron = setTimeout(notificationsCron, duration);
+}
+
+var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
+// var URL = "http://amanzimtoti.co.nf/wp-json/";
 
 function signOn() {
   if ( $("#uname").val() === "" || $("#pword").val() === "" ) {
@@ -94,23 +137,119 @@ function signOn() {
 }
 
 function signOut() {
-  // Load spinning loading icon
-  displayLoadingSpinner({ message: "Logging out, bye!." });
+    // Load spinning loading icon
+    displayLoadingSpinner({ message: "Logging out, bye!." });
+    var seenOldNotifications = seenNotifications.concat(oldNotifications);
+    var seenOldMNoDuplicatesNotifications = [];
+    $.each(seenOldNotifications, function(index, value) {
+        if ($.inArray(value) < 0 && !isNaN(value) && typeof value !== "undefined") {
+            seenOldMNoDuplicatesNotifications.push(value);
+        }
+    });
 
-  var paramObj = {
-    type      : "GET",
-    route     : "amanzimtoti-mobile/v1/logout",
-    callback  : function(response) {
-      $("#uid, #cat, #org").remove();
-      $("#main-profile").html("");
+    var notificationsStr = "";
+    $.each(seenOldMNoDuplicatesNotifications, function(index, value){
+        notificationsStr += value;
+        notificationsStr += (index < seenOldMNoDuplicatesNotifications.length-1) ? "-" : "";
+    });
 
-      $("#uname, #pword").val("");
-      $("#logged-in").val("false");
-      window.location.href = "#login";
-      navigator.app.exitApp();
+    var uid = $("#uid").val();
+
+    var paramObj = {
+        type      : "GET",
+        route     : "amanzimtoti-mobile/v1/logout/"+uid+"/"+notificationsStr,
+        callback  : function(response) {
+            $("#uid, #cat, #org").remove();
+            $("#main-profile").html("");
+
+            $("#uname, #pword").val("");
+            $("#logged-in").val("false");
+            window.location.href = "#login";
+            navigator.app.exitApp();
+        }
+    };
+    execJSONRESTRequest(paramObj, true);
+}
+
+function notificationsCron(redirect) {
+    redirect = redirect || false;
+    var notificationURL = "amanzimtoti-mobile/v1/notifications/"+$("#read-notifications-count").val();
+    var noNotifications = false;
+
+    var paramObj = {
+        type        : "GET",
+        route       : notificationURL,
+        callback    : function(response) {
+            var list  = '<ul id="notifications-ul" class="ui-listview" data-role="listview" data-filter="true" data-filter-placeholder="Search Notification..." date-inset="true">';
+            $.each(response, function(index, obj){
+                if ($.isEmptyObject(obj)) {
+                    noNotifications = true;
+                }
+                totalNotifications[index] = parseInt(obj.id);
+                var classes = "ui-btn";
+                list +=     '<li>';
+                list +=         '<a href="#notification" onclick="loadNotificationByID(event, ' + parseInt(obj.id) + ', \'' + obj.heading + '\');" class="'+classes+'">' + obj.heading + '</a>';
+                list +=     '</li>';
+                if (obj.new_notification) {
+                    newNotifications = obj.new_notifications_count;
+                    //$("#read-notifications-count").val(obj.new_notifications_count);
+                }
+                console.log("newNotifications:::::: " + newNotifications);
+            });
+            list     += '</ul>';
+
+            /*if (currentPageObj.id !== "notifications") {
+                $("#notifications-div").html((noNotifications) ? '<p>there are no notifications at the moment</p>' : list);
+            }*/
+            $("#notifications-div").html((noNotifications) ? '<p>there are no notifications at the moment</p>' : list);
+
+            if (redirect) {
+                window.location.href = "#notifications";
+            }
+        }
+    };
+    execJSONRESTRequest(paramObj, true);
+}
+
+function loadNotifications() {
+    // Load spinning loading icon
+    displayLoadingSpinner({ message: "Loading notifications..." });
+    notificationsCron(true);
+}
+
+function loadNotificationByID(evt, notificationID, heading) {
+    evt = evt || window.event;
+    evt.preventDefault();
+
+    // $(evt.target).removeClass("not-read");
+    if (seenNotifications.indexOf(notificationID) < 0) {
+        seenNotifications[totalNotifications.indexOf(notificationID)] = notificationID;
+        $("#read-notifications-count").val(parseInt($("#read-notifications-count").val()) + newNotifications);
+        newNotifications--;
     }
-  };
-  execJSONRESTRequest(paramObj, true);
+
+    // Load spinning loading icon
+    displayLoadingSpinner({ message: heading });
+
+    var paramObj = {
+        type        : "GET",
+        route       : "amanzimtoti-mobile/v1/notification/"+notificationID,
+        callback    : function(response) {
+            var content = '<div class="ui-bar ui-bar-a top">';
+            content    +=   '<h3>' + response.heading.trim() + '</h3>';
+            content    += '</div>';
+            content    += '<div class="ui-body ui-body-a with-bottom">';
+            content    +=   '<p>' + response.description.replace("\\'", "'").trim() + '</p>';
+            content    += '</div>';
+            content    += '<div class="ui-bar ui-bar-a bottom">';
+            content    +=   '<b class="notification-datetime">' + response.sent_day + ' &commat; ' + response.sent_time + '</b>';
+            content    += '</div>';
+
+            $("#notification-div").html(content);
+            window.location.href = "#notification";
+        }
+    };
+    execJSONRESTRequest(paramObj, true);
 }
 
 function loadEvents() {
@@ -178,7 +317,7 @@ function loadEventByID(evt, eventID, title) {
       content    +=     '<b>Time: </b>' + startDateTime[1].trim() + " - " + endDateTime[1].trim() + "<br />";
       content    +=     '<b>Duration: </b>' + response.postmeta.event_duration + " hrs" + "<br />";
       if (response.postmeta.event_currency_symbol !== "" && response.postmeta.event_cost !== "") {
-        content    +=     '<b>Entrance Fee: </b>' + response.postmeta.event_currency_symbol + " " + response.postmeta.event_cost.toFixed(0) + "<br />";
+        content    +=     '<b>Entrance Fee: </b>' + response.postmeta.event_currency_symbol + " " + response.postmeta.event_cost + "<br />";
       }
       if (response.postmeta.event_organizer != null && response.postmeta.event_organizer !== "") {
         content    +=     '<b>Organized By: </b>' + response.postmeta.event_organizer.trim() + "<br />";
@@ -307,17 +446,26 @@ function displayLoadingSpinner(params) {
 }
 
 function createUserProfileSection(data) {
-  var hiddenInformation = '<input type="hidden" id="uid" value="'+ data.ID +'" />';
-  var cat = (data.amanzimtoti_member_info.event_categories.length > 0) ? data.amanzimtoti_member_info.event_categories.toString().replace(",", "-") : "0";
-  hiddenInformation +=    '<input type="hidden" id="cat" value="'+ cat +'" />';
-  var org = (data.amanzimtoti_member_info.event_organizers.length > 0) ? data.amanzimtoti_member_info.event_organizers.toString().replace(",", "-") : "0";
-  hiddenInformation +=    '<input type="hidden" id="org" value="'+ org +'" />';
+    if (data.amanzimtoti_member_info.read_notifications && data.amanzimtoti_member_info.read_notifications != "") {
+        oldNotifications = data.amanzimtoti_member_info.read_notifications.split("-");
+    }
 
-  var profileSection =  '<div id="profile-pic">' +
+    $.each(oldNotifications, function(index, value){
+        oldNotifications[index] = parseInt(value);
+    });
+    $("#read-notifications-count").val(oldNotifications.length);
+
+    var hiddenInformation = '<input type="hidden" id="uid" value="'+ data.ID +'" />';
+    var cat = (data.amanzimtoti_member_info.event_categories.length > 0) ? data.amanzimtoti_member_info.event_categories.toString().replace(",", "-") : "0";
+    hiddenInformation +=    '<input type="hidden" id="cat" value="'+ cat +'" />';
+    var org = (data.amanzimtoti_member_info.event_organizers.length > 0) ? data.amanzimtoti_member_info.event_organizers.toString().replace(",", "-") : "0";
+    hiddenInformation +=    '<input type="hidden" id="org" value="'+ org +'" />';
+
+    var profileSection =  '<div id="profile-pic">' +
                           '<img src="img/default.jpg" alt="" />' +
-                        '</div>' +
-                        '<h3>'+ data.display_name +'</h3>' +
-                        '<a class="noshadow" href="mailto:'+ data.user_email +'">'+ data.user_email +'</a>';
-  $("body").prepend(hiddenInformation);
-  $("#main-profile").html(profileSection);
+                          '</div>' +
+                          '<h3>'+ data.display_name +'</h3>' +
+                          '<a class="noshadow" href="mailto:'+ data.user_email +'">'+ data.user_email +'</a>';
+    $("body").prepend(hiddenInformation);
+    $("#main-profile").html(profileSection);
 }

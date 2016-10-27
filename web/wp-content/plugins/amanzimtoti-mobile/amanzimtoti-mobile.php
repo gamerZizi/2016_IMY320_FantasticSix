@@ -9,6 +9,10 @@
   License URI:	https://www.gnu.org/licenses/gpl-2.0.html
  */
 
+define("AMANZI_MOBILIE_PLUGIN_DIR", plugin_dir_path( __FILE__ ));
+
+require_once 'includes/amanzi_mobile_admin.php';
+
 /**
  * Adding Custom Route
  */
@@ -23,16 +27,10 @@ function amanzi_create_route() {
 	);
 	// Adding a Logout Route
 	register_rest_route(
-		"amanzimtoti-mobile/v1", "/logout", 
+		"amanzimtoti-mobile/v1", "/logout/(?P<id>[\\d]+)/(?P<nots>[\\w-]+)", 
 		array(
 			"methods" => "GET",
-			"callback" => function() {
-				wp_logout();
-				$results = new stdClass();
-				$results->status = 200;
-				$results->message = "Successfully logged out.";
-				return $results;
-			}
+			"callback" => "amanzi_signout_callback"
 		)
 	);
 	// Adding a Events Route (Without Params)
@@ -83,6 +81,36 @@ function amanzi_create_route() {
 			"callback" => "amanzi_news_by_id_callback"
 		)
 	);		
+	// Get all notifications
+	register_rest_route(
+		"amanzimtoti-mobile/v1", "/notifications/(?P<count>[\\d]+)", 
+		array(
+			"methods" => "GET",
+			"callback" => "amanzi_get_notications_callback"
+		)
+	);		
+	// Get notification by id
+	register_rest_route(
+		"amanzimtoti-mobile/v1", "/notification/(?P<id>[\\d]+)", 
+		array(
+			"methods" => "GET",
+			"callback" => "amanzi_get_notification_by_id_callback"
+		)
+	);
+}
+
+function amanzi_signout_callback( $data ) {
+	global $wpdb;
+	$id = (int)$data["id"];
+	$read_notifications = $data["nots"];
+	$query = "UPDATE {$wpdb->prefix}amanzi_members SET read_notifications='{$read_notifications}' WHERE user_id={$id} LIMIT 1;";
+	$wpdb->query($query);
+	
+	wp_logout();
+	$results = new stdClass();
+	$results->status = 200;
+	$results->message = "Successfully logged out.";
+	return $results;
 }
 
 function amanzi_authorize_mobile_user_callback( $data ) {
@@ -102,6 +130,7 @@ function amanzi_authorize_mobile_user_callback( $data ) {
 	}
 	$user->data = amanzi_ignore_fields($user->data, array("user_activation_key", "user_pass", "user_status", "user_url"), true);
 	$user->amanzimtoti_member_info = amanzi_get_member_by_id( $user->ID );
+	update_amanzi_member_has_mobile_app($user->ID);
 	return $user;
 }
 
@@ -214,6 +243,32 @@ function amanzi_news_by_id_callback( $data ) {
 	return $news;
 }
 
+function amanzi_get_notications_callback( $data ) {
+	global $wpdb;
+	$count = (int)$data["count"];
+	$query = "SELECT id, heading, description, created_on FROM {$wpdb->prefix}amanzi_mobile_notifications ORDER BY id DESC;";
+	$results = $wpdb->get_results($query);
+	if (!$results) { return array(); }
+	foreach ( $results as $result ) {
+		$result->sent_day = date("j F Y", strtotime($result->created_on));
+		$result->sent_time = date("G:i A", strtotime($result->created_on));
+		$result->new_notifications_count = ($wpdb->num_rows > $count) ? $wpdb->num_rows - $count: $count;		
+		$result->new_notification = ($wpdb->num_rows > $count) ? true : false;
+	}	
+	return $results;
+}
+
+function amanzi_get_notification_by_id_callback( $data ) {
+	global $wpdb;
+	$id = (int)$data["id"];
+	$query = "SELECT heading, description, created_on FROM {$wpdb->prefix}amanzi_mobile_notifications WHERE id={$id};";
+	$row = $wpdb->get_row($query);
+	if (!$row) { return array(); }
+	$row->sent_day = date("j F Y", strtotime($row->created_on));
+	$row->sent_time = date("G:i A", strtotime($row->created_on));
+	return $row;
+}
+
 function amanzi_get_event_postmeta_data($event_post_id) {
 	$formated_event_postmeta = new stdClass();
 	$event_postmeta = get_post_meta($event_post_id);
@@ -279,7 +334,7 @@ function amanzi_ignore_fields($params, $ignore, $is_object) {
 
 function amanzi_get_member_by_id( $id ) {
 	global $wpdb;
-	$query = "SELECT phone, event_categories, event_organizers FROM " . $wpdb->prefix . "amanzi_members WHERE user_id=" . $id . " LIMIT 1;";
+	$query = "SELECT phone, event_categories, event_organizers, read_notifications FROM " . $wpdb->prefix . "amanzi_members WHERE user_id=" . $id . " LIMIT 1;";
 	$results = $wpdb->get_results( $query );
 	$results[0]->event_categories = json_decode($results[0]->event_categories);
 	$results[0]->event_organizers = json_decode($results[0]->event_organizers);
@@ -314,6 +369,17 @@ function amanzi_get_author_name( $object, $field_name, $request ) {
 function amanzi_get_image_src( $object, $field_name, $request ) {
 	$featured_image_array = wp_get_attachment_image_src( $object["featured_image"], "thumbnail", true );
 	return $featured_image_array[0];
+}
+
+function update_amanzi_member_has_mobile_app( $id ) {
+	global $wpdb;
+	$query = "SELECT has_mobile_app FROM {$wpdb->prefix}amanzi_members WHERE user_id={$id} LIMIT 1;";
+	if (!($result = $wpdb->get_results($query))) return;
+	if ($result[0]->has_mobile_app == 1) return;
+	
+	// We do the update
+	$query = "UPDATE {$wpdb->prefix}amanzi_members SET has_mobile_app=1 WHERE user_id={$id} LIMIT 1;";
+	$wpdb->query($query);
 }
 
 add_action( "rest_api_init", "amanzi_create_route" );

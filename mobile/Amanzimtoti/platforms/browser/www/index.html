@@ -72,11 +72,13 @@
       </header><!-- /Header Section -->
       <!-- panel menu -->
       <div data-role="panel" data-theme="b" data-position-fixed="true" data-position="left" data-display="overlay" id="main-menu-panel">
+          <input type="hidden" id="read-notifications-count" value="0" />
           <div class="" id="main-profile"></div>
           <nav>
               <ul data-role="listview">
                   <li><a href="#news" id="to-news" class="ui-btn ui-icon-info ui-btn-icon-left">News</a></li>
                   <li><a href="#events" id="to-events" class="ui-btn ui-icon-calendar ui-btn-icon-left">Events</a></li>
+                  <li><a href="#notifications" id="to-notifications" class="ui-btn ui-icon-comment ui-btn-icon-left">Notifications<span id="new-num-notifications" class="ui-li-count">0</span></a></li>
                   <li><a href="#login" id="to-logout" class="ui-btn ui-icon-power ui-btn-icon-left">Exit</a></li>
                   <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
                   <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
@@ -114,23 +116,22 @@
       <!-- ===================== NOTIFICATIONS SECTION ======================= -->
       <!-- notifications page -->
       <section data-role="page" data-title="Notifications" id="notifications">
-          <article class="ui-content">
-              <p>there are no notifications at the moment</p>
-          </article>
+          <div id="notifications-div" class="ui-corner-all custom-corners ui-content"></div>
       </section><!-- /notifications page -->
 
       <!-- notification page -->
       <section data-role="page" data-title="Notification" id="notification">
-
+        <div class="ui-content" id="notification-div"></div>
       </section><!-- /notification page -->
 
       <!-- footer page -->
-      <footer data-role="footer" data-theme="b" data-position="absolute" data-fullscreen="true">
+      <!--footer data-role="footer" data-theme="b" data-position="absolute" data-fullscreen="true">
+          <input type="hidden" id="current-notifications-count" value="0" />
           <div data-role="navbar">
               <ul>
-                  <li><a href="#notifications" class="ui-icon-comment ui-btn-icon-top">Notifications</a></li>
+                  <li><a href="#notifications" id="to-notifications" class="ui-icon-comment ui-btn-icon-top">Notifications</a></li>
               </ul>
           </div>
-      </footer><!-- footer -->
+      </footer--><!-- footer -->
     </body>
 </html>
