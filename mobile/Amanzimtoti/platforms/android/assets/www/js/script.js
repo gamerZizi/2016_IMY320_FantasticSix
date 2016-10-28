@@ -35,7 +35,7 @@ var seenNotifications = [];
 var totalNotifications = [];
 var newNotifications = 0;
 var cron;
-var duration = 3 * 1000;
+var duration = 10 * 1000;
 
 $(document).ready(function(){
   // Update the contents of the toolbars
