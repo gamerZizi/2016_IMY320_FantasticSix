@@ -102,7 +102,9 @@ function amanzi_create_route() {
 function amanzi_signout_callback( $data ) {
 	global $wpdb;
 	$id = (int)$data["id"];
-	$read_notifications = $data["nots"];
+	$query = "SELECT COUNT(*) AS num_notifications FROM {$wpdb->prefix}amanzi_mobile_notifications;";
+	$num_notifications = $wpdb->get_row($query);	
+	$read_notifications = ($num_notifications->num_notifications == 0) ? "0" : $data["nots"];
 	$query = "UPDATE {$wpdb->prefix}amanzi_members SET read_notifications='{$read_notifications}' WHERE user_id={$id} LIMIT 1;";
 	$wpdb->query($query);
 	
