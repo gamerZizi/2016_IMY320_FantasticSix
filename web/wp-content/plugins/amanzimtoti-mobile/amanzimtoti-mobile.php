@@ -234,7 +234,7 @@ function amanzi_news_by_id_callback( $data ) {
 		$query->post->post_modified = date("j F Y", strtotime($query->post->post_modified));
 		$query->post->post_content = str_replace( "\r\n", "<br />", $query->post->post_content );
 		$query->post->post_content = str_replace("[/caption]", "</caption>", $query->post->post_content );
-		$more_filter = '[caption id="" align="alignleft" width="525"]';
+		$more_filter = '[caption id="" align="aligncenter" width="525"]';
 		$query->post->post_content = str_replace($more_filter, "<caption>", $query->post->post_content );
 		$news->news = $query->post;
 	}
