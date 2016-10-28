@@ -178,7 +178,7 @@ function loadEventByID(evt, eventID, title) {
       content    +=     '<b>Time: </b>' + startDateTime[1].trim() + " - " + endDateTime[1].trim() + "<br />";
       content    +=     '<b>Duration: </b>' + response.postmeta.event_duration + " hrs" + "<br />";
       if (response.postmeta.event_currency_symbol !== "" && response.postmeta.event_cost !== "") {
-        content    +=     '<b>Entrance Fee: </b>' + response.postmeta.event_currency_symbol + " " + response.postmeta.event_cost.toFixed(0) + "<br />";
+        content    +=     '<b>Entrance Fee: </b>' + response.postmeta.event_currency_symbol + " " + response.postmeta.event_cost + "<br />";
       }
       if (response.postmeta.event_organizer != null && response.postmeta.event_organizer !== "") {
         content    +=     '<b>Organized By: </b>' + response.postmeta.event_organizer.trim() + "<br />";
