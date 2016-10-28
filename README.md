@@ -190,7 +190,7 @@ Based on your stated needs we have come up with user friendly web and mobile app
 <div>
     <b>Deadline: </b>28 October 2016<br />
     <ul>
-        <li><b>Mobile Description: </b><p>Mobile functionality complete(might be a bit buggy!!), Look and feel not 100% complete.</p></li>
+        <li><b>Mobile Description: </b><p>Mobile functionality complete(might be a bit buggy!!), Look and feel not 100% complete. APK is under mobile folder.</p></li>
         <li><b>Amanzimtoti Webpage (For Mobile Testing): </b><a href="http://amanzimtoti.co.nf" target="_blank">http://amanzimtoti.co.nf</a></li>
     </ul>
 </div>
