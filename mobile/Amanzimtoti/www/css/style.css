@@ -172,3 +172,7 @@ caption {
 .not-read {
     background-color: red;
 }
+
+#notifications-div p {
+    text-align: center;
+}

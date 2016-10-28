@@ -103,8 +103,8 @@ function timedCron() {
     cron = setTimeout(notificationsCron, duration);
 }
 
-var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
-// var URL = "http://amanzimtoti.co.nf/wp-json/";
+// var URL = "http://localhost/2016_IMY320_FantasticSix/web/wp-json/";
+var URL = "http://amanzimtoti.co.nf/wp-json/";
 
 function signOn() {
   if ( $("#uname").val() === "" || $("#pword").val() === "" ) {
@@ -150,6 +150,10 @@ function signOut() {
         notificationsStr += (index < seenOldMNoDuplicatesNotifications.length-1) ? "-" : "";
     });
 
+    if (notificationsStr === "") {
+        notificationsStr = "0";
+    }
+
     var uid = $("#uid").val();
 
     var paramObj = {
@@ -177,6 +181,11 @@ function notificationsCron(redirect) {
         type        : "GET",
         route       : notificationURL,
         callback    : function(response) {
+            console.log(response);
+            if (response.length === 0) {
+                noNotifications = true;
+            }
+
             var list  = '<ul id="notifications-ul" class="ui-listview" data-role="listview" data-filter="true" data-filter-placeholder="Search Notification..." date-inset="true">';
             $.each(response, function(index, obj){
                 if ($.isEmptyObject(obj)) {
@@ -450,6 +459,11 @@ function createUserProfileSection(data) {
     $.each(oldNotifications, function(index, value){
         oldNotifications[index] = parseInt(value);
     });
+
+    if (oldNotifications.length === 1 && oldNotifications[0] === 0) {
+        oldNotifications = [];
+    }
+
     $("#read-notifications-count").val(oldNotifications.length);
 
     var hiddenInformation = '<input type="hidden" id="uid" value="'+ data.ID +'" />';
