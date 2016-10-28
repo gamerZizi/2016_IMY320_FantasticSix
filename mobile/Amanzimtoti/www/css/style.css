@@ -92,8 +92,8 @@
 }
 
 .ui-content .ui-body img {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     max-width: inherit;
 }
 
@@ -237,6 +237,7 @@ html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
 
 #main-menu-panel nav li a {
     background-color: #38c !important;
+    color: #fff;
 }
 
 #main-menu-panel nav li a:hover {
