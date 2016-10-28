@@ -37,6 +37,12 @@ C Nkhwashu  - 14296684 <br />
             <li><i>More details and progress regarding the Mobile App.</i></li>
         </ul>
     </li>
+    <li>
+        <h3>Final Mobile App</h3>
+        <ul>
+            <li><i>Details about the almost complete Mobile App.</i></li>
+        </ul>
+    </li>
 </ol>
 <hr />
 <br />
@@ -178,5 +184,13 @@ Based on your stated needs we have come up with user friendly web and mobile app
     <b>Deadline: </b>28 October 2016<br />
     <ul>
         <li><b>Mobile Description: </b><p>Mobile App now works live (Used a different hosting just to store the database to be in sync with our site). User can login, view news, view old, current, and upcoming events. Still missing Notification functionality (someone must work on that guys), and the Look and Feel of the app.</p></li>        
+    </ul>
+</div>
+<h2><u>Final Mobile App</u></h2>
+<div>
+    <b>Deadline: </b>28 October 2016<br />
+    <ul>
+        <li><b>Mobile Description: </b><p>Mobile functionality complete(might be a bit buggy!!), Look and feel not 100% complete.</p></li>
+        <li><b>Amanzimtoti Webpage (For Mobile Testing): </b><a href="http://amanzimtoti.co.nf" target="_blank">http://amanzimtoti.co.nf</a></li>
     </ul>
 </div>
